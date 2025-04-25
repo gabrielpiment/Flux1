@@ -461,6 +461,23 @@ const Index = () => {
           <div className="mt-8 text-center text-sm text-white/80">
             * Os valores +99,90 são adicionais para liberar as funcionalidades específicas caso haja interesse
           </div>
+          {/* Botão de personalização */}
+          <div className="mt-6 text-center">
+            <a 
+              href="https://wa.me/+5534991557772?text=Olá! Gostaria de personalizar meu plano no Flux CRM" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button
+                variant="secondary"
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 font-medium"
+              >
+                Quero personalizar meu plano
+              </Button>
+            </a>
+          </div>
           {/* Indicador de scroll */}
           <div className={`md:hidden fixed right-4 top-1/2 transform -translate-y-1/2 transition-opacity duration-500 ${showScrollHint ? 'opacity-70' : 'opacity-0'}`}>
             <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
