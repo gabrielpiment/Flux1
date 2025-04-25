@@ -12,6 +12,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: undefined,
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'favicon.ico') {
+            return '[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
   },
@@ -24,5 +30,8 @@ export default defineConfig({
     headers: {
       'Content-Type': 'application/javascript',
     },
+  },
+  optimizeDeps: {
+    exclude: ['path'],
   },
 }) 

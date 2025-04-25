@@ -1,11 +1,29 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(.*)\\.js$",
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/javascript"
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.tsx?$",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.ico$",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/x-icon"
         }
       ]
     }
