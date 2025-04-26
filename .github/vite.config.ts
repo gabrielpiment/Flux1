@@ -4,7 +4,18 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'configure-response-headers',
+      configureServer: (server) => {
+        server.middlewares.use((_req, res, next) => {
+          res.setHeader("Content-Type", "application/javascript");
+          next();
+        });
+      }
+    }
+  ],
   base: '/Flux1/', // Nome do seu repositório
   build: {
     outDir: 'dist',
@@ -18,6 +29,8 @@ export default defineConfig({
           }
           return 'assets/[name]-[hash][extname]';
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       },
     },
   },
