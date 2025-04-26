@@ -132,31 +132,31 @@ const PricingCards: React.FC = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[280px] bg-white rounded-lg p-6 shadow-lg snap-center relative overflow-hidden first:ml-2 last:mr-2"
+            className="flex-shrink-0 w-[280px] bg-white rounded-xl p-6 shadow-sm snap-center relative overflow-hidden first:ml-2 last:mr-2"
           >
             {/* Tag de teste grátis no card */}
-            <div className="absolute -right-8 top-6 bg-blue-600 text-white px-8 py-1 rotate-45 transform text-sm font-semibold shadow-md">
+            <div className="absolute -right-10 top-6 bg-blue-600 text-white px-8 py-1 rotate-45 transform text-sm font-semibold shadow-sm">
               7 dias grátis
             </div>
 
-            <h3 className="text-lg font-semibold">{plan.title}</h3>
-            <h4 className="text-2xl font-bold mt-2">{plan.subtitle}</h4>
-            <div className="text-4xl font-bold mt-4">
+            <h3 className="text-lg font-semibold text-gray-800">{plan.title}</h3>
+            <h4 className="text-2xl font-bold mt-2 text-gray-900">{plan.subtitle}</h4>
+            <div className="text-4xl font-bold mt-4 text-gray-900">
               R$ {plan.price}
               <span className="text-lg font-normal text-gray-600">/mês</span>
             </div>
             
             <div className="mt-6 space-y-4">
               {plan.features.map((feature, idx) => (
-                <div key={idx} className="flex items-center gap-2">
+                <div key={idx} className="flex items-start gap-2">
                   {feature.included ? (
-                    <span className="text-green-500">✓</span>
+                    <span className="text-green-500 mt-1">✓</span>
                   ) : (
-                    <span className="text-gray-400">×</span>
+                    <span className="text-gray-400 mt-1">×</span>
                   )}
-                  <span className="flex-1">{feature.text}</span>
+                  <span className="flex-1 text-gray-700">{feature.text}</span>
                   {feature.additionalPrice && (
-                    <span className="text-sm text-red-500">
+                    <span className="text-sm text-red-500 whitespace-nowrap">
                       +{feature.additionalPrice.toFixed(2)}
                     </span>
                   )}
