@@ -68,7 +68,9 @@ export const Navigation = () => {
 
           {/* Toggle de Navegação Mobile */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-white" onClick={() => setIsOpen(!isOpen)}>
+            <Button variant="ghost" size="icon" className={`${
+              scrolled ? 'text-gray-700' : 'text-white'
+            }`} onClick={() => setIsOpen(!isOpen)}>
               <Menu className="h-6 w-6" />
             </Button>
           </div>
@@ -76,20 +78,26 @@ export const Navigation = () => {
 
         {/* Menu de Navegação Mobile */}
         {isOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              <a href="#features" className="text-white/80 hover:text-white">
+          <div className="md:hidden py-4 animate-fade-in bg-white/10 backdrop-blur-lg rounded-lg mx-4">
+            <div className="flex flex-col space-y-4 px-4">
+              <a href="#features" className={`${
+                scrolled ? 'text-gray-700' : 'text-white/80'
+              } hover:text-primary transition-colors`}>
                 Recursos
               </a>
-              <a href="#testimonials" className="text-white/80 hover:text-white">
+              <a href="#testimonials" className={`${
+                scrolled ? 'text-gray-700' : 'text-white/80'
+              } hover:text-primary transition-colors`}>
                 Depoimentos
               </a>
-              <a href="#pricing" className="text-white/80 hover:text-white">
+              <a href="#pricing" className={`${
+                scrolled ? 'text-gray-700' : 'text-white/80'
+              } hover:text-primary transition-colors`}>
                 Preços
               </a>
               <div className="flex flex-col space-y-2">
                 <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener noreferrer">
-                  <Button variant="secondary" className={`${
+                  <Button variant="secondary" className={`w-full ${
                     scrolled 
                       ? "bg-transparent border-2 border-primary !text-primary font-semibold hover:bg-primary/5"
                       : "bg-transparent border-2 border-white !text-white font-semibold hover:bg-white/10"

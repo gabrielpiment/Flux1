@@ -1,5 +1,5 @@
-import React from 'react';
-import { ChevronRight, Gift } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronRight, ChevronLeft, Gift } from 'lucide-react';
 
 interface PricingPlan {
   title: string;
@@ -13,6 +13,58 @@ interface PricingPlan {
 }
 
 const PricingCards: React.FC = () => {
+  const [showLeftScroll, setShowLeftScroll] = useState(false);
+  const [showRightScroll, setShowRightScroll] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout>();
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    setShowLeftScroll(container.scrollLeft > 0);
+    setShowRightScroll(
+      container.scrollLeft < container.scrollWidth - container.clientWidth - 10
+    );
+  };
+
+  const scrollToNext = () => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const cardWidth = 300; // Largura do card + gap
+      const currentScroll = container.scrollLeft;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      
+      if (currentScroll >= maxScroll) {
+        // Se estiver no final, volta para o início
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollTo({
+          left: currentScroll + cardWidth,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (!isPaused) {
+      intervalRef.current = setInterval(scrollToNext, 3000);
+    }
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPaused]);
+
+  const handleTouchStart = () => {
+    setIsPaused(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsPaused(false);
+  };
+
   const plans: PricingPlan[] = [
     {
       title: 'Basic',
@@ -27,7 +79,32 @@ const PricingCards: React.FC = () => {
         { included: false, text: 'Integrações com redes sociais', additionalPrice: 99.90 },
       ],
     },
-    // Adicione outros planos aqui se necessário
+    {
+      title: 'Pro',
+      subtitle: 'Digital Flux Pro',
+      price: 499,
+      features: [
+        { included: true, text: '3 Conexões' },
+        { included: true, text: '10 usuários' },
+        { included: true, text: 'Disparos em massa' },
+        { included: true, text: 'Automações de fluxo' },
+        { included: false, text: 'Integrações com APIs' },
+        { included: true, text: 'Integrações com redes sociais' },
+      ],
+    },
+    {
+      title: 'Enterprise',
+      subtitle: 'Digital Flux Enterprise',
+      price: 999,
+      features: [
+        { included: true, text: 'Conexões ilimitadas' },
+        { included: true, text: 'Usuários ilimitados' },
+        { included: true, text: 'Disparos em massa' },
+        { included: true, text: 'Automações de fluxo' },
+        { included: true, text: 'Integrações com APIs' },
+        { included: true, text: 'Integrações com redes sociais' },
+      ],
+    },
   ];
 
   return (
@@ -43,7 +120,15 @@ const PricingCards: React.FC = () => {
       </div>
 
       {/* Container dos cards com scroll horizontal */}
-      <div className="flex overflow-x-auto gap-4 pb-6 px-4 snap-x snap-mandatory hide-scrollbar">
+      <div 
+        ref={containerRef}
+        className="flex overflow-x-auto gap-4 pb-6 px-4 snap-x snap-mandatory hide-scrollbar"
+        onScroll={handleScroll}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onMouseEnter={handleTouchStart}
+        onMouseLeave={handleTouchEnd}
+      >
         {plans.map((plan, index) => (
           <div
             key={index}
@@ -89,9 +174,27 @@ const PricingCards: React.FC = () => {
         ))}
       </div>
 
-      {/* Indicadores de scroll */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white/90 to-transparent p-2 flex items-center md:hidden">
-        <ChevronRight className="w-6 h-6 text-gray-400 animate-pulse" />
+      {/* Indicador de scroll esquerdo */}
+      {showLeftScroll && (
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white/90 to-transparent p-2 flex items-center md:hidden">
+          <div className="bg-white/80 rounded-full p-2 shadow-lg backdrop-blur-sm">
+            <ChevronLeft className="w-6 h-6 text-gray-600 animate-pulse" />
+          </div>
+        </div>
+      )}
+
+      {/* Indicador de scroll direito */}
+      {showRightScroll && (
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white/90 to-transparent p-2 flex items-center md:hidden">
+          <div className="bg-white/80 rounded-full p-2 shadow-lg backdrop-blur-sm">
+            <ChevronRight className="w-6 h-6 text-gray-600 animate-pulse" />
+          </div>
+        </div>
+      )}
+
+      {/* Indicador de texto */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-gray-500 bg-white/80 px-3 py-1 rounded-full shadow-sm backdrop-blur-sm md:hidden">
+        Arraste para ver mais planos
       </div>
     </div>
   );
