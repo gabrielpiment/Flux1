@@ -200,6 +200,11 @@ const Index = () => {
                 Conhecer a Plataforma
               </Button>
             </div>
+            <div className="flex justify-center mt-6">
+              <span className="bg-red-600 text-white py-2 px-6 rounded-full inline-block font-medium shadow-lg">
+                Experimente grátis por 7 dias
+              </span>
+            </div>
           </div>
         </div>
       </section>
