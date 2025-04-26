@@ -122,7 +122,7 @@ const PricingCards: React.FC = () => {
       {/* Container dos cards com scroll horizontal */}
       <div 
         ref={containerRef}
-        className="flex overflow-x-auto gap-4 pb-6 px-4 snap-x snap-mandatory hide-scrollbar"
+        className="flex overflow-x-auto gap-6 pb-6 px-6 md:px-4 snap-x snap-mandatory hide-scrollbar"
         onScroll={handleScroll}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -132,7 +132,7 @@ const PricingCards: React.FC = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[300px] bg-white rounded-lg p-6 shadow-lg snap-center relative overflow-hidden"
+            className="flex-shrink-0 w-[280px] bg-white rounded-lg p-6 shadow-lg snap-center relative overflow-hidden first:ml-2 last:mr-2"
           >
             {/* Tag de teste grátis no card */}
             <div className="absolute -right-8 top-6 bg-blue-600 text-white px-8 py-1 rotate-45 transform text-sm font-semibold shadow-md">
