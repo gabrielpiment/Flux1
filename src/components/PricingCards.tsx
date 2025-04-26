@@ -122,7 +122,7 @@ const PricingCards: React.FC = () => {
       {/* Container dos cards com scroll horizontal */}
       <div 
         ref={containerRef}
-        className="flex overflow-x-auto gap-6 pb-6 px-6 md:px-4 snap-x snap-mandatory hide-scrollbar"
+        className="flex overflow-x-auto gap-6 pb-12 px-4 snap-x snap-mandatory hide-scrollbar relative"
         onScroll={handleScroll}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -132,14 +132,14 @@ const PricingCards: React.FC = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[280px] bg-white rounded-xl p-6 shadow-sm snap-center relative overflow-hidden first:ml-2 last:mr-2"
+            className="flex-shrink-0 w-[300px] bg-white rounded-2xl p-6 shadow-md snap-center relative overflow-visible mx-2"
           >
             {/* Tag de teste grátis no card */}
-            <div className="absolute -right-10 top-6 bg-blue-600 text-white px-8 py-1 rotate-45 transform text-sm font-semibold shadow-sm">
+            <div className="absolute -right-2 top-4 bg-blue-600 text-white px-4 py-1 text-sm font-semibold shadow-md rounded-lg transform rotate-0 z-10">
               7 dias grátis
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800">{plan.title}</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mt-2">{plan.title}</h3>
             <h4 className="text-2xl font-bold mt-2 text-gray-900">{plan.subtitle}</h4>
             <div className="text-4xl font-bold mt-4 text-gray-900">
               R$ {plan.price}
@@ -148,23 +148,25 @@ const PricingCards: React.FC = () => {
             
             <div className="mt-6 space-y-4">
               {plan.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-2">
+                <div key={idx} className="flex items-start gap-3">
                   {feature.included ? (
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 flex-shrink-0 mt-1">✓</span>
                   ) : (
-                    <span className="text-gray-400 mt-1">×</span>
+                    <span className="text-gray-400 flex-shrink-0 mt-1">×</span>
                   )}
-                  <span className="flex-1 text-gray-700">{feature.text}</span>
-                  {feature.additionalPrice && (
-                    <span className="text-sm text-red-500 whitespace-nowrap">
-                      +{feature.additionalPrice.toFixed(2)}
-                    </span>
-                  )}
+                  <div className="flex flex-wrap justify-between items-start flex-1 gap-1">
+                    <span className="text-gray-700">{feature.text}</span>
+                    {feature.additionalPrice && (
+                      <span className="text-sm text-red-500 font-medium">
+                        +R$ {feature.additionalPrice.toFixed(2)}
+                      </span>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
 
-            <button className="w-full mt-6 bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors">
+            <button className="w-full mt-6 bg-red-600 text-white py-3 rounded-xl hover:bg-red-700 transition-colors font-semibold">
               Começar teste grátis
             </button>
             <p className="text-center text-sm text-gray-500 mt-2">
@@ -176,8 +178,8 @@ const PricingCards: React.FC = () => {
 
       {/* Indicador de scroll esquerdo */}
       {showLeftScroll && (
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white/90 to-transparent p-2 flex items-center md:hidden">
-          <div className="bg-white/80 rounded-full p-2 shadow-lg backdrop-blur-sm">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white/90 to-transparent p-2 flex items-center md:hidden z-20">
+          <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
             <ChevronLeft className="w-6 h-6 text-gray-600 animate-pulse" />
           </div>
         </div>
@@ -185,15 +187,15 @@ const PricingCards: React.FC = () => {
 
       {/* Indicador de scroll direito */}
       {showRightScroll && (
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white/90 to-transparent p-2 flex items-center md:hidden">
-          <div className="bg-white/80 rounded-full p-2 shadow-lg backdrop-blur-sm">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white/90 to-transparent p-2 flex items-center md:hidden z-20">
+          <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
             <ChevronRight className="w-6 h-6 text-gray-600 animate-pulse" />
           </div>
         </div>
       )}
 
       {/* Indicador de texto */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-gray-500 bg-white/80 px-3 py-1 rounded-full shadow-sm backdrop-blur-sm md:hidden">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-gray-500 bg-white/90 px-3 py-1 rounded-full shadow-sm backdrop-blur-sm md:hidden z-20">
         Arraste para ver mais planos
       </div>
     </div>
