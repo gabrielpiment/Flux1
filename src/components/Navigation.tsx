@@ -33,17 +33,17 @@ export const Navigation = () => {
 
           {/* Navegação Desktop */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className={`${
+            <a href="/#features" className={`${
               scrolled ? 'text-gray-700' : 'text-white'
             } hover:text-primary transition-colors`}>
               Recursos
             </a>
-            <a href="#testimonials" className={`${
+            <a href="/#testimonials" className={`${
               scrolled ? 'text-gray-700' : 'text-white'
             } hover:text-primary transition-colors`}>
               Depoimentos
             </a>
-            <a href="#pricing" className={`${
+            <a href="/#pricing" className={`${
               scrolled ? 'text-gray-700' : 'text-white'
             } hover:text-primary transition-colors`}>
               Preços
@@ -80,17 +80,17 @@ export const Navigation = () => {
         {isOpen && (
           <div className="md:hidden py-4 animate-fade-in bg-white/10 backdrop-blur-lg rounded-lg mx-4">
             <div className="flex flex-col space-y-4 px-4">
-              <a href="#features" className={`${
+              <a href="/#features" className={`${
                 scrolled ? 'text-gray-700' : 'text-white/80'
               } hover:text-primary transition-colors`}>
                 Recursos
               </a>
-              <a href="#testimonials" className={`${
+              <a href="/#testimonials" className={`${
                 scrolled ? 'text-gray-700' : 'text-white/80'
               } hover:text-primary transition-colors`}>
                 Depoimentos
               </a>
-              <a href="#pricing" className={`${
+              <a href="/#pricing" className={`${
                 scrolled ? 'text-gray-700' : 'text-white/80'
               } hover:text-primary transition-colors`}>
                 Preços

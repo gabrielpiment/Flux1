@@ -547,9 +547,12 @@ const Index = () => {
                 <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
               </div>
             </div>
-            
+          </div>
+          
+          {/* Texto indicativo e pontos logo abaixo dos cards */}
+          <div className="md:hidden mt-6">
             {/* Texto indicativo permanente */}
-            <div className="text-center mt-6 mb-4">
+            <div className="text-center mb-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 inline-block">
                 <p className="text-white/80 text-sm font-medium flex items-center gap-2">
                   <span>←</span>
@@ -560,7 +563,7 @@ const Index = () => {
             </div>
             
             {/* Indicadores de pontos */}
-            <div className="flex justify-center gap-2 mt-4">
+            <div className="flex justify-center gap-2">
               {pricing.map((_, index) => (
                 <div
                   key={index}
@@ -568,6 +571,81 @@ const Index = () => {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção FAQ */}
+      <section className="relative py-20 px-4 bg-black overflow-hidden">
+        {/* Fundo animado */}
+        <div className="absolute inset-0">
+          <TechBackground />
+          <AnimatedGrid />
+        </div>
+        
+        <div className="relative z-10 container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+            Perguntas Frequentes
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                question: "Funciona no celular?",
+                answer: "Sim, é só acessar o link do aplicativo da mesma maneira que você faz no computador, e todos os recursos estarão disponíveis para você."
+              },
+              {
+                question: "Quantos atendentes eu posso adicionar?",
+                answer: "O Flux Conversa proporciona total flexibilidade na quantidade de colaboradores que você pode incluir, oferecendo planos variados e ajustados ao tamanho da sua equipe. Fale conosco para descobrir a solução ideal para atender às necessidades da sua empresa."
+              },
+              {
+                question: "Existe algum contrato?",
+                answer: "No Flux Conversa, você tem total liberdade. Nossos serviços não exigem contratos de fidelidade nem geram preocupações com multas por cancelamento. Utilize o Flux Conversa pelo período que precisar, com toda a flexibilidade que sua empresa merece."
+              },
+              {
+                question: "Posso testar o sistema?",
+                answer: "Sim, trabalhamos com testes de até 7 dias sem pagamento prévio. Assim que você entrar em contato com nosso time de vendas, terá a oportunidade de conhecer a ferramenta em detalhes e ver como ela pode atender às necessidades do seu negócio. Nosso objetivo é garantir que você tenha todas as informações necessárias para tomar a melhor decisão."
+              },
+              {
+                question: "Preciso deixar meu computador ligado para o chatbot funcionar?",
+                answer: "Não! O chatbot do Flux Conversa opera 100% em nossos servidores, ou seja, funciona 24 horas por dia, mesmo se seu computador estiver desligado. Todas as mensagens dos seus clientes são recebidas e processadas automaticamente pela plataforma, garantindo que você nunca perca uma interação importante."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-black/60 backdrop-blur-sm rounded-lg border border-red-500/20 hover:border-red-500/40 transition-all duration-300">
+                <details className="group">
+                  <summary className="flex justify-between items-center p-6 cursor-pointer hover:bg-red-500/10 transition-colors">
+                    <h3 className="text-lg font-semibold text-red-400 group-open:text-red-300">
+                      {faq.question}
+                    </h3>
+                    <ChevronRight className="w-5 h-5 text-white/60 transform group-open:rotate-90 transition-transform" />
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <div className="text-white/90 leading-relaxed">
+                      {faq.answer}
+                      {index === 4 && (
+                        <div className="mt-4 space-y-2">
+                          <p className="font-medium text-white">Como isso é possível?</p>
+                          <ul className="space-y-2 ml-4">
+                            <li className="flex items-start gap-2">
+                              <span className="text-red-400 mt-1">•</span>
+                              <span><strong>Hospedagem em nuvem:</strong> A plataforma está sempre online, sem depender do seu dispositivo.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-red-400 mt-1">•</span>
+                              <span><strong>Processamento automático:</strong> As respostas são enviadas instantaneamente, sem intervenção manual.</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-red-400 mt-1">•</span>
+                              <span><strong>Segurança total:</strong> Seus dados e conversas ficam armazenados com privacidade em nossos servidores.</span>
+                            </li>
+                          </ul>
+                          <p className="mt-3 font-medium text-white">Resultado: Atendimento contínuo, eficiência garantida e paz de espírito para você!</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </details>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -594,6 +672,52 @@ const Index = () => {
           </a>
         </div>
       </section>
+
+      {/* Rodapé */}
+      <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-12 px-4">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">F</span>
+              </div>
+              <span className="text-white font-semibold text-lg">Flux</span>
+            </div>
+            
+            {/* Links */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 text-center md:text-left">
+              <a 
+                href="/terms" 
+                className="text-white/70 hover:text-white transition-colors text-sm"
+              >
+                Termos de Uso
+              </a>
+              <a 
+                href="/privacy" 
+                className="text-white/70 hover:text-white transition-colors text-sm"
+              >
+                Política de Privacidade
+              </a>
+              <a 
+                href="https://crm.fluxconversa.com.br/login" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
+              >
+                Acessar Plataforma
+              </a>
+            </div>
+          </div>
+          
+          {/* Copyright */}
+          <div className="mt-8 pt-8 border-t border-white/10 text-center">
+            <p className="text-white/50 text-sm">
+              © 2024 Flux. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
