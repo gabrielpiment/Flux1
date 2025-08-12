@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/Flux1/",
+  // Removendo base path para deploy no Vercel
   server: {
     host: "::",
     port: 8080,

@@ -1,26 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
-import { Search, Star, Users, Check, BadgeCheck, ChevronRight, X, Bot, Target, Zap, BarChart3, Share2, Globe } from "lucide-react";
+import { Check, BadgeCheck, ChevronRight, X, Bot, Target, Zap, BarChart3, Share2, Globe, Headphones, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect, useRef } from "react";
+import TechBackground from "@/components/TechBackground";
+import AnimatedGrid from "@/components/AnimatedGrid";
+import HolographicEffect from "@/components/HolographicEffect";
 
-const features = [
-  {
-    icon: Search,
-    title: "Busca Poderosa",
-    description: "Encontre o que precisa instantaneamente com nossas capacidades avançadas de busca.",
-  },
-  {
-    icon: Star,
-    title: "Recursos de Ponta",
-    description: "Ferramentas líderes de mercado que te ajudam a alcançar mais.",
-  },
-  {
-    icon: Users,
-    title: "Colaboração em Equipe",
-    description: "Trabalhe em conjunto perfeitamente com sua equipe em tempo real.",
-  },
-];
+
 
 const testimonials = [
   {
@@ -142,9 +129,7 @@ const pricing = [
 
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [currentFeature, setCurrentFeature] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
-  const featuresRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -154,35 +139,25 @@ const Index = () => {
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (window.innerWidth < 768) {
-        setCurrentFeature((prev) => (prev + 1) % 5);
-        featuresRef.current?.scrollTo({
-          left: (window.innerWidth * 0.85 + 32) * ((currentFeature + 1) % 5),
-          behavior: 'smooth'
-        });
-      }
-    }, 5000);
 
-    return () => clearInterval(timer);
-  }, [currentFeature]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowScrollHint(false);
-    }, 5000);
-
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#4A1118] to-[#E31D3C]">
+    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#4A1118] to-[#E31D3C] relative overflow-hidden">
+      <TechBackground />
+      <AnimatedGrid />
       <Navigation />
       
       {/* Seção Hero */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto">
+      <section className="pt-32 pb-20 px-4 relative z-10">
+        <HolographicEffect />
+        <div className="container mx-auto relative z-20">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white animate-fade-in text-center">
               Transforme Relacionamentos em Resultados
@@ -210,7 +185,7 @@ const Index = () => {
       </section>
 
       {/* Seção Sobre Nós */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white relative z-10">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary hover:text-primary/80 transition-colors cursor-default group">
             <span className="inline-block transform group-hover:scale-105 transition-transform duration-300">Sobre Nós</span>
@@ -224,90 +199,169 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Seção de Recursos */}
-      <section id="features" className="py-20 px-4 bg-gray-50 relative">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-primary hover:text-primary/80 transition-colors cursor-default group">
-            <span className="inline-block transform group-hover:scale-105 transition-transform duration-300">
-              Funcionalidades
-            </span>
-          </h2>
-          <p className="text-xl text-center mb-12 text-gray-600">
-            Tudo o que Você Precisa em um Só Lugar
-          </p>
-          <div 
-            ref={featuresRef}
-            className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
-            style={{ scrollBehavior: 'smooth' }}
-          >
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 0 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <Target className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Gestão de Leads</h3>
+      {/* Seção de Screenshots da Plataforma */}
+      <section className="py-20 px-4 bg-black relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-black to-red-900/5" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.1),transparent_70%)]" />
+        </div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(239,68,68,0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(239,68,68,0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+            animation: 'matrix-rain 20s linear infinite'
+          }} />
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Conheça a <span className="text-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]">Plataforma</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Veja como nossa interface intuitiva e poderosa pode transformar a gestão do seu negócio
+            </p>
+          </div>
+          
+          {/* Screenshots Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Screenshot 1 - Chat Interface */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Interface de Chat</h3>
+                      <p className="text-sm text-gray-400">Atendimento integrado e intuitivo</p>
+                    </div>
+                  </div>
+                </div>
+                {/* Neon Border Effect */}
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Organize e acompanhe seus leads de forma eficiente, desde a captação até o fechamento.</p>
             </div>
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 1 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <Zap className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Automação de Tarefas</h3>
+            
+            {/* Screenshot 2 - Dashboard */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <BarChart3 className="w-8 h-8" />
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Dashboard Analítico</h3>
+                      <p className="text-sm text-gray-400">Métricas e insights em tempo real</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Reduza o trabalho manual com automações inteligentes que economizam tempo e recursos.</p>
             </div>
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 2 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <BarChart3 className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Relatórios Personalizados</h3>
+            
+            {/* Screenshot 3 - Automation */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <Bot className="w-8 h-8" />
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Automação Inteligente</h3>
+                      <p className="text-sm text-gray-400">Fluxos automatizados personalizados</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Acesse insights valiosos sobre o desempenho da sua equipe e identifique oportunidades de melhoria.</p>
             </div>
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 3 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <Share2 className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Integrações</h3>
+            
+            {/* Screenshot 4 - CRM */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <Users className="w-8 h-8" />
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Gestão de Contatos</h3>
+                      <p className="text-sm text-gray-400">CRM completo e organizado</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Conecte-se facilmente com ferramentas como WhatsApp, Instagram, Facebook, Telegram e e-mail.</p>
             </div>
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 4 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <Globe className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Acesso Remoto</h3>
+            
+            {/* Screenshot 5 - Reports */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <Target className="w-8 h-8" />
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Relatórios Avançados</h3>
+                      <p className="text-sm text-gray-400">Análises detalhadas de performance</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Gerencie suas operações de qualquer lugar, com segurança e praticidade.</p>
             </div>
-            <div className={`w-[85vw] md:w-auto flex-shrink-0 snap-start p-6 rounded-lg border bg-white shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-primary/20 group cursor-pointer ${currentFeature === 5 ? 'scale-[1.02]' : ''}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <Bot className="w-6 h-6 text-primary" />
-                <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Agentes de IA</h3>
+            
+            {/* Screenshot 6 - Integrations */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
+                    <div className="text-red-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <Globe className="w-8 h-8" />
+                      </div>
+                      <h3 className="font-semibold text-white mb-2">Integrações</h3>
+                      <p className="text-sm text-gray-400">Conecte com suas ferramentas favoritas</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
-              <p className="text-gray-600 group-hover:text-gray-700 transition-colors">Crie assistentes virtuais inteligentes para automatizar atendimentos e aumentar a eficiência do seu negócio.</p>
             </div>
           </div>
-          {/* Indicadores de navegação */}
-          <div className="flex justify-center mt-8 gap-2 md:hidden">
-            {[...Array(6)].map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentFeature ? "bg-primary w-4" : "bg-gray-300"
-                }`}
-                onClick={() => {
-                  setCurrentFeature(index);
-                  featuresRef.current?.scrollTo({
-                    left: (window.innerWidth * 0.85 + 32) * index,
-                    behavior: 'smooth'
-                  });
-                }}
-              />
-            ))}
-          </div>
-          {/* Indicador de scroll */}
-          <div className={`md:hidden fixed right-4 top-1/2 transform -translate-y-1/2 transition-opacity duration-500 ${showScrollHint ? 'opacity-70' : 'opacity-0'}`}>
-            <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
-              <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
-            </div>
+          
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400">
+              Experimente Gratuitamente
+            </Button>
           </div>
         </div>
+        
+        {/* Floating Tech Elements */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-red-500 rounded-full animate-pulse opacity-60" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-red-400 rounded-full animate-pulse opacity-40" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse opacity-50" style={{animationDelay: '2s'}} />
+        <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-red-400 rounded-full animate-pulse opacity-30" style={{animationDelay: '3s'}} />
       </section>
 
       {/* Seção de Depoimentos */}
