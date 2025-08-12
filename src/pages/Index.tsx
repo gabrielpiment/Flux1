@@ -351,9 +351,11 @@ const Index = () => {
           
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400">
-              Experimente Gratuitamente
-            </Button>
+            <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400">
+                Experimente Gratuitamente
+              </Button>
+            </a>
           </div>
         </div>
         
