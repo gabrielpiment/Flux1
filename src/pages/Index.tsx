@@ -539,10 +539,34 @@ const Index = () => {
               </Button>
             </a>
           </div>
-          {/* Indicador de scroll */}
-          <div className={`md:hidden fixed right-4 top-1/2 transform -translate-y-1/2 transition-opacity duration-500 ${showScrollHint ? 'opacity-70' : 'opacity-0'}`}>
-            <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
-              <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
+          {/* Indicadores de scroll melhorados para mobile */}
+          <div className="md:hidden">
+            {/* Indicador de scroll direito */}
+            <div className={`fixed right-4 top-1/2 transform -translate-y-1/2 transition-opacity duration-500 ${showScrollHint ? 'opacity-70' : 'opacity-30'}`}>
+              <div className="bg-white/90 rounded-full p-2 shadow-lg backdrop-blur-sm">
+                <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
+              </div>
+            </div>
+            
+            {/* Texto indicativo permanente */}
+            <div className="text-center mt-6 mb-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 inline-block">
+                <p className="text-white/80 text-sm font-medium flex items-center gap-2">
+                  <span>←</span>
+                  Deslize para ver todos os planos
+                  <span>→</span>
+                </p>
+              </div>
+            </div>
+            
+            {/* Indicadores de pontos */}
+            <div className="flex justify-center gap-2 mt-4">
+              {pricing.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-white/40 transition-all duration-300"
+                />
+              ))}
             </div>
           </div>
         </div>
