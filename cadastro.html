@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Flux WhatsApp Extension</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 40'%3E%3Ctext x='10' y='25' font-family='Inter, sans-serif' font-size='18' font-weight='bold' fill='white'%3EFluxWeb%3C/text%3E%3C/svg%3E" alt="FluxWeb" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#depoimentos">Depoimentos</a>
+                <a href="index.html#precos">Preços</a>
+                <a href="cadastro.html">Cadastro</a>
+                <button class="btn-cta" onclick="window.location.href='cadastro.html'">Criar Conta</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="registration" id="cadastro">
+        <div class="floating-element-1"></div>
+        <div class="registration-container">
+            <h2>Cadastre-se e Transforme seu WhatsApp</h2>
+            <p>Preencha os dados abaixo e nossa equipe entrará em contato para realizar a instalação da extensão</p>
+            
+            <form class="registration-form" id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Nome Completo *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyName">Nome da Empresa *</label>
+                    <input type="text" id="companyName" name="companyName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cnpj">CNPJ *</label>
+                    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Celular *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="plan">Plano Desejado *</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Selecione um plano</option>
+                        <option value="starter">Digital Flux - R$ 519/ano (1 licença)</option>
+                        <option value="growth">Growth Digital Flux - R$ 799/ano (2 licenças)</option>
+                        <option value="premium">Pro Digital Flux - R$ 997/ano (3 licenças)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-submit">Enviar Cadastro</button>
+            </form>
+            
+            <div class="back-link">
+                <a href="index.html" class="btn-back">← Voltar para página inicial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-icon">✓</div>
+                <h3>Cadastro Realizado com Sucesso!</h3>
+                <p>Em breve alguém da nossa equipe entrará em contato para realizar a instalação da extensão Flux WhatsApp.</p>
+                <button class="btn-popup" onclick="closePopup()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 40'%3E%3Ctext x='10' y='25' font-family='Inter, sans-serif' font-size='18' font-weight='bold' fill='white'%3EFluxWeb%3C/text%3E%3C/svg%3E" alt="FluxWeb" class="footer-logo">
+        </div>
+    </footer>
+
+    <script>
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+        
+        // Get plan from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedPlan = urlParams.get('plan');
+        if (selectedPlan) {
+            document.getElementById('plan').value = selectedPlan;
+        }
+        
+        // CNPJ mask
+        document.getElementById('cnpj').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{2})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1/$2');
+            value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            e.target.value = value;
+        });
+        
+        // Phone mask
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{2})(\d)/, '($1) $2');
+            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            e.target.value = value;
+        });
+        
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                companyName: document.getElementById('companyName').value,
+                cnpj: document.getElementById('cnpj').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                plan: document.getElementById('plan').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                // Create URL with query parameters for GET request
+                const params = new URLSearchParams(formData);
+                const webhookUrl = `https://webhook.elevenapp.com.br/webhook/584276f7-4469-40f9-a674-22251138fe9a?${params.toString()}`;
+                
+                // Send data to webhook using GET method
+                const response = await fetch(webhookUrl, {
+                    method: 'GET'
+                });
+                
+                // Show success popup regardless of webhook response
+                document.getElementById('popupOverlay').style.display = 'flex';
+                
+                // Optional: Log response for debugging
+                if (response.ok) {
+                    console.log('Dados enviados com sucesso para o webhook');
+                } else {
+                    console.log('Webhook retornou erro, mas cadastro foi processado');
+                }
+            } catch (error) {
+                // Show success popup even if webhook fails
+                console.log('Erro ao enviar para webhook:', error);
+                document.getElementById('popupOverlay').style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "fluxweb",
+  "version": "1.0.0",
+  "description": "FluxWeb - Landing page para extensão WhatsApp",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site deployed'"
+  },
+  "keywords": [
+    "whatsapp",
+    "extension",
+    "landing-page",
+    "fluxweb"
+  ],
+  "author": "FluxWeb Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
