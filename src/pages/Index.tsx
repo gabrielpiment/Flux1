@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import TechBackground from "@/components/TechBackground";
 import AnimatedGrid from "@/components/AnimatedGrid";
 import HolographicEffect from "@/components/HolographicEffect";
+import { SignupModal } from "@/components/SignupModal";
 
 
 
@@ -130,6 +131,7 @@ const pricing = [
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -166,11 +168,14 @@ const Index = () => {
               Descubra uma nova forma de gerenciar seus clientes com eficiência e inteligência. Nosso CRM foi desenvolvido para simplificar processos, automatizar tarefas e proporcionar uma visão completa do seu funil de vendas. Ideal para pequenas e médias empresas que buscam crescimento sustentável.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button size="lg" variant="default" className="w-full">
-                  Vamos Começar
-                </Button>
-              </a>
+              <Button 
+                size="lg" 
+                variant="default" 
+                className="w-full sm:w-auto"
+                onClick={() => setIsSignupModalOpen(true)}
+              >
+                Vamos Começar
+              </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 Conhecer a Plataforma
               </Button>
@@ -351,11 +356,12 @@ const Index = () => {
           
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400">
-                Experimente Gratuitamente
-              </Button>
-            </a>
+            <Button 
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400"
+              onClick={() => setIsSignupModalOpen(true)}
+            >
+              Experimente Gratuitamente
+            </Button>
           </div>
         </div>
         
@@ -502,18 +508,17 @@ const Index = () => {
                     </Button>
                   </a>
                 ) : (
-                  <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer" className="w-full">
-                    <Button
-                      variant={plan.buttonVariant}
-                      className={`w-full ${
-                        plan.highlighted
-                          ? "bg-white text-primary hover:bg-gray-200 hover:text-primary/90 font-medium transition-colors"
-                          : "border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
-                      }`}
-                    >
-                      {plan.buttonText}
-                    </Button>
-                  </a>
+                  <Button
+                    variant={plan.buttonVariant}
+                    className={`w-full ${
+                      plan.highlighted
+                        ? "bg-white text-primary hover:bg-gray-200 hover:text-primary/90 font-medium transition-colors"
+                        : "border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+                    }`}
+                    onClick={() => setIsSignupModalOpen(true)}
+                  >
+                    {plan.buttonText}
+                  </Button>
                 )}
               </div>
             ))}
@@ -661,15 +666,14 @@ const Index = () => {
           <p className="text-lg mb-8 text-white/90">
             Junte-se a milhares de empresas que já estão usando nossa plataforma para impulsionar seus resultados.
           </p>
-          <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90"
-            >
-              Abra uma Nova Conta
-            </Button>
-          </a>
+          <Button
+            variant="secondary"
+            size="lg"
+            className="bg-white text-primary hover:bg-white/90"
+            onClick={() => setIsSignupModalOpen(true)}
+          >
+            Abra uma Nova Conta
+          </Button>
         </div>
       </section>
 
@@ -718,6 +722,11 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      <SignupModal 
+        isOpen={isSignupModalOpen} 
+        onClose={() => setIsSignupModalOpen(false)} 
+      />
     </div>
   );
 };

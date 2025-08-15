@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { SignupModal } from "./SignupModal";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,11 +60,13 @@ export const Navigation = () => {
                   Login
                 </Button>
               </a>
-              <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer">
-                <Button variant="default" className="bg-white text-primary hover:bg-white/90">
-                  Criar Conta
-                </Button>
-              </a>
+              <Button 
+                variant="default" 
+                className="bg-white text-primary hover:bg-white/90"
+                onClick={() => setIsSignupModalOpen(true)}
+              >
+                Criar Conta
+              </Button>
             </div>
           </div>
 
@@ -105,16 +109,27 @@ export const Navigation = () => {
                     Login
                   </Button>
                 </a>
-                <a href="https://crm.fluxconversa.com.br/signup" target="_blank" rel="noopener noreferrer">
-                  <Button variant="default" className="w-full bg-white text-primary hover:bg-white/90">
-                    Criar Conta
-                  </Button>
-                </a>
+                <Button 
+                  variant="default" 
+                  className="w-full bg-white text-primary hover:bg-white/90"
+                  onClick={() => {
+                    setIsSignupModalOpen(true);
+                    setIsOpen(false);
+                  }}
+                >
+                  Criar Conta
+                </Button>
               </div>
             </div>
           </div>
         )}
       </div>
+      
+      {/* Modal de Cadastro */}
+      <SignupModal 
+        isOpen={isSignupModalOpen} 
+        onClose={() => setIsSignupModalOpen(false)} 
+      />
     </nav>
   );
 };
