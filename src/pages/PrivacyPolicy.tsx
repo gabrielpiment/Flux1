@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
               Política de Privacidade
             </h1>
             <p className="text-white/80 text-lg">
-              Última atualização: {new Date().toLocaleDateString('pt-BR')}
+              Última atualização: 12/08/2025
             </p>
           </div>
 
