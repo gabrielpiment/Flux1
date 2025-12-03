@@ -39,7 +39,7 @@ const TechBackground: React.FC = () => {
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
           opacity: Math.random() * 0.5 + 0.2,
-          color: Math.random() > 0.5 ? '#E31D3C' : '#4A1118'
+          color: Math.random() > 0.5 ? '#22C55E' : '#064E3B'
         });
       }
       
@@ -79,7 +79,7 @@ const TechBackground: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(227, 29, 60, ${opacity})`;
+            ctx.strokeStyle = `rgba(34, 197, 94, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

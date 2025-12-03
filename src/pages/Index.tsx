@@ -151,7 +151,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#4A1118] to-[#E31D3C] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#112B1A] to-[#22C55E] relative overflow-hidden">
       <TechBackground />
       <AnimatedGrid />
       <Navigation />
@@ -177,11 +177,11 @@ const Index = () => {
                 Vamos Começar
               </Button>
               <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                Conhecer a Plataforma
+                Conheça a <span className="text-green-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.5)]">Plataforma</span>
               </Button>
             </div>
             <div className="flex justify-center mt-6">
-              <span className="bg-red-600 text-white py-2 px-6 rounded-full inline-block font-medium shadow-lg">
+              <span className="bg-green-600 text-white py-2 px-6 rounded-full inline-block font-medium shadow-lg">
                 Experimente grátis por 7 dias
               </span>
             </div>
@@ -208,16 +208,16 @@ const Index = () => {
       <section className="py-20 px-4 bg-black relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-black to-red-900/5" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.1),transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 via-black to-green-900/5" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_70%)]" />
         </div>
         
         {/* Animated Grid Background */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: `
-              linear-gradient(rgba(239,68,68,0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(239,68,68,0.3) 1px, transparent 1px)
+              linear-gradient(rgba(34,197,94,0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(34,197,94,0.3) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
             animation: 'matrix-rain 20s linear infinite'
@@ -227,7 +227,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Conheça a <span className="text-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]">Plataforma</span>
+              Conheça a <span className="text-green-500 drop-shadow-[0_0_20px_rgba(34,197,94,0.5)]">Plataforma</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Veja como nossa interface intuitiva e poderosa pode transformar a gestão do seu negócio
@@ -238,12 +238,12 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Screenshot 1 - Chat Interface */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
                         </svg>
@@ -254,18 +254,18 @@ const Index = () => {
                   </div>
                 </div>
                 {/* Neon Border Effect */}
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
             
             {/* Screenshot 2 - Dashboard */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <BarChart3 className="w-8 h-8" />
                       </div>
                       <h3 className="font-semibold text-white mb-2">Dashboard Analítico</h3>
@@ -273,18 +273,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
             
             {/* Screenshot 3 - Automation */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <Bot className="w-8 h-8" />
                       </div>
                       <h3 className="font-semibold text-white mb-2">Automação Inteligente</h3>
@@ -292,18 +292,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
             
             {/* Screenshot 4 - CRM */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <Users className="w-8 h-8" />
                       </div>
                       <h3 className="font-semibold text-white mb-2">Gestão de Contatos</h3>
@@ -311,18 +311,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
             
             {/* Screenshot 5 - Reports */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <Target className="w-8 h-8" />
                       </div>
                       <h3 className="font-semibold text-white mb-2">Relatórios Avançados</h3>
@@ -330,18 +330,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
             
             {/* Screenshot 6 - Integrations */}
             <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
-              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-500">
-                <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-lg p-4">
-                  <div className="aspect-video bg-gray-800/50 rounded border border-red-500/20 flex items-center justify-center group-hover:border-red-500/40 transition-all duration-500">
-                    <div className="text-red-400 text-center">
-                      <div className="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-500" />
+              <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-lg p-1 border border-green-500/30 group-hover:border-green-500/60 transition-all duration-500">
+                <div className="bg-gradient-to-br from-green-500/10 to-transparent rounded-lg p-4">
+                  <div className="aspect-video bg-gray-800/50 rounded border border-green-500/20 flex items-center justify-center group-hover:border-green-500/40 transition-all duration-500">
+                    <div className="text-green-400 text-center">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
                         <Globe className="w-8 h-8" />
                       </div>
                       <h3 className="font-semibold text-white mb-2">Integrações</h3>
@@ -349,7 +349,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 rounded-lg border border-red-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                <div className="absolute inset-0 rounded-lg border border-green-500/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
               </div>
             </div>
           </div>
@@ -357,7 +357,7 @@ const Index = () => {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <Button 
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-red-500/25 transition-all duration-300 border border-red-500/50 hover:border-red-400"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-green-500/25 transition-all duration-300 border border-green-500/50 hover:border-green-400"
               onClick={() => setIsSignupModalOpen(true)}
             >
               Experimente Gratuitamente
@@ -366,10 +366,10 @@ const Index = () => {
         </div>
         
         {/* Floating Tech Elements */}
-        <div className="absolute top-20 left-10 w-2 h-2 bg-red-500 rounded-full animate-pulse opacity-60" />
-        <div className="absolute top-40 right-20 w-1 h-1 bg-red-400 rounded-full animate-pulse opacity-40" style={{animationDelay: '1s'}} />
-        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse opacity-50" style={{animationDelay: '2s'}} />
-        <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-red-400 rounded-full animate-pulse opacity-30" style={{animationDelay: '3s'}} />
+        <div className="absolute top-20 left-10 w-2 h-2 bg-green-500 rounded-full animate-pulse opacity-60" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-40" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse opacity-50" style={{animationDelay: '2s'}} />
+        <div className="absolute bottom-20 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-30" style={{animationDelay: '3s'}} />
       </section>
 
       {/* Seção de Depoimentos */}
@@ -490,7 +490,7 @@ const Index = () => {
                           <span className={`${plan.highlighted || plan.isCustom ? "text-white" : "text-gray-600"}`}>
                             {feature.text}
                             {feature.addon && (
-                              <span className="ml-1 text-red-500">{feature.addon}</span>
+                              <span className="ml-1 text-green-500">{feature.addon}</span>
                             )}
                           </span>
                         </>
@@ -538,7 +538,8 @@ const Index = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 font-medium"
+                className="bg-white text-primary hover:bg-white/90"
+                onClick={() => setIsSignupModalOpen(true)}
               >
                 Quero personalizar meu plano
               </Button>
@@ -615,10 +616,10 @@ const Index = () => {
                 answer: "Não! O chatbot do Flux Conversa opera 100% em nossos servidores, ou seja, funciona 24 horas por dia, mesmo se seu computador estiver desligado. Todas as mensagens dos seus clientes são recebidas e processadas automaticamente pela plataforma, garantindo que você nunca perca uma interação importante."
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-black/60 backdrop-blur-sm rounded-lg border border-red-500/20 hover:border-red-500/40 transition-all duration-300">
+              <div key={index} className="bg-black/60 backdrop-blur-sm rounded-lg border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
                 <details className="group">
-                  <summary className="flex justify-between items-center p-6 cursor-pointer hover:bg-red-500/10 transition-colors">
-                    <h3 className="text-lg font-semibold text-red-400 group-open:text-red-300">
+                  <summary className="flex justify-between items-center p-6 cursor-pointer hover:bg-green-500/10 transition-colors">
+                    <h3 className="text-lg font-semibold text-green-400 group-open:text-green-300">
                       {faq.question}
                     </h3>
                     <ChevronRight className="w-5 h-5 text-white/60 transform group-open:rotate-90 transition-transform" />
@@ -631,15 +632,15 @@ const Index = () => {
                           <p className="font-medium text-white">Como isso é possível?</p>
                           <ul className="space-y-2 ml-4">
                             <li className="flex items-start gap-2">
-                              <span className="text-red-400 mt-1">•</span>
+                              <span className="text-green-400 mt-1">•</span>
                               <span><strong>Hospedagem em nuvem:</strong> A plataforma está sempre online, sem depender do seu dispositivo.</span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <span className="text-red-400 mt-1">•</span>
+                              <span className="text-green-400 mt-1">•</span>
                               <span><strong>Processamento automático:</strong> As respostas são enviadas instantaneamente, sem intervenção manual.</span>
                             </li>
                             <li className="flex items-start gap-2">
-                              <span className="text-red-400 mt-1">•</span>
+                              <span className="text-green-400 mt-1">•</span>
                               <span><strong>Segurança total:</strong> Seus dados e conversas ficam armazenados com privacidade em nossos servidores.</span>
                             </li>
                           </ul>

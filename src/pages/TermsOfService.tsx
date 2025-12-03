@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#4A1118] to-[#E31D3C] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#064E3B] to-[#22C55E] relative overflow-hidden">
       <TechBackground />
       <AnimatedGrid />
       <Navigation />
@@ -39,7 +39,7 @@ const TermsOfService = () => {
           <div className="bg-black/40 backdrop-blur-sm rounded-lg p-8 text-white/90 space-y-8">
             
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">1. Aceitação dos Termos</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">1. Aceitação dos Termos</h2>
               <p className="leading-relaxed">
                 Ao acessar e utilizar a plataforma Flux Conversa, você concorda em cumprir e estar vinculado a estes Termos de Uso. 
                 Se você não concordar com qualquer parte destes termos, não deve utilizar nossos serviços.
@@ -47,7 +47,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">2. Descrição do Serviço</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">2. Descrição do Serviço</h2>
               <p className="leading-relaxed mb-4">
                 O Flux Conversa é uma plataforma de CRM (Customer Relationship Management) que oferece:
               </p>
@@ -61,7 +61,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">3. Cadastro e Conta do Usuário</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">3. Cadastro e Conta do Usuário</h2>
               <p className="leading-relaxed mb-4">
                 Para utilizar nossos serviços, você deve:
               </p>
@@ -74,7 +74,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">4. Uso Aceitável</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">4. Uso Aceitável</h2>
               <p className="leading-relaxed mb-4">
                 Você concorda em não utilizar a plataforma para:
               </p>
@@ -88,7 +88,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">5. Proteção de Dados e LGPD</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">5. Proteção de Dados e LGPD</h2>
               <p className="leading-relaxed mb-4">
                 Em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018):
               </p>
@@ -102,7 +102,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">6. Planos e Pagamentos</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">6. Planos e Pagamentos</h2>
               <p className="leading-relaxed mb-4">
                 Nossos serviços são oferecidos através de planos de assinatura:
               </p>
@@ -116,7 +116,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">7. Propriedade Intelectual</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">7. Propriedade Intelectual</h2>
               <p className="leading-relaxed">
                 Todos os direitos de propriedade intelectual da plataforma Flux Conversa pertencem à nossa empresa. 
                 Você recebe apenas uma licença limitada para uso dos serviços conforme estes termos.
@@ -124,7 +124,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">8. Limitação de Responsabilidade</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">8. Limitação de Responsabilidade</h2>
               <p className="leading-relaxed">
                 Nossa responsabilidade é limitada ao valor pago pelos serviços. Não nos responsabilizamos por danos 
                 indiretos, lucros cessantes ou outras perdas decorrentes do uso da plataforma.
@@ -132,7 +132,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">9. Suspensão e Encerramento</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">9. Suspensão e Encerramento</h2>
               <p className="leading-relaxed">
                 Reservamo-nos o direito de suspender ou encerrar contas que violem estes termos, 
                 mediante notificação prévia quando possível.
@@ -140,7 +140,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">10. Alterações nos Termos</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">10. Alterações nos Termos</h2>
               <p className="leading-relaxed">
                 Podemos atualizar estes termos periodicamente. As alterações serão comunicadas através da plataforma 
                 e entrarão em vigor após o período de notificação adequado.
@@ -148,7 +148,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">11. Lei Aplicável</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">11. Lei Aplicável</h2>
               <p className="leading-relaxed">
                 Estes termos são regidos pelas leis brasileiras. Qualquer disputa será resolvida nos tribunais 
                 competentes do Brasil.
@@ -156,7 +156,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">12. Contato</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">12. Contato</h2>
               <p className="leading-relaxed">
                 Para dúvidas sobre estes termos ou exercício de seus direitos sob a LGPD, 
                 entre em contato através dos canais disponíveis em nossa plataforma.
@@ -164,7 +164,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">13. Serviços de Terceiros e Falhas de API</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">13. Serviços de Terceiros e Falhas de API</h2>
               <p className="leading-relaxed mb-4">
                 O Flux Conversa integra funcionalidades que dependem de APIs e serviços de terceiros, como WhatsApp,
                 Meta, provedores de mensagens, gateways e outras plataformas externas.
@@ -179,7 +179,7 @@ const TermsOfService = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">14. Estorno e Garantia em Caso de Falhas Graves</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">14. Estorno e Garantia em Caso de Falhas Graves</h2>
               <p className="leading-relaxed mb-4">
                 Em caso de falha grave que impossibilite o uso essencial da plataforma — entendida como indisponibilidade total ou parcial que
                 impeça a utilização das principais funcionalidades contratadas — e não houver correção em prazo razoável após comunicação formal do cliente,

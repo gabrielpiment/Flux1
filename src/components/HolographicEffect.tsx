@@ -27,7 +27,7 @@ const HolographicEffect: React.FC = () => {
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className="absolute w-full h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent opacity-0 animate-pulse"
+            className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-500/40 to-transparent opacity-0 animate-pulse"
             style={{
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 4}s`,
@@ -40,11 +40,11 @@ const HolographicEffect: React.FC = () => {
       {/* Circuit Pattern */}
       <div className="absolute top-1/4 left-1/4 w-32 h-32 opacity-20">
         <svg viewBox="0 0 100 100" className="w-full h-full animate-spin-slow">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="#E31D3C" strokeWidth="0.5" strokeDasharray="5,5" />
-          <circle cx="50" cy="50" r="30" fill="none" stroke="#4A1118" strokeWidth="0.5" strokeDasharray="3,3" />
-          <circle cx="50" cy="50" r="15" fill="none" stroke="#E31D3C" strokeWidth="0.5" strokeDasharray="2,2" />
-          <line x1="50" y1="5" x2="50" y2="95" stroke="#E31D3C" strokeWidth="0.5" opacity="0.5" />
-          <line x1="5" y1="50" x2="95" y2="50" stroke="#E31D3C" strokeWidth="0.5" opacity="0.5" />
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="5,5" />
+          <circle cx="50" cy="50" r="30" fill="none" stroke="#064E3B" strokeWidth="0.5" strokeDasharray="3,3" />
+          <circle cx="50" cy="50" r="15" fill="none" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="2,2" />
+          <line x1="50" y1="5" x2="50" y2="95" stroke="#22C55E" strokeWidth="0.5" opacity="0.5" />
+          <line x1="5" y1="50" x2="95" y2="50" stroke="#22C55E" strokeWidth="0.5" opacity="0.5" />
         </svg>
       </div>
       
@@ -67,14 +67,14 @@ const HolographicEffect: React.FC = () => {
       
       {/* Corner Tech Elements */}
       <div className="absolute top-8 right-8 w-16 h-16 opacity-30">
-        <div className="w-full h-full border border-red-500/50 rotate-45 animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 w-8 h-8 border border-red-500/50 -translate-x-1/2 -translate-y-1/2 rotate-45 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <div className="w-full h-full border border-green-500/50 rotate-45 animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 w-8 h-8 border border-green-500/50 -translate-x-1/2 -translate-y-1/2 rotate-45 animate-pulse" style={{ animationDelay: '0.5s' }} />
       </div>
       
       <div className="absolute bottom-8 left-8 w-16 h-16 opacity-30">
-        <div className="w-full h-full border border-red-500/50 animate-pulse" />
-        <div className="absolute top-0 left-0 w-4 h-4 bg-red-500/50 animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-0 right-0 w-4 h-4 bg-red-500/50 animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="w-full h-full border border-green-500/50 animate-pulse" />
+        <div className="absolute top-0 left-0 w-4 h-4 bg-green-500/50 animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500/50 animate-pulse" style={{ animationDelay: '1.5s' }} />
       </div>
     </div>
   );

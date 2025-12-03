@@ -25,7 +25,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#E31D3C",
+          DEFAULT: "#22C55E",
           foreground: "#FFFFFF",
         },
         secondary: {
@@ -33,7 +33,7 @@ export default {
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#FF3850",
+          DEFAULT: "#22C55E",
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -51,7 +51,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'flux-gradient': 'linear-gradient(135deg, #1A1A1A 0%, #E31D3C 100%)',
+        'flux-gradient': 'linear-gradient(135deg, #1A1A1A 0%, #22C55E 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",
