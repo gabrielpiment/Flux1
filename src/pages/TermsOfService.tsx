@@ -15,14 +15,15 @@ const TermsOfService = () => {
         <div className="container mx-auto max-w-4xl">
           {/* Botão Voltar */}
           <div className="mb-8">
+          <a href="/">
             <Button 
               variant="outline" 
               className="bg-transparent border-white/20 text-white hover:bg-white/10"
-              onClick={() => window.history.back()}
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
             </Button>
+            </a>
           </div>
 
           {/* Cabeçalho */}
