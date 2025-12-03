@@ -200,6 +200,72 @@ const TermsOfService = () => {
                 <li>Problemas causados pelo próprio cliente ou por configurações externas à plataforma.</li>
               </ul>
             </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">15. Indisponibilidade Programada (Manutenção)</h2>
+              <p className="leading-relaxed mb-4">
+                O Flux Conversa poderá realizar manutenções programadas para garantir a estabilidade, segurança e melhorias da plataforma. Sempre que possível, tais manutenções serão comunicadas previamente aos usuários pelos canais oficiais.
+              </p>
+              <p className="leading-relaxed">
+                Indisponibilidades decorrentes de manutenções programadas não geram direito a reembolso, créditos ou compensações, uma vez que fazem parte do processo normal de operação e evolução do serviço.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">16. Alterações Técnicas Necessárias</h2>
+              <p className="leading-relaxed">
+                O Flux Conversa poderá modificar, ajustar, limitar ou descontinuar funcionalidades específicas da plataforma sempre que necessário para atender a requisitos técnicos, legais, de segurança ou políticas de terceiros (como WhatsApp, Meta e demais APIs integradas).
+                Alterações técnicas necessárias não caracterizam quebra contratual, sendo consideradas parte da natureza dinâmica de plataformas SaaS e ferramentas integradas a serviços externos.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">17. Isenção por Configurações do Usuário</h2>
+              <p className="leading-relaxed mb-4">
+                O usuário é inteiramente responsável pelas configurações realizadas dentro da plataforma, incluindo fluxos de automação, integrações externas, regras de envio, mensagens criadas e demais parametrizações.
+              </p>
+              <p className="leading-relaxed">
+                O Flux Conversa não se responsabiliza por falhas, duplicações, disparos indevidos, quedas de performance ou qualquer prejuízo decorrente de configurações incorretas feitas pelo próprio usuário ou por terceiros que ele autorize a acessar sua conta.
+                Erros de operação ou parametrização inadequada não geram direito a estorno ou compensação.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">18. Responsabilidade sobre Informações Inseridas</h2>
+              <p className="leading-relaxed mb-4">
+                O usuário é exclusivamente responsável pela veracidade, legalidade e adequação dos dados e conteúdos inseridos na plataforma, incluindo informações de clientes, contatos, mensagens, documentos, listas de envio e demais registros.
+              </p>
+              <p className="leading-relaxed">
+                O Flux Conversa não audita, valida ou se responsabiliza pelo conteúdo fornecido pelo usuário, tampouco por danos, prejuízos ou violações legais decorrentes do uso indevido, ilegal ou inadequado dessas informações.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">19. Política de Suporte e Níveis de Atendimento (SLA Básico)</h2>
+              <p className="leading-relaxed mb-4">
+                O suporte do Flux Conversa é prestado através dos canais oficiais indicados na plataforma, dentro dos horários estabelecidos e conforme a ordem de recebimento das solicitações.
+                Os prazos de resposta podem variar de acordo com a complexidade da demanda, volume de atendimentos e natureza do problema.
+              </p>
+              <p className="leading-relaxed">
+                O suporte prestado pelo Flux Conversa não caracteriza SLA de atendimento imediato, exceto quando previamente contratado em plano específico.
+                Chamados relacionados a plataformas externas, integrações de terceiros ou políticas do WhatsApp/Meta podem requerer prazos adicionais, não sendo garantido tempo de solução imediato.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">20. Rescisão por Conduta Abusiva</h2>
+              <p className="leading-relaxed mb-4">
+                O Flux Conversa poderá suspender ou encerrar o acesso à plataforma caso o usuário:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
+                <li>Adote comportamento ofensivo, agressivo ou desrespeitoso com a equipe de suporte ou demais representantes da empresa;</li>
+                <li>Pratique abusos operacionais, tentativas de fraude, exploração indevida da plataforma ou ações que coloquem em risco a integridade do serviço;</li>
+                <li>Descumpra de forma reiterada qualquer cláusula destes Termos de Uso.</li>
+              </ul>
+              <p className="leading-relaxed">
+                Quando possível, o usuário será notificado previamente. A rescisão decorrente de conduta abusiva não dá direito a reembolso.
+              </p>
+            </section>
           </div>
         </div>
       </div>
