@@ -605,7 +605,7 @@ const Index = () => {
               },
               {
                 question: "Existe algum contrato?",
-                answer: "No Flux Conversa, você tem total liberdade. Nossos serviços não exigem contratos de fidelidade nem geram preocupações com multas por cancelamento. Utilize o Flux Conversa pelo período que precisar, com toda a flexibilidade que sua empresa merece."
+                answer: "Não! No Flux Conversa você não fica preso a contratos de fidelidade nem precisa se preocupar com multas por cancelamento. Você utiliza a plataforma pelo tempo que quiser, com total liberdade e flexibilidade. A única condição necessária para usar o software é aceitar nossos Termos de Uso, que definem as regras de funcionamento, segurança e responsabilidade entre você e a plataforma — algo padrão em qualquer serviço profissional. Assim, você mantém total autonomia, e nós garantimos um serviço seguro, estável e transparente."
               },
               {
                 question: "Posso testar o sistema?",
