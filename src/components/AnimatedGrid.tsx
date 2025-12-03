@@ -9,7 +9,7 @@ const AnimatedGrid: React.FC = () => {
           {Array.from({ length: 144 }).map((_, i) => (
             <div
               key={i}
-              className="border border-red-500/20 animate-pulse"
+              className="border border-green-500/20 animate-pulse"
               style={{
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 2}s`
@@ -33,13 +33,13 @@ const AnimatedGrid: React.FC = () => {
             }}
           >
             {i % 3 === 0 && (
-              <div className="w-16 h-16 border-2 border-red-500/30 rotate-45 animate-spin-slow" />
+              <div className="w-16 h-16 border-2 border-green-500/30 rotate-45 animate-spin-slow" />
             )}
             {i % 3 === 1 && (
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-transparent rounded-full animate-pulse" />
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-transparent rounded-full animate-pulse" />
             )}
             {i % 3 === 2 && (
-              <div className="w-20 h-1 bg-gradient-to-r from-transparent via-red-500/40 to-transparent animate-pulse" />
+              <div className="w-20 h-1 bg-gradient-to-r from-transparent via-green-500/40 to-transparent animate-pulse" />
             )}
           </div>
         ))}
@@ -47,15 +47,15 @@ const AnimatedGrid: React.FC = () => {
       
       {/* Scanning Lines */}
       <div className="absolute inset-0">
-        <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent animate-scan-vertical" />
-        <div className="absolute h-full w-px bg-gradient-to-b from-transparent via-red-500/50 to-transparent animate-scan-horizontal" />
+        <div className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent animate-scan-vertical" />
+        <div className="absolute h-full w-px bg-gradient-to-b from-transparent via-green-500/50 to-transparent animate-scan-horizontal" />
       </div>
       
       {/* Corner Decorations */}
-      <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-red-500/40 animate-pulse" />
-      <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-red-500/40 animate-pulse" />
-      <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-red-500/40 animate-pulse" />
-      <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-red-500/40 animate-pulse" />
+      <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-green-500/40 animate-pulse" />
+      <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-green-500/40 animate-pulse" />
+      <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-green-500/40 animate-pulse" />
+      <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-green-500/40 animate-pulse" />
     </div>
   );
 };

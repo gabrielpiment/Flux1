@@ -157,7 +157,7 @@ const PricingCards: React.FC = () => {
                   <div className="flex flex-wrap justify-between items-start flex-1 gap-1">
                     <span className="text-gray-700">{feature.text}</span>
                     {feature.additionalPrice && (
-                      <span className="text-sm text-red-500 font-medium">
+                      <span className="text-sm text-green-500 font-medium">
                         +R$ {feature.additionalPrice.toFixed(2)}
                       </span>
                     )}
@@ -166,7 +166,7 @@ const PricingCards: React.FC = () => {
               ))}
             </div>
 
-            <button className="w-full mt-6 bg-red-600 text-white py-3 rounded-xl hover:bg-red-700 transition-colors font-semibold">
+            <button className="w-full mt-6 bg-green-600 text-white py-3 rounded-xl hover:bg-green-700 transition-colors font-semibold">
               Começar teste grátis
             </button>
             <p className="text-center text-sm text-gray-500 mt-2">
@@ -202,4 +202,4 @@ const PricingCards: React.FC = () => {
   );
 };
 
-export default PricingCards; 
+export default PricingCards;

@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#4A1118] to-[#E31D3C] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-radial from-[#1A1A1A] via-[#064E3B] to-[#22C55E] relative overflow-hidden">
       <TechBackground />
       <AnimatedGrid />
       <Navigation />
@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
           <div className="bg-black/40 backdrop-blur-sm rounded-lg p-8 text-white/90 space-y-8">
             
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">1. Introdução</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">1. Introdução</h2>
               <p className="leading-relaxed">
                 Esta Política de Privacidade descreve como o Flux Conversa coleta, usa, armazena e protege suas informações pessoais 
                 em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018) e demais regulamentações aplicáveis.
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">2. Controlador de Dados</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">2. Controlador de Dados</h2>
               <p className="leading-relaxed">
                 O Flux Conversa atua como controlador dos dados pessoais coletados através de nossa plataforma. 
                 Somos responsáveis pelas decisões referentes ao tratamento de seus dados pessoais.
@@ -55,7 +55,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">3. Dados Coletados</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">3. Dados Coletados</h2>
               <p className="leading-relaxed mb-4">
                 Coletamos os seguintes tipos de dados pessoais:
               </p>
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">4. Finalidades do Tratamento</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">4. Finalidades do Tratamento</h2>
               <p className="leading-relaxed mb-4">
                 Utilizamos seus dados pessoais para as seguintes finalidades:
               </p>
@@ -107,7 +107,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">5. Base Legal</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">5. Base Legal</h2>
               <p className="leading-relaxed mb-4">
                 O tratamento de seus dados pessoais é baseado nas seguintes hipóteses legais:
               </p>
@@ -120,7 +120,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">6. Compartilhamento de Dados</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">6. Compartilhamento de Dados</h2>
               <p className="leading-relaxed mb-4">
                 Seus dados pessoais podem ser compartilhados nas seguintes situações:
               </p>
@@ -136,7 +136,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">7. Armazenamento e Segurança</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">7. Armazenamento e Segurança</h2>
               <p className="leading-relaxed mb-4">
                 Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados:
               </p>
@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">8. Retenção de Dados</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">8. Retenção de Dados</h2>
               <p className="leading-relaxed">
                 Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas nesta política, 
                 respeitando os prazos legais de retenção. Após esse período, os dados são excluídos de forma segura.
@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">9. Seus Direitos</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">9. Seus Direitos</h2>
               <p className="leading-relaxed mb-4">
                 Conforme a LGPD, você possui os seguintes direitos:
               </p>
@@ -174,7 +174,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">10. Cookies e Tecnologias Similares</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">10. Cookies e Tecnologias Similares</h2>
               <p className="leading-relaxed mb-4">
                 Utilizamos cookies e tecnologias similares para:
               </p>
@@ -190,7 +190,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">11. Transferência Internacional</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">11. Transferência Internacional</h2>
               <p className="leading-relaxed">
                 Caso seja necessário transferir dados para outros países, garantimos que tais transferências 
                 sejam realizadas com adequado nível de proteção, conforme exigido pela LGPD.
@@ -198,7 +198,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">12. Menores de Idade</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">12. Menores de Idade</h2>
               <p className="leading-relaxed">
                 Nossos serviços não são direcionados a menores de 18 anos. Caso identifiquemos dados de menores 
                 coletados sem o devido consentimento dos responsáveis, procederemos com a exclusão imediata.
@@ -206,7 +206,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">13. Alterações na Política</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">13. Alterações na Política</h2>
               <p className="leading-relaxed">
                 Esta política pode ser atualizada periodicamente. Notificaremos sobre alterações significativas 
                 através da plataforma ou por e-mail, conforme apropriado.
@@ -214,7 +214,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">14. Encarregado de Dados (DPO)</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">14. Encarregado de Dados (DPO)</h2>
               <p className="leading-relaxed">
                 Designamos um Encarregado de Proteção de Dados para atuar como canal de comunicação 
                 entre você, o Flux Conversa e a Autoridade Nacional de Proteção de Dados (ANPD).
@@ -222,7 +222,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-red-400 mb-4">15. Contato</h2>
+              <h2 className="text-2xl font-bold text-green-400 mb-4">15. Contato</h2>
               <p className="leading-relaxed mb-4">
                 Para exercer seus direitos, esclarecer dúvidas ou reportar incidentes relacionados à proteção de dados:
               </p>
