@@ -200,7 +200,6 @@ const TermsOfService = () => {
                 <li>Problemas causados pelo próprio cliente ou por configurações externas à plataforma.</li>
               </ul>
             </section>
-
           </div>
         </div>
       </div>
