@@ -295,7 +295,7 @@ onPanelReady: (flowInstance) => {
 }
 
 :deep(.vue-flow__attribution) {
-  display: none;
+  display: none !important;
 }
 
 :deep(.vue-flow__minimap) {
