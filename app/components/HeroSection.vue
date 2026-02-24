@@ -1,5 +1,5 @@
 <template>
-  <section id="hero-section" class="hero">
+  <section id="hero-section" ref="sectionRef" class="hero">
     <div class="dotted-bg" aria-hidden="true"></div>
 
     <div class="container hero-wrap">
@@ -47,7 +47,7 @@
           :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
         >
           <NuxtLink class="btn-primary" to="#demo">
-            Agendar Demo de Elite
+            Teste Grátis Agora
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7" />
@@ -82,6 +82,25 @@ const rotateToNext = () => {
   setTimeout(() => { exitIndex.value = null }, 600)
 }
 
-onMounted(() => { intervalId = setInterval(rotateToNext, 3000) })
-onUnmounted(() => { if (intervalId) clearInterval(intervalId) })
+// ── Mouse Glow Logic ──────────────────────────────────────────────────
+const sectionRef = ref<HTMLElement | null>(null)
+
+const handleMouseMove = (e: MouseEvent) => {
+  if (!sectionRef.value) return
+  const rect = sectionRef.value.getBoundingClientRect()
+  const x = e.clientX - rect.left
+  const y = e.clientY - rect.top
+  sectionRef.value.style.setProperty('--mouse-x', `${x}px`)
+  sectionRef.value.style.setProperty('--mouse-y', `${y}px`)
+}
+
+onMounted(() => {
+  intervalId = setInterval(rotateToNext, 3000)
+  window.addEventListener('mousemove', handleMouseMove)
+})
+
+onUnmounted(() => {
+  if (intervalId) clearInterval(intervalId)
+  window.removeEventListener('mousemove', handleMouseMove)
+})
 </script>
