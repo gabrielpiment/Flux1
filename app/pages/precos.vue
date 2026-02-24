@@ -12,7 +12,7 @@
                         <span class="plan-type">Iniciante</span>
                         <h3 class="plan-name">Starter Digital Flux</h3>
                         <div class="plan-price">
-                            <span class="currency">R$ 98</span>
+                            <span class="currency">R$ 97</span>
                             <span class="period">/mês</span>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                         <span class="plan-type">Padrão</span>
                         <h3 class="plan-name">Digital Flux</h3>
                         <div class="plan-price">
-                            <span class="currency">R$ 299</span>
+                            <span class="currency">R$ 198</span>
                             <span class="period">/mês</span>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         <span class="plan-type">Premium</span>
                         <h3 class="plan-name">Pro Digital Flux</h3>
                         <div class="plan-price">
-                            <span class="currency">R$ 899</span>
+                            <span class="currency">R$ 299</span>
                             <span class="period">/mês</span>
                         </div>
                     </div>
