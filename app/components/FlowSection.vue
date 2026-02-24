@@ -80,14 +80,20 @@
                   <div class="node-badge">0<br><small>Total</small></div>
                 </div>
                 <div class="node-body">
-                  <div class="random-option"><span>A</span> <div class="percent">33%</div></div>
-                  <div class="random-option"><span>B</span> <div class="percent">33%</div></div>
-                  <div class="random-option"><span>C</span> <div class="percent">33%</div></div>
+                  <div class="random-option">
+                    <span>A</span> <div class="percent">33%</div>
+                    <Handle type="source" :position="Position.Right" id="a" />
+                  </div>
+                  <div class="random-option">
+                    <span>B</span> <div class="percent">33%</div>
+                    <Handle type="source" :position="Position.Right" id="b" />
+                  </div>
+                  <div class="random-option">
+                    <span>C</span> <div class="percent">33%</div>
+                    <Handle type="source" :position="Position.Right" id="c" />
+                  </div>
                 </div>
                 <Handle type="target" :position="Position.Left" />
-                <Handle type="source" :position="Position.Right" id="a" style="top: 35%;" />
-                <Handle type="source" :position="Position.Right" id="b" style="top: 50%;" />
-                <Handle type="source" :position="Position.Right" id="c" style="top: 65%;" />
               </div>
             </template>
 
@@ -134,45 +140,48 @@ const elements = ref([
   { 
     id: 'msg1', 
     type: 'wa', 
-    position: { x: 250, y: 220 }, 
+    position: { x: 300, y: 220 }, 
     data: { label: 'Mensagem', sublabel: 'Mensagem...' } 
   },
   { 
     id: 'random', 
     type: 'random', 
-    position: { x: 250, y: 50 }, 
+    position: { x: 300, y: 30 }, 
     data: { label: 'Randomizador' } 
   },
   { 
     id: 'attendant', 
     type: 'wa', 
-    position: { x: 550, y: 50 }, 
+    position: { x: 620, y: 50 }, 
     data: { label: 'Atendente', sublabel: 'Redirecionar para Atendente' } 
   },
   { 
     id: 'sector', 
     type: 'wa', 
-    position: { x: 550, y: 150 }, 
+    position: { x: 620, y: 160 }, 
     data: { label: 'Setor', sublabel: 'Setor' } 
   },
   { 
     id: 'menu', 
     type: 'wa', 
-    position: { x: 550, y: 250 }, 
+    position: { x: 620, y: 270 }, 
     data: { label: 'Menu Lista', sublabel: 'Menu Lista' } 
   },
   { 
     id: 'kanban', 
     type: 'kanban', 
-    position: { x: 850, y: 350 }, 
+    position: { x: 450, y: 410 }, 
     data: { label: 'Quadro Kanban' } 
   },
 
   // Edges
   { id: 'e-start-msg', source: 'start', target: 'msg1', animated: true },
+  { id: 'e-msg-random', source: 'msg1', target: 'random', animated: true },
   { id: 'e-random-a', source: 'random', sourceHandle: 'a', target: 'attendant', animated: true },
   { id: 'e-random-b', source: 'random', sourceHandle: 'b', target: 'attendant', animated: true },
   { id: 'e-random-c', source: 'random', sourceHandle: 'c', target: 'attendant', animated: true },
+  { id: 'e-msg-sector', source: 'msg1', target: 'sector', animated: true },
+  { id: 'e-sector-menu', source: 'sector', target: 'menu', animated: true },
   { id: 'e-menu-kanban', source: 'menu', target: 'kanban', animated: true },
 ])
 
@@ -260,6 +269,23 @@ onPanelReady: (flowInstance) => {
 
 .interactive-flow {
   background: transparent !important;
+}
+
+:deep(.vue-flow__handle) {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+:deep(.vue-flow__edge-path) {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 2;
+}
+
+:deep(.vue-flow__edge.animated .vue-flow__edge-path) {
+  stroke: var(--accent-primary);
+  stroke-dasharray: 5;
 }
 
 /* ── Custom Nodes ───────────────────────────────── */
