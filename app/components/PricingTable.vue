@@ -66,10 +66,10 @@
                     </tr>
                     <tr>
                         <td class="feature-name">Automação de fluxos</td>
-                        <td>Max (2 Fluxos)</td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
+                        <td>Maximo 2 fluxos</td>
+                        <td>5 Fluxos</td>
+                        <td>15 Fluxos</td>
+                        <td>Ilimitado</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Chat Interno</td>

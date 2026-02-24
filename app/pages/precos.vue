@@ -21,7 +21,7 @@
                             <li class="check">1 Conexão WhatsApp Api Paralela</li>
                             <li class="check">2 Usuários</li>
                             <li class="check">Disparos em massa</li>
-                            <li class="check">Max (2 Fluxos)</li>
+                            <li class="check">Automação de fluxo (Maximo 2 fluxos)</li>
                             <li class="check">Kanban Pro Multifunil</li>
                             <li class="cross">Integrações com APIs</li>
                             <li class="cross">Integrações sociais (Facebook e Instagram)</li>
@@ -53,7 +53,7 @@
                             <li class="check">2 Conexões WhatsApp Api Oficial</li>
                             <li class="check">10 Usuários</li>
                             <li class="check">Disparos em massa</li>
-                            <li class="check">Automação de fluxo</li>
+                            <li class="check">5 Fluxos de automação</li>
                             <li class="check">Integrações com APIs</li>
                             <li class="check">Integrações sociais (Facebook e Instagram)</li>
                             <li class="check">Chat Interno</li>
@@ -85,7 +85,7 @@
                             <li class="check">3 Conexões WhatsApp Api Oficial</li>
                             <li class="check">15 Usuários</li>
                             <li class="check">Disparos em massa</li>
-                            <li class="check">Automação de fluxo</li>
+                            <li class="check">15 Fluxos de automação</li>
                             <li class="check">Integrações com APIs</li>
                             <li class="check">Integrações sociais (Facebook e Instagram)</li>
                             <li class="check">Chat Interno</li>
@@ -113,7 +113,7 @@
                             <li class="check">Conexões ilimitadas WhatsApp Api Paralela</li>
                             <li class="check">Usuários ilimitados</li>
                             <li class="check">Disparos em massa</li>
-                            <li class="check">Automação de fluxo</li>
+                            <li class="check">Fluxos de automação ilimitados</li>
                             <li class="check">Integrações com APIs</li>
                             <li class="check">Integrações sociais (Facebook e Instagram)</li>
                             <li class="check">Chat Interno</li>
