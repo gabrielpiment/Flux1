@@ -193,9 +193,11 @@ const elements = ref([
 
 const { onPaneReady, onNodeDragStop, onConnect, addEdges } = useVueFlow()
 
-onPanelReady: (flowInstance) => {
-  flowInstance.fitView()
-}
+onPaneReady((flowInstance) => {
+  setTimeout(() => {
+    flowInstance.fitView({ padding: 0.2 })
+  }, 100)
+})
 </script>
 
 <style scoped>
