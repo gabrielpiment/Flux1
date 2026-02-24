@@ -294,6 +294,10 @@ onPanelReady: (flowInstance) => {
   stroke-dasharray: 5;
 }
 
+:deep(.vue-flow__attribution) {
+  display: none;
+}
+
 :deep(.vue-flow__minimap) {
   background: rgba(15, 27, 32, 0.8);
   border: 1px solid rgba(255, 255, 255, 0.1);
