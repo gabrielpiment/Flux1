@@ -96,7 +96,7 @@
                     </tr>
                     <tr>
                         <td class="feature-name">Kanban Inteligente</td>
-                        <td>Simples</td>
+                        <td>Pro (Multifunil)</td>
                         <td>Pro (Multifunil)</td>
                         <td>Pro (Multifunil)</td>
                         <td>Pro (Multifunil)</td>
@@ -127,7 +127,7 @@
                     </tr>
                     <tr>
                         <td class="feature-name">Número de usuários</td>
-                        <td>1</td>
+                        <td>2</td>
                         <td>5</td>
                         <td>10</td>
                         <td>15</td>
