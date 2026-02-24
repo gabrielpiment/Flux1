@@ -146,37 +146,37 @@ const elements = ref([
   { 
     id: 'msg1', 
     type: 'wa', 
-    position: { x: 300, y: 220 }, 
+    position: { x: 320, y: 250 }, 
     data: { label: 'Mensagem', sublabel: 'Mensagem...' } 
   },
   { 
     id: 'random', 
     type: 'random', 
-    position: { x: 300, y: 30 }, 
+    position: { x: 350, y: 0 }, 
     data: { label: 'Randomizador' } 
   },
   { 
     id: 'attendant', 
     type: 'wa', 
-    position: { x: 620, y: 50 }, 
+    position: { x: 720, y: 30 }, 
     data: { label: 'Atendente', sublabel: 'Redirecionar para Atendente' } 
   },
   { 
     id: 'sector', 
     type: 'wa', 
-    position: { x: 620, y: 160 }, 
+    position: { x: 720, y: 160 }, 
     data: { label: 'Setor', sublabel: 'Setor' } 
   },
   { 
     id: 'menu', 
     type: 'wa', 
-    position: { x: 620, y: 270 }, 
+    position: { x: 720, y: 290 }, 
     data: { label: 'Menu Lista', sublabel: 'Menu Lista' } 
   },
   { 
     id: 'kanban', 
     type: 'kanban', 
-    position: { x: 450, y: 410 }, 
+    position: { x: 500, y: 450 }, 
     data: { label: 'Quadro Kanban' } 
   },
 
