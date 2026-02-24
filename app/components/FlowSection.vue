@@ -1,7 +1,7 @@
 <template>
   <section id="automation-flow" class="flow-section">
     <div class="container flow-container">
-      <div class="flow-info" v-motion-fade-visible>
+      <div class="flow-info">
         <span class="eyebrow">Automação Visual</span>
         <h2>Construa processos complexos com <span>Arrasta e Solta</span></h2>
         <p>
@@ -29,11 +29,10 @@
         </div>
       </div>
 
-      <div class="flow-viewer-wrapper" v-motion-fade-visible>
+      <div class="flow-viewer-wrapper">
         <div class="flow-viewer">
           <VueFlow 
             v-model="elements" 
-            :fit-view-on-init="true"
             :default-edge-options="{ type: 'smoothstep', animated: true }"
             class="interactive-flow"
           >
@@ -194,9 +193,13 @@ const elements = ref([
 const { onPaneReady, onNodeDragStop, onConnect, addEdges } = useVueFlow()
 
 onPaneReady((flowInstance) => {
+  const isMobile = window.innerWidth < 1024
   setTimeout(() => {
-    flowInstance.fitView({ padding: 0.2 })
-  }, 100)
+    flowInstance.fitView({ 
+      padding: isMobile ? 0.35 : 0.15,
+      duration: 800
+    })
+  }, 300)
 })
 </script>
 
@@ -261,7 +264,9 @@ onPaneReady((flowInstance) => {
 
 .flow-viewer-wrapper {
   flex: 1;
-  height: 600px;
+  width: 100%;
+  min-height: 450px;
+  height: 650px;
   background: rgba(15, 27, 32, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 32px;
@@ -466,6 +471,10 @@ onPaneReady((flowInstance) => {
   }
   .flow-info { flex: 0 0 auto; max-width: 600px; }
   .flow-features li { justify-content: center; }
-  .flow-viewer-wrapper { width: 100%; height: 500px; }
+  .flow-viewer-wrapper { 
+    width: 100%; 
+    height: 600px; 
+    min-height: 500px;
+  }
 }
 </style>
