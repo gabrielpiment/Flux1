@@ -18,11 +18,11 @@
                     </div>
                     <div class="card-body">
                         <ul class="plan-features">
-                            <li class="check">1 Conexão WhatsApp Api Meow</li>
-                            <li class="check">1 Usuário</li>
+                            <li class="check">1 Conexão WhatsApp Api Paralela</li>
+                            <li class="check">2 Usuários</li>
                             <li class="check">Disparos em massa</li>
-                            <li class="check">Automação de fluxo</li>
-                            <li class="check">Kanban simples (1 Funil)</li>
+                            <li class="check">Max (2 Fluxos)</li>
+                            <li class="check">Kanban Pro Multifunil</li>
                             <li class="cross">Integrações com APIs</li>
                             <li class="cross">Integrações sociais (Facebook e Instagram)</li>
                             <li class="cross">Agente de IA</li>
@@ -37,7 +37,8 @@
                 </div>
 
                 <!-- Basic Plan -->
-                <div class="pricing-card" v-motion-fade-visible>
+                <div class="pricing-card pricing-card--popular" v-motion-fade-visible>
+                    <div class="popular-badge">Mais Popular</div>
                     <div class="card-header">
                         <span class="plan-type">Padrão</span>
                         <h3 class="plan-name">Digital Flux</h3>
@@ -48,38 +49,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="plan-features">
-                            <li class="check">1 Conexão WhatsApp Api Meow</li>
-                            <li class="check">1 Conexão WhatsApp Api Oficial</li>
-                            <li class="check">5 Usuários</li>
-                            <li class="check">Disparos em massa</li>
-                            <li class="check">Automação de fluxo</li>
-                            <li class="check">Kanban Pro Multifunil</li>
-                            <li class="check">Integrações com APIs</li>
-                            <li class="check">Chat Interno</li>
-                            <li class="cross">Integrações sociais (Facebook e Instagram)</li>
-                            <li class="cross">Agente de IA</li>
-                            <li class="cross">Conexões OLX e Mercado Livre</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn-outline">Vamos começar</button>
-                    </div>
-                </div>
-
-                <!-- Growth Plan (Popular) -->
-                <div class="pricing-card pricing-card--popular" v-motion-fade-visible>
-                    <div class="popular-badge">Mais Popular</div>
-                    <div class="card-header">
-                        <span class="plan-type">Escalável</span>
-                        <h3 class="plan-name">Growth Digital Flux</h3>
-                        <div class="plan-price">
-                            <span class="currency">R$ 599</span>
-                            <span class="period">/mês</span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <ul class="plan-features">
-                            <li class="check">2 Conexões WhatsApp Api Meow</li>
+                            <li class="check">2 Conexões WhatsApp Api Paralela</li>
                             <li class="check">2 Conexões WhatsApp Api Oficial</li>
                             <li class="check">10 Usuários</li>
                             <li class="check">Disparos em massa</li>
@@ -93,9 +63,10 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <button class="btn-white">Dê um Upgrade</button>
+                        <button class="btn-white">Vamos começar</button>
                     </div>
                 </div>
+
 
                 <!-- Pro Plan (Enterprise) -->
                 <div class="pricing-card" v-motion-fade-visible>
@@ -110,7 +81,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="plan-features">
-                            <li class="check">3 Conexões WhatsApp Api Meow</li>
+                            <li class="check">3 Conexões WhatsApp Api Paralela</li>
                             <li class="check">3 Conexões WhatsApp Api Oficial</li>
                             <li class="check">15 Usuários</li>
                             <li class="check">Disparos em massa</li>
@@ -139,7 +110,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="plan-features">
-                            <li class="check">Conexões ilimitadas WhatsApp Api Meow</li>
+                            <li class="check">Conexões ilimitadas WhatsApp Api Paralela</li>
                             <li class="check">Usuários ilimitados</li>
                             <li class="check">Disparos em massa</li>
                             <li class="check">Automação de fluxo</li>
@@ -190,7 +161,7 @@
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-bottom: 4rem;
     max-width: 1440px;
