@@ -296,16 +296,19 @@ onPanelReady: (flowInstance) => {
 
 :deep(.vue-flow__attribution) {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 :deep(.vue-flow__minimap) {
-  background: rgba(15, 27, 32, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 27, 32, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  bottom: 15px;
-  left: 15px; /* Moved to left */
+  bottom: 10px;
+  left: 10px;
   right: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   z-index: 1000;
 }
 
