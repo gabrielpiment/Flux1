@@ -261,24 +261,10 @@ a {
     justify-content: center;
     padding: 140px 0 380px;
     /* extra bottom padding to give room for the video overlap */
-    overflow: hidden;
-    /* hide the glow when it goes off-section */
+    overflow: visible;
     z-index: 2;
     --mouse-x: 50%;
     --mouse-y: 50%;
-}
-
-/* Interactive Mouse Glow Background */
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-            rgba(31, 105, 255, 0.12),
-            transparent 80%);
-    transition: opacity 1s ease;
 }
 
 .hero::before {

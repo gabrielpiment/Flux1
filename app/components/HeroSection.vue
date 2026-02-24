@@ -1,5 +1,5 @@
 <template>
-  <section id="hero-section" ref="sectionRef" class="hero">
+  <section id="hero-section" class="hero">
     <div class="dotted-bg" aria-hidden="true"></div>
 
     <div class="container hero-wrap">
@@ -82,25 +82,11 @@ const rotateToNext = () => {
   setTimeout(() => { exitIndex.value = null }, 600)
 }
 
-// ── Mouse Glow Logic ──────────────────────────────────────────────────
-const sectionRef = ref<HTMLElement | null>(null)
-
-const handleMouseMove = (e: MouseEvent) => {
-  if (!sectionRef.value) return
-  const rect = sectionRef.value.getBoundingClientRect()
-  const x = e.clientX - rect.left
-  const y = e.clientY - rect.top
-  sectionRef.value.style.setProperty('--mouse-x', `${x}px`)
-  sectionRef.value.style.setProperty('--mouse-y', `${y}px`)
-}
-
 onMounted(() => {
   intervalId = setInterval(rotateToNext, 3000)
-  window.addEventListener('mousemove', handleMouseMove)
 })
 
 onUnmounted(() => {
   if (intervalId) clearInterval(intervalId)
-  window.removeEventListener('mousemove', handleMouseMove)
 })
 </script>
