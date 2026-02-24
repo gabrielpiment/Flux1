@@ -31,91 +31,96 @@
 
       <div class="flow-viewer-wrapper">
         <div class="flow-viewer">
-          <VueFlow 
-            v-model="elements" 
-            :default-edge-options="{ type: 'smoothstep', animated: true }"
-            class="interactive-flow"
-          >
-            <Background pattern-color="#1f69ff" :gap="20" :size="1" />
-            <Controls />
-            <MiniMap 
-              :mask-color="'rgba(15, 27, 32, 0.7)'" 
-              :node-color="'rgba(139, 92, 246, 0.4)'"
-            />
+          <ClientOnly>
+            <VueFlow 
+              v-model="elements" 
+              :default-edge-options="{ type: 'smoothstep', animated: true }"
+              class="interactive-flow"
+              :nodes-draggable="true"
+              :nodes-connectable="false"
+              :zoom-on-scroll="true"
+            >
+              <Background pattern-color="#1f69ff" :gap="20" :size="1" />
+              <Controls />
+              <MiniMap 
+                :mask-color="'rgba(15, 27, 32, 0.7)'" 
+                :node-color="'rgba(139, 92, 246, 0.4)'"
+              />
 
-            <!-- Custom Nodes -->
-            <template #node-start="props">
-              <div class="custom-node node-start">
-                <div class="node-icon-side left">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </div>
-                <span>{{ props.data.label }}</span>
-                <div class="node-icon-side right">
-                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </div>
-                <Handle type="source" :position="Position.Right" />
-              </div>
-            </template>
-
-            <template #node-wa="props">
-              <div class="custom-node node-wa">
-                <div class="node-header">
-                  <div class="node-wa-icon">
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.404 2.513 1.157 3.518l-1.002 2.652 2.766-.948a5.733 5.733 0 0 0 2.847.747h.001c3.182 0 5.768-2.586 5.769-5.766 0-1.536-.598-2.981-1.684-4.067s-2.531-1.684-4.086-1.702zm3.38 8.125c-.147.414-.725.753-1.002.8l-.134.025c-.341.064-.783.147-2.315-.461-1.956-.777-3.219-2.772-3.317-2.902-.097-.13-.725-.964-.725-1.85 0-.886.463-1.319.627-1.487.164-.168.358-.211.477-.211h.341c.108 0 .253-.04.397.3.147.348.5.1.58.261.082.162.082.348.026.467-.056.119-.056.119-.119.206-.063.087-.134.14-.191.206-.056.066-.118.136-.051.251.067.115.297.491.637.794.439.389.809.51 0 .618-.112.112-.297.238-.414.38-.117.142-.238.297-.101.533.137.236.608 1.004 1.309 1.626.541.48 1 .637 1.23.753.23.116.366.1.503-.056.136-.156.58-.675.736-.906.156-.23.313-.194.526-.115.213.078 1.348.636 1.581.751.233.115.388.173.445.271.056.098.056.55-.091.964z"/></svg>
+              <!-- Custom Nodes -->
+              <template #node-start="props">
+                <div class="custom-node node-start">
+                  <div class="node-icon-side left">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"></polyline></svg>
                   </div>
                   <span>{{ props.data.label }}</span>
+                  <div class="node-icon-side right">
+                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </div>
+                  <Handle type="source" :position="Position.Right" />
                 </div>
-                <div class="node-body">
-                  <div class="node-placeholder">{{ props.data.sublabel || props.data.label }}</div>
-                </div>
-                <Handle type="target" :position="Position.Left" />
-                <Handle type="source" :position="Position.Right" />
-              </div>
-            </template>
+              </template>
 
-            <template #node-random="props">
-              <div class="custom-node node-random">
-                <div class="node-header">
-                  <div class="node-wa-icon random-icon">
-                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 5L12 11l6 6M6 5l6 11-6 6"/></svg>
+              <template #node-wa="props">
+                <div class="custom-node node-wa">
+                  <div class="node-header">
+                    <div class="node-wa-icon">
+                      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.404 2.513 1.157 3.518l-1.002 2.652 2.766-.948a5.733 5.733 0 0 0 2.847.747h.001c3.182 0 5.768-2.586 5.769-5.766 0-1.536-.598-2.981-1.684-4.067s-2.531-1.684-4.086-1.702zm3.38 8.125c-.147.414-.725.753-1.002.8l-.134.025c-.341.064-.783.147-2.315-.461-1.956-.777-3.219-2.772-3.317-2.902-.097-.13-.725-.964-.725-1.85 0-.886.463-1.319.627-1.487.164-.168.358-.211.477-.211h.341c.108 0 .253-.04.397.3.147.348.5.1.58.261.082.162.082.348.026.467-.056.119-.056.119-.119.206-.063.087-.134.14-.191.206-.056.066-.118.136-.051.251.067.115.297.491.637.794.439.389.809.51 0 .618-.112.112-.297.238-.414.38-.117.142-.238.297-.101.533.137.236.608 1.004 1.309 1.626.541.48 1 .637 1.23.753.23.116.366.1.503-.056.136-.156.58-.675.736-.906.156-.23.313-.194.526-.115.213.078 1.348.636 1.581.751.233.115.388.173.445.271.056.098.056.55-.091.964z"/></svg>
+                    </div>
+                    <span>{{ props.data.label }}</span>
                   </div>
-                  <span>Randomizador</span>
-                  <div class="node-badge">0<br><small>Total</small></div>
+                  <div class="node-body">
+                    <div class="node-placeholder">{{ props.data.sublabel || props.data.label }}</div>
+                  </div>
+                  <Handle type="target" :position="Position.Left" />
+                  <Handle type="source" :position="Position.Right" />
                 </div>
-                <div class="node-body">
-                  <div class="random-option">
-                    <span>A</span> <div class="percent">33%</div>
-                    <Handle type="source" :position="Position.Right" id="a" />
-                  </div>
-                  <div class="random-option">
-                    <span>B</span> <div class="percent">33%</div>
-                    <Handle type="source" :position="Position.Right" id="b" />
-                  </div>
-                  <div class="random-option">
-                    <span>C</span> <div class="percent">33%</div>
-                    <Handle type="source" :position="Position.Right" id="c" />
-                  </div>
-                </div>
-                <Handle type="target" :position="Position.Left" />
-              </div>
-            </template>
+              </template>
 
-            <template #node-kanban="props">
-              <div class="custom-node node-kanban">
-                <div class="node-header">
-                  <div class="node-wa-icon kanban-icon">
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h2v10H7zm4 0h2v7h-2zm4 0h2v4h-2z"/></svg>
+              <template #node-random="props">
+                <div class="custom-node node-random">
+                  <div class="node-header">
+                    <div class="node-wa-icon random-icon">
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 5L12 11l6 6M6 5l6 11-6 6"/></svg>
+                    </div>
+                    <span>Randomizador</span>
+                    <div class="node-badge">0<br><small>Total</small></div>
                   </div>
-                  <span>Quadro Kanban</span>
+                  <div class="node-body">
+                    <div class="random-option">
+                      <span>A</span> <div class="percent">33%</div>
+                      <Handle type="source" :position="Position.Right" id="a" />
+                    </div>
+                    <div class="random-option">
+                      <span>B</span> <div class="percent">33%</div>
+                      <Handle type="source" :position="Position.Right" id="b" />
+                    </div>
+                    <div class="random-option">
+                      <span>C</span> <div class="percent">33%</div>
+                      <Handle type="source" :position="Position.Right" id="c" />
+                    </div>
+                  </div>
+                  <Handle type="target" :position="Position.Left" />
                 </div>
-                <div class="node-body">
-                  <div class="kanban-field"><span>Quadro</span> <div class="field-value">--</div></div>
-                  <div class="kanban-field"><span>Coluna</span> <div class="field-value">--</div></div>
+              </template>
+
+              <template #node-kanban="props">
+                <div class="custom-node node-kanban">
+                  <div class="node-header">
+                    <div class="node-wa-icon kanban-icon">
+                      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h2v10H7zm4 0h2v7h-2zm4 0h2v4h-2z"/></svg>
+                    </div>
+                    <span>Quadro Kanban</span>
+                  </div>
+                  <div class="node-body">
+                    <div class="kanban-field"><span>Quadro</span> <div class="field-value">--</div></div>
+                    <div class="kanban-field"><span>Coluna</span> <div class="field-value">--</div></div>
+                  </div>
+                  <Handle type="target" :position="Position.Left" />
                 </div>
-                <Handle type="target" :position="Position.Left" />
-              </div>
-            </template>
-          </VueFlow>
+              </template>
+            </VueFlow>
+          </ClientOnly>
         </div>
       </div>
     </div>
@@ -282,6 +287,9 @@ onPaneReady((flowInstance) => {
 
 .interactive-flow {
   background: transparent !important;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
 }
 
 :deep(.vue-flow__handle) {
