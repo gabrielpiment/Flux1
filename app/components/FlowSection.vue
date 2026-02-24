@@ -39,6 +39,10 @@
           >
             <Background pattern-color="#1f69ff" :gap="20" :size="1" />
             <Controls />
+            <MiniMap 
+              :mask-color="'rgba(15, 27, 32, 0.7)'" 
+              :node-color="'rgba(139, 92, 246, 0.4)'"
+            />
 
             <!-- Custom Nodes -->
             <template #node-start="props">
@@ -124,10 +128,12 @@ import { ref } from 'vue'
 import { VueFlow, useVueFlow, Position, Handle } from '@vue-flow/core'
 import { Background } from '@vue-flow/background'
 import { Controls } from '@vue-flow/controls'
+import { MiniMap } from '@vue-flow/minimap'
 
 // Required styles for Vue Flow
 import '@vue-flow/core/dist/style.css'
 import '@vue-flow/core/dist/theme-default.css'
+import '@vue-flow/minimap/dist/style.css'
 
 const elements = ref([
   // Nodes
@@ -286,6 +292,19 @@ onPanelReady: (flowInstance) => {
 :deep(.vue-flow__edge.animated .vue-flow__edge-path) {
   stroke: var(--accent-primary);
   stroke-dasharray: 5;
+}
+
+:deep(.vue-flow__minimap) {
+  background: rgba(15, 27, 32, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+:deep(.vue-flow__minimap-mask) {
+  fill: rgba(31, 105, 255, 0.05);
 }
 
 /* ── Custom Nodes ───────────────────────────────── */
