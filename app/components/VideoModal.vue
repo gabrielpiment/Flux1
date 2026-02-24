@@ -35,7 +35,7 @@
               @click.stop
             >
               <source
-                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                src=""
                 type="video/mp4"
               >
               Seu navegador não suporta vídeo HTML5.
