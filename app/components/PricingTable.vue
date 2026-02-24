@@ -24,7 +24,7 @@
                         <td colspan="6">Canais e Conexões</td>
                     </tr>
                     <tr>
-                        <td class="feature-name">WhatsApp Api Meow</td>
+                        <td class="feature-name">WhatsApp Api Paralela</td>
                         <td>1</td>
                         <td>1</td>
                         <td>2</td>
@@ -72,7 +72,7 @@
                     </tr>
                     <tr>
                         <td class="feature-name">Automação de fluxos</td>
-                        <td><span class="check-icon">✓</span></td>
+                        <td>Max (2 Fluxos)</td>
                         <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
@@ -120,9 +120,9 @@
                     <tr>
                         <td class="feature-name">Total de Conexões WhatsApp</td>
                         <td>1</td>
-                        <td>2 <small style="opacity: 0.6; font-size: 0.7rem">(1 Meow + 1 Oficial)</small></td>
-                        <td>4 <small style="opacity: 0.6; font-size: 0.7rem">(2 Meow + 2 Oficial)</small></td>
-                        <td>6 <small style="opacity: 0.6; font-size: 0.7rem">(3 Meow + 3 Oficial)</small></td>
+                        <td>2 <small style="opacity: 0.6; font-size: 0.7rem">(1 Paralela + 1 Oficial)</small></td>
+                        <td>4 <small style="opacity: 0.6; font-size: 0.7rem">(2 Paralela + 2 Oficial)</small></td>
+                        <td>6 <small style="opacity: 0.6; font-size: 0.7rem">(3 Paralela + 3 Oficial)</small></td>
                         <td>Ilimitado</td>
                     </tr>
                     <tr>
