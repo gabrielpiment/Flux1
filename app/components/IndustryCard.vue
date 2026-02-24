@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import type { PropType } from 'vue'
-import type { IndustryCard as IndustryCardType } from '../../shared/types/IndustryCard'
+import type { IndustryCard as IndustryCardType } from '~/shared/types/IndustryCard'
 
 export default defineComponent({
   name: 'IndustryCard',

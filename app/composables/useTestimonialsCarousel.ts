@@ -1,5 +1,5 @@
 import { ref, onMounted, onUnmounted } from 'vue'
-import type { Testimonial } from '../../shared/types/Testimonial'
+import type { Testimonial } from '~/shared/types/Testimonial'
 
 export function useTestimonialsCarousel(testimonialsList: Testimonial[]) {
     const currentIndex = ref(0)

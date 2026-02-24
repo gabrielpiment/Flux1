@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import type { CadastroFormData } from '../../shared/types/CadastroForm'
+import type { CadastroFormData } from '~/shared/types/CadastroForm'
 import { formatCNPJ, formatPhone } from '../utils/masks'
 
 export function useCadastroForm() {
