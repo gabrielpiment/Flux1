@@ -299,12 +299,14 @@ onPanelReady: (flowInstance) => {
 }
 
 :deep(.vue-flow__minimap) {
-  background: rgba(15, 27, 32, 0.8);
+  background: rgba(15, 27, 32, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  left: 15px; /* Moved to left */
+  right: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
 }
 
 :deep(.vue-flow__minimap-mask) {
