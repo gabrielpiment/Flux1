@@ -327,6 +327,13 @@ onPaneReady((flowInstance) => {
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  :deep(.vue-flow__minimap) {
+    width: 120px;
+    height: 80px;
+  }
+}
+
 :deep(.vue-flow__minimap-mask) {
   fill: rgba(31, 105, 255, 0.05);
 }
