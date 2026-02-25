@@ -2,7 +2,8 @@
     <div class="pricing-page">
         <div class="container hero-wrap">
             <div class="pricing-header">
-                <h1 class="text-gradient">Pague por mês ou ano e cancele a hora que quiser, sem precisar dar explicações
+                <h1 class="text-gradient">Pague por mês ou trimestre e cancele a hora que quiser, sem precisar dar
+                    explicações
                 </h1>
             </div>
 
@@ -15,8 +16,7 @@
                         <div class="price-main">
                             <span class="value">R$ 75 por usuario/mês</span>
                         </div>
-                        <p class="price-detail">assinando por ano, <strong>R$ 60/mês</strong> assinando por trimestre.
-                        </p>
+                        <p class="price-detail"><strong>R$ 60/mês</strong> assinando por trimestre.</p>
                         <div class="min-badge">Contratação mínima de 2 atendentes</div>
                     </div>
                     <div class="card-body">
@@ -46,8 +46,7 @@
                         <div class="price-main">
                             <span class="value">R$ 105 por usuario/mês</span>
                         </div>
-                        <p class="price-detail">assinando por ano, <strong>R$ 90/mês</strong> assinando por trimestre.
-                        </p>
+                        <p class="price-detail"><strong>R$ 90/mês</strong> assinando por trimestre.</p>
                         <div class="min-badge">Contratação mínima de 2 atendentes</div>
                     </div>
                     <div class="card-body">
@@ -84,7 +83,7 @@
             <div id="conexoes" class="addons-section" v-motion-fade-visible>
                 <div class="addons-header">
                     <h2>TURBINE O SEU ATENDIMENTO</h2>
-                    <h3>CONEXÕES E ATENDENTES</h3>
+                    <h3>CONEXÕES</h3>
                 </div>
 
                 <div class="addons-grid">
