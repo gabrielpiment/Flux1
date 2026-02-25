@@ -10,93 +10,71 @@
                 <thead>
                     <tr>
                         <th class="feature-col">Funcionalidades</th>
-                        <th>Starter</th>
-                        <th>Padrão</th>
-                        <th>Premium</th>
-                        <th>Exclusivo</th>
+                        <th>Plano Digital Flux</th>
+                        <th>Pro Digital Flux</th>
                     </tr>
                 </thead>
 
                 <!-- Canais e Conexões -->
                 <tbody>
                     <tr class="category-row">
-                        <td colspan="5">Canais e Conexões</td>
+                        <td colspan="3">Canais e Conexões</td>
                     </tr>
                     <tr>
                         <td class="feature-name">WhatsApp Api Paralela</td>
                         <td>1</td>
                         <td>2</td>
-                        <td>3</td>
-                        <td>Ilimitado</td>
                     </tr>
                     <tr>
                         <td class="feature-name">WhatsApp Api Oficial</td>
                         <td><span class="cross-icon">✕</span></td>
                         <td>2</td>
-                        <td>3</td>
-                        <td><span class="check-icon">✓</span></td>
                     </tr>
                     <tr>
                         <td class="feature-name">Instagram & Facebook</td>
                         <td><span class="cross-icon">✕</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
                     </tr>
                     <tr>
                         <td class="feature-name">OLX & Mercado Livre</td>
                         <td><span class="cross-icon">✕</span></td>
                         <td><span class="cross-icon">✕</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                     </tr>
                 </tbody>
 
                 <!-- Fluxo de Trabalho -->
                 <tbody>
                     <tr class="category-row">
-                        <td colspan="5">Fluxo de Trabalho</td>
+                        <td colspan="3">Fluxo de Trabalho</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Disparos em massa</td>
                         <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                     </tr>
                     <tr>
                         <td class="feature-name">Automação de fluxos</td>
-                        <td>Maximo 2 fluxos</td>
-                        <td>5 Fluxos</td>
-                        <td>15 Fluxos</td>
+                        <td>Maximo 3 fluxos</td>
                         <td>Ilimitado</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Chat Interno</td>
                         <td><span class="cross-icon">✕</span></td>
                         <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                     </tr>
                     <tr>
                         <td class="feature-name">Integrações com APIs</td>
                         <td><span class="cross-icon">✕</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
                     </tr>
                     <tr>
                         <td class="feature-name">Kanban Inteligente</td>
                         <td>Pro (Multifunil)</td>
                         <td>Pro (Multifunil)</td>
-                        <td>Pro (Multifunil)</td>
-                        <td>Personalizado</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Agente de IA</td>
                         <td><span class="cross-icon">✕</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                        <td><span class="check-icon">✓</span></td>
                         <td><span class="check-icon">✓</span></td>
                     </tr>
                 </tbody>
@@ -104,21 +82,17 @@
                 <!-- Gestão -->
                 <tbody>
                     <tr class="category-row">
-                        <td colspan="5">Capacidade & Gestão</td>
+                        <td colspan="3">Capacidade & Gestão</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Total de Conexões WhatsApp</td>
                         <td>1</td>
                         <td>4 <small style="opacity: 0.6; font-size: 0.7rem">(2 Paralela + 2 Oficial)</small></td>
-                        <td>6 <small style="opacity: 0.6; font-size: 0.7rem">(3 Paralela + 3 Oficial)</small></td>
-                        <td>Ilimitado</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Número de usuários</td>
-                        <td>2</td>
-                        <td>10</td>
-                        <td>15</td>
-                        <td>Ilimitado</td>
+                        <td>Minimo 2</td>
+                        <td>Minimo 2</td>
                     </tr>
                 </tbody>
             </table>
