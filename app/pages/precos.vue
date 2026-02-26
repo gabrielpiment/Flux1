@@ -31,6 +31,10 @@
                             <li class="check">Kanban CRM</li>
                             <li class="check">Painel de controle de atendentes</li>
                             <li class="check">Logs de atividade</li>
+                            <li class="bonus-item">
+                                <span class="gift-emoji">🎁</span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <strong class="unlock">DESBLOQUEAR</strong></span>
+                            </li>
                         </ul>
                     </div>
                     <div class="card-action">
@@ -63,6 +67,10 @@
                             <li class="check">Agente de IA</li>
                             <li class="cross warning">
                                 <span>Gestor de IA <a href="#gestor-ia" class="consultar-link">( consultar )</a></span>
+                            </li>
+                            <li class="bonus-item">
+                                <span class="gift-emoji">🎁</span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <strong class="unlock">DESBLOQUEAR</strong></span>
                             </li>
                         </ul>
                     </div>
