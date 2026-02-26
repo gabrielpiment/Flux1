@@ -92,47 +92,7 @@
                         <span class="label">MENSALIDADE</span>
                     </div>
 
-                    <!-- Instagram -->
-                    <div class="addon-item">
-                        <div class="addon-info">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                                alt="Instagram" class="addon-icon">
-                            <div class="addon-details">
-                                <span class="addon-name">Instagram</span>
-                                <span class="addon-desc">Conexão direta com Direct e comentários.</span>
-                            </div>
-                        </div>
-                        <div class="addon-value">R$ 50,00</div>
-                    </div>
 
-                    <!-- Facebook -->
-                    <div class="addon-item">
-                        <div class="addon-info">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
-                                alt="Facebook" class="addon-icon">
-                            <div class="addon-details">
-                                <span class="addon-name">Facebook</span>
-                                <span class="addon-desc">Gestão de Messenger.</span>
-                            </div>
-                        </div>
-                        <div class="addon-value">R$ 50,00</div>
-                    </div>
-
-                    <!-- WhatsApp Official -->
-                    <div class="addon-item">
-                        <div class="addon-info">
-                            <div class="wa-icon-wrapper">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                                    alt="WhatsApp Official" class="addon-icon">
-                                <span class="verified-badge">✓</span>
-                            </div>
-                            <div class="addon-details">
-                                <span class="addon-name">WhatsApp API Oficial</span>
-                                <span class="addon-desc">Estabilidade total e selo de verificação.</span>
-                            </div>
-                        </div>
-                        <div class="addon-value">R$ 60,00</div>
-                    </div>
 
                     <!-- WhatsApp Parallel -->
                     <div class="addon-item">

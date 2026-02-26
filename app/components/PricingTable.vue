@@ -25,16 +25,7 @@
                         <td>1</td>
                         <td>2</td>
                     </tr>
-                    <tr>
-                        <td class="feature-name">WhatsApp Api Oficial</td>
-                        <td><span class="cross-icon">✕</span></td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td class="feature-name">Instagram & Facebook</td>
-                        <td><span class="cross-icon">✕</span></td>
-                        <td><span class="check-icon">✓</span></td>
-                    </tr>
+
                     <tr>
                         <td class="feature-name">OLX & Mercado Livre</td>
                         <td><span class="cross-icon">✕</span></td>
@@ -87,7 +78,7 @@
                     <tr>
                         <td class="feature-name">Total de Conexões WhatsApp</td>
                         <td>1</td>
-                        <td>4 <small style="opacity: 0.6; font-size: 0.7rem">(2 Paralela + 2 Oficial)</small></td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td class="feature-name">Número de usuários</td>
