@@ -26,11 +26,7 @@
                         <td>2</td>
                     </tr>
 
-                    <tr>
-                        <td class="feature-name">OLX & Mercado Livre</td>
-                        <td><span class="cross-icon">✕</span></td>
-                        <td><span class="cross-icon">✕</span></td>
-                    </tr>
+
                 </tbody>
 
                 <!-- Fluxo de Trabalho -->
