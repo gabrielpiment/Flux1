@@ -33,7 +33,7 @@
                             <li class="check">Logs de atividade</li>
                             <li class="bonus-item">
                                 <span class="gift-emoji">🎁</span>
-                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <strong class="unlock">DESBLOQUEAR</strong></span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span class="unlock-shimmer">DESBLOQUEAR</span></span>
                             </li>
                         </ul>
                     </div>
