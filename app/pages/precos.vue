@@ -70,7 +70,7 @@
                             </li>
                             <li class="bonus-item">
                                 <span class="gift-emoji">🎁</span>
-                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <strong class="unlock">DESBLOQUEAR</strong></span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span class="unlock-shimmer">DESBLOQUEAR</span></span>
                             </li>
                         </ul>
                     </div>
@@ -760,5 +760,57 @@ html {
         color: #94a3b8;
         font-weight: 700;
     }
+}
+
+.bonus-item {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem !important;
+    font-weight: 800;
+}
+
+.gift-emoji {
+    font-size: 1.5rem;
+    display: inline-block;
+    animation: shake 1.5s infinite;
+}
+
+.unlock-shimmer {
+    background: linear-gradient(90deg, #ef4444, #ff8a8a, #ef4444);
+    background-size: 200% auto;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    margin-left: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+    animation: shimmer 2s linear infinite;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.unlock-shimmer:hover {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(12deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(9deg); }
+    50% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 </style>
