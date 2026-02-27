@@ -194,11 +194,15 @@ export function useCadastroForm() {
                 extra_whatsapp_paralela: String(form.value.extraWhatsappParalela),
                 gestor_ia: form.value.wantsGestorIA ? 'sim' : 'nao',
                 bonuses: form.value.bonuses.join('; '),
+                total_mensal: String(computedTotalPrice.value.total),
                 timestamp: new Date().toISOString()
             }
 
-            const params = new URLSearchParams(data)
-            await fetch(`${WEBHOOK_URL}?${params.toString()}`, { method: 'GET' })
+            await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
         } catch {
             // silently ignore webhook errors
         } finally {
