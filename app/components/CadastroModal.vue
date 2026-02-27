@@ -25,245 +25,254 @@
                         </div>
                     </div>
 
-                    <!-- Step 1: Dados Básicos -->
-                    <div v-if="currentStep === 1" class="step-content">
-                        <p class="step-subtitle">Informe seus dados de contato</p>
+                    <!-- Form wrapper for accessibility and password managers -->
+                    <form id="cadastro-form" @submit.prevent>
+                        <!-- Step 1: Dados Básicos -->
+                        <div v-if="currentStep === 1" class="step-content">
+                            <p class="step-subtitle">Informe seus dados de contato</p>
 
-                        <div class="form-group">
-                            <label for="cadastro-nome">Nome completo *</label>
-                            <input id="cadastro-nome" v-model="form.fullName" type="text"
-                                placeholder="Seu nome completo" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cadastro-empresa">Nome da empresa *</label>
-                            <input id="cadastro-empresa" v-model="form.companyName" type="text"
-                                placeholder="Nome da sua empresa" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cadastro-doc">CNPJ ou CPF *</label>
-                            <input id="cadastro-doc" :value="form.cnpjCpf" type="text"
-                                placeholder="000.000.000-00 ou 00.000.000/0000-00" @input="onCPFCNPJInput" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cadastro-email">Email de acesso *</label>
-                            <input id="cadastro-email" v-model="form.email" type="email"
-                                placeholder="exemplo@empresa.com" required />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cadastro-whatsapp">WhatsApp *</label>
-                            <div class="phone-input-wrapper">
-                                <div class="phone-prefix">
-                                    <span class="flag-br">🇧🇷</span>
-                                    <span>+55</span>
-                                </div>
-                                <input id="cadastro-whatsapp" :value="form.phone" type="tel"
-                                    placeholder="(34) 88452-548" @input="onPhoneInput" required />
+                            <div class="form-group">
+                                <label for="cadastro-nome">Nome completo *</label>
+                                <input id="cadastro-nome" v-model="form.fullName" type="text"
+                                    placeholder="Seu nome completo" required />
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="cadastro-senha">Crie sua senha de acesso *</label>
-                            <input id="cadastro-senha" v-model="form.password" type="password"
-                                placeholder="Mínimo 8 caracteres" required minlength="8" />
-                            <span class="form-hint">Esta será sua senha para acessar o sistema</span>
-                        </div>
-
-                        <button id="step1-continue-btn" class="btn-step" :disabled="!validateStep1()" @click="nextStep">
-                            Continuar
-                        </button>
-                    </div>
-
-                    <!-- Step 2: Plano & Extras -->
-                    <div v-if="currentStep === 2" class="step-content">
-                        <p class="step-subtitle">Configure seu plano</p>
-
-                        <!-- Selected plan badge -->
-                        <div class="plan-badge-row">
-                            <span class="plan-badge">{{ form.plan }}</span>
-                        </div>
-
-                        <!-- Billing cycle -->
-                        <div class="form-group">
-                            <label>Período de assinatura</label>
-                            <div class="toggle-group">
-                                <button id="billing-mensal-btn"
-                                    :class="['toggle-btn', { active: form.billingCycle === 'mensal' }]"
-                                    @click="form.billingCycle = 'mensal'">
-                                    Mensal
-                                </button>
-                                <button id="billing-trimestral-btn"
-                                    :class="['toggle-btn', { active: form.billingCycle === 'trimestral' }]"
-                                    @click="form.billingCycle = 'trimestral'">
-                                    Trimestral
-                                </button>
+                            <div class="form-group">
+                                <label for="cadastro-empresa">Nome da empresa *</label>
+                                <input id="cadastro-empresa" v-model="form.companyName" type="text"
+                                    placeholder="Nome da sua empresa" required />
                             </div>
-                        </div>
 
-                        <!-- Attendant count -->
-                        <div class="form-group">
-                            <label for="cadastro-atendentes">Quantidade de atendentes (mín. 2)</label>
-                            <div class="number-stepper">
-                                <button class="stepper-btn"
-                                    @click="form.attendantCount = Math.max(2, form.attendantCount - 1)">−</button>
-                                <input id="cadastro-atendentes" v-model.number="form.attendantCount" type="number"
-                                    min="2" />
-                                <button class="stepper-btn" @click="form.attendantCount++">+</button>
+                            <div class="form-group">
+                                <label for="cadastro-doc">CNPJ ou CPF *</label>
+                                <input id="cadastro-doc" :value="form.cnpjCpf" type="text"
+                                    placeholder="000.000.000-00 ou 00.000.000/0000-00" @input="onCPFCNPJInput"
+                                    required />
                             </div>
-                        </div>
 
-                        <!-- Extra connections -->
-                        <div class="form-group">
-                            <label>Conexões extras</label>
-                            <div class="extras-list">
-                                <div class="extra-row">
-                                    <span class="extra-name">Instagram</span>
-                                    <span class="extra-price">R$ 50/un</span>
-                                    <div class="number-stepper small">
-                                        <button class="stepper-btn"
-                                            @click="form.extraInstagram = Math.max(0, form.extraInstagram - 1)">−</button>
-                                        <input v-model.number="form.extraInstagram" type="number" min="0" />
-                                        <button class="stepper-btn" @click="form.extraInstagram++">+</button>
+                            <div class="form-group">
+                                <label for="cadastro-email">Email de acesso *</label>
+                                <input id="cadastro-email" v-model="form.email" type="email"
+                                    placeholder="exemplo@empresa.com" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cadastro-whatsapp">WhatsApp *</label>
+                                <div class="phone-input-wrapper">
+                                    <div class="phone-prefix">
+                                        <span class="flag-br">🇧🇷</span>
+                                        <span>+55</span>
                                     </div>
-                                </div>
-
-                                <div class="extra-row">
-                                    <span class="extra-name">Facebook</span>
-                                    <span class="extra-price">R$ 50/un</span>
-                                    <div class="number-stepper small">
-                                        <button class="stepper-btn"
-                                            @click="form.extraFacebook = Math.max(0, form.extraFacebook - 1)">−</button>
-                                        <input v-model.number="form.extraFacebook" type="number" min="0" />
-                                        <button class="stepper-btn" @click="form.extraFacebook++">+</button>
-                                    </div>
-                                </div>
-
-                                <div class="extra-row">
-                                    <span class="extra-name">WhatsApp API Oficial</span>
-                                    <span class="extra-price">R$ 60/un</span>
-                                    <div class="number-stepper small">
-                                        <button class="stepper-btn"
-                                            @click="form.extraWhatsappOficial = Math.max(0, form.extraWhatsappOficial - 1)">−</button>
-                                        <input v-model.number="form.extraWhatsappOficial" type="number" min="0" />
-                                        <button class="stepper-btn" @click="form.extraWhatsappOficial++">+</button>
-                                    </div>
-                                </div>
-
-                                <div class="extra-row">
-                                    <span class="extra-name">WhatsApp API Paralela</span>
-                                    <span class="extra-price">R$ 50/un</span>
-                                    <div class="number-stepper small">
-                                        <button class="stepper-btn"
-                                            @click="form.extraWhatsappParalela = Math.max(0, form.extraWhatsappParalela - 1)">−</button>
-                                        <input v-model.number="form.extraWhatsappParalela" type="number" min="0" />
-                                        <button class="stepper-btn" @click="form.extraWhatsappParalela++">+</button>
-                                    </div>
+                                    <input id="cadastro-whatsapp" :value="form.phone" type="tel"
+                                        placeholder="(34) 88452-548" @input="onPhoneInput" required />
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Gestor de Automação -->
-                        <div class="form-group">
-                            <label>Gestor de Automação (IA)</label>
-                            <div class="toggle-group">
-                                <button id="gestor-sim-btn" :class="['toggle-btn', { active: form.wantsGestorIA }]"
-                                    @click="form.wantsGestorIA = true">
-                                    Sim
-                                </button>
-                                <button id="gestor-nao-btn" :class="['toggle-btn', { active: !form.wantsGestorIA }]"
-                                    @click="form.wantsGestorIA = false">
-                                    Não
-                                </button>
+                            <div class="form-group">
+                                <label for="cadastro-senha">Crie sua senha de acesso *</label>
+                                <input id="cadastro-senha" v-model="form.password" type="password"
+                                    placeholder="Mínimo 8 caracteres" required minlength="8" />
+                                <span class="form-hint">Esta será sua senha para acessar o sistema</span>
                             </div>
-                        </div>
 
-                        <!-- Bonuses (auto-fill for trimestral) -->
-                        <div v-if="computedBonuses.length > 0" class="bonuses-section">
-                            <label>🎁 Bônus do plano trimestral</label>
-                            <ul class="bonuses-list">
-                                <li v-for="(bonus, i) in computedBonuses" :key="i">
-                                    <span class="bonus-check">✓</span> {{ bonus }}
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Price summary -->
-                        <div class="price-summary">
-                            <div class="price-summary-row">
-                                <span>Atendentes ({{ form.attendantCount }}x R$ {{
-                                    computedTotalPrice.pricePerUser.toFixed(2) }})</span>
-                                <span>R$ {{ computedTotalPrice.attendants.toFixed(2) }}</span>
-                            </div>
-                            <div v-if="computedTotalPrice.connections > 0" class="price-summary-row">
-                                <span>Conexões extras</span>
-                                <span>R$ {{ computedTotalPrice.connections.toFixed(2) }}</span>
-                            </div>
-                            <div class="price-summary-total">
-                                <span>Total mensal</span>
-                                <span class="total-value">R$ {{ computedTotalPrice.total.toFixed(2) }}</span>
-                            </div>
-                            <div v-if="form.billingCycle === 'trimestral'" class="price-summary-grand">
-                                <span>Total trimestral (3 meses)</span>
-                                <span class="grand-value">R$ {{ (computedTotalPrice.total * 3).toFixed(2) }}</span>
-                            </div>
-                        </div>
-
-                        <div class="step-actions">
-                            <button id="step2-back-btn" class="btn-step-outline" @click="prevStep">
-                                Voltar
-                            </button>
-                            <button id="step2-send-btn" class="btn-step" :disabled="!validateStep2()"
-                                @click="requestConfirmation">
-                                Enviar
+                            <button id="step1-continue-btn" type="button" class="btn-step" :disabled="!validateStep1()"
+                                @click="nextStep">
+                                Continuar
                             </button>
                         </div>
-                    </div>
 
-                    <!-- Confirmation popup -->
-                    <Transition name="confirm-fade">
-                        <div v-if="showConfirmation" class="confirm-overlay" @click.self="cancelConfirmation">
-                            <div class="confirm-box">
-                                <h3>Confirme seus dados</h3>
-                                <div class="confirm-data">
-                                    <div class="confirm-row"><strong>Nome:</strong> {{ form.fullName }}</div>
-                                    <div class="confirm-row"><strong>Empresa:</strong> {{ form.companyName }}</div>
-                                    <div class="confirm-row"><strong>Documento:</strong> {{ form.cnpjCpf }}</div>
-                                    <div class="confirm-row"><strong>Email:</strong> {{ form.email }}</div>
-                                    <div class="confirm-row"><strong>WhatsApp:</strong> +55 {{ form.phone }}</div>
-                                    <div class="confirm-row"><strong>Plano:</strong> {{ form.plan }}</div>
-                                    <div class="confirm-row"><strong>Período:</strong> {{ form.billingCycle }}
-                                    </div>
-                                    <div class="confirm-row"><strong>Atendentes:</strong> {{ form.attendantCount }}
-                                    </div>
-                                    <div v-if="form.extraInstagram" class="confirm-row"><strong>Instagram
-                                            extra:</strong> {{ form.extraInstagram }}</div>
-                                    <div v-if="form.extraFacebook" class="confirm-row"><strong>Facebook
-                                            extra:</strong> {{ form.extraFacebook }}</div>
-                                    <div v-if="form.extraWhatsappOficial" class="confirm-row"><strong>WhatsApp Oficial
-                                            extra:</strong> {{ form.extraWhatsappOficial }}</div>
-                                    <div v-if="form.extraWhatsappParalela" class="confirm-row"><strong>WhatsApp Paralela
-                                            extra:</strong> {{ form.extraWhatsappParalela }}</div>
-                                    <div class="confirm-row"><strong>Gestor IA:</strong> {{ form.wantsGestorIA ? 'Sim'
-                                        : 'Não' }}</div>
-                                    <div v-if="form.bonuses.length" class="confirm-row">
-                                        <strong>Bônus:</strong> {{ form.bonuses.join(', ') }}
-                                    </div>
-                                </div>
-                                <div class="confirm-actions">
-                                    <button id="confirm-no-btn" class="btn-step-outline" @click="cancelConfirmation">
-                                        Não, editar
+                        <!-- Step 2: Plano & Extras -->
+                        <div v-if="currentStep === 2" class="step-content">
+                            <p class="step-subtitle">Configure seu plano</p>
+
+                            <!-- Selected plan badge -->
+                            <div class="plan-badge-row">
+                                <span class="plan-badge">{{ form.plan }}</span>
+                            </div>
+
+                            <!-- Billing cycle -->
+                            <div class="form-group">
+                                <label>Período de assinatura</label>
+                                <div class="toggle-group">
+                                    <button id="billing-mensal-btn"
+                                        :class="['toggle-btn', { active: form.billingCycle === 'mensal' }]"
+                                        @click="form.billingCycle = 'mensal'">
+                                        Mensal
                                     </button>
-                                    <button id="confirm-yes-btn" class="btn-step" :disabled="isSubmitting"
-                                        @click="confirmAndSubmit">
-                                        {{ isSubmitting ? 'Enviando...' : 'Confirmo' }}
+                                    <button id="billing-trimestral-btn"
+                                        :class="['toggle-btn', { active: form.billingCycle === 'trimestral' }]"
+                                        @click="form.billingCycle = 'trimestral'">
+                                        Trimestral
                                     </button>
                                 </div>
                             </div>
+
+                            <!-- Attendant count -->
+                            <div class="form-group">
+                                <label for="cadastro-atendentes">Quantidade de atendentes (mín. 2)</label>
+                                <div class="number-stepper">
+                                    <button class="stepper-btn"
+                                        @click="form.attendantCount = Math.max(2, form.attendantCount - 1)">−</button>
+                                    <input id="cadastro-atendentes" v-model.number="form.attendantCount" type="number"
+                                        min="2" />
+                                    <button class="stepper-btn" @click="form.attendantCount++">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Extra connections -->
+                            <div class="form-group">
+                                <label>Conexões extras</label>
+                                <div class="extras-list">
+                                    <div class="extra-row">
+                                        <span class="extra-name">Instagram</span>
+                                        <span class="extra-price">R$ 50/un</span>
+                                        <div class="number-stepper small">
+                                            <button class="stepper-btn"
+                                                @click="form.extraInstagram = Math.max(0, form.extraInstagram - 1)">−</button>
+                                            <input v-model.number="form.extraInstagram" type="number" min="0" />
+                                            <button class="stepper-btn" @click="form.extraInstagram++">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="extra-row">
+                                        <span class="extra-name">Facebook</span>
+                                        <span class="extra-price">R$ 50/un</span>
+                                        <div class="number-stepper small">
+                                            <button class="stepper-btn"
+                                                @click="form.extraFacebook = Math.max(0, form.extraFacebook - 1)">−</button>
+                                            <input v-model.number="form.extraFacebook" type="number" min="0" />
+                                            <button class="stepper-btn" @click="form.extraFacebook++">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="extra-row">
+                                        <span class="extra-name">WhatsApp API Oficial</span>
+                                        <span class="extra-price">R$ 60/un</span>
+                                        <div class="number-stepper small">
+                                            <button class="stepper-btn"
+                                                @click="form.extraWhatsappOficial = Math.max(0, form.extraWhatsappOficial - 1)">−</button>
+                                            <input v-model.number="form.extraWhatsappOficial" type="number" min="0" />
+                                            <button class="stepper-btn" @click="form.extraWhatsappOficial++">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="extra-row">
+                                        <span class="extra-name">WhatsApp API Paralela</span>
+                                        <span class="extra-price">R$ 50/un</span>
+                                        <div class="number-stepper small">
+                                            <button class="stepper-btn"
+                                                @click="form.extraWhatsappParalela = Math.max(0, form.extraWhatsappParalela - 1)">−</button>
+                                            <input v-model.number="form.extraWhatsappParalela" type="number" min="0" />
+                                            <button class="stepper-btn" @click="form.extraWhatsappParalela++">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Gestor de Automação -->
+                            <div class="form-group">
+                                <label>Gestor de Automação (IA)</label>
+                                <div class="toggle-group">
+                                    <button id="gestor-sim-btn" :class="['toggle-btn', { active: form.wantsGestorIA }]"
+                                        @click="form.wantsGestorIA = true">
+                                        Sim
+                                    </button>
+                                    <button id="gestor-nao-btn" :class="['toggle-btn', { active: !form.wantsGestorIA }]"
+                                        @click="form.wantsGestorIA = false">
+                                        Não
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Bonuses (auto-fill for trimestral) -->
+                            <div v-if="computedBonuses.length > 0" class="bonuses-section">
+                                <label>🎁 Bônus do plano trimestral</label>
+                                <ul class="bonuses-list">
+                                    <li v-for="(bonus, i) in computedBonuses" :key="i">
+                                        <span class="bonus-check">✓</span> {{ bonus }}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Price summary -->
+                            <div class="price-summary">
+                                <div class="price-summary-row">
+                                    <span>Atendentes ({{ form.attendantCount }}x R$ {{
+                                        computedTotalPrice.pricePerUser.toFixed(2) }})</span>
+                                    <span>R$ {{ computedTotalPrice.attendants.toFixed(2) }}</span>
+                                </div>
+                                <div v-if="computedTotalPrice.connections > 0" class="price-summary-row">
+                                    <span>Conexões extras</span>
+                                    <span>R$ {{ computedTotalPrice.connections.toFixed(2) }}</span>
+                                </div>
+                                <div class="price-summary-total">
+                                    <span>Total mensal</span>
+                                    <span class="total-value">R$ {{ computedTotalPrice.total.toFixed(2) }}</span>
+                                </div>
+                                <div v-if="form.billingCycle === 'trimestral'" class="price-summary-grand">
+                                    <span>Total trimestral (3 meses)</span>
+                                    <span class="grand-value">R$ {{ (computedTotalPrice.total * 3).toFixed(2) }}</span>
+                                </div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button id="step2-back-btn" type="button" class="btn-step-outline" @click="prevStep">
+                                    Voltar
+                                </button>
+                                <button id="step2-send-btn" type="button" class="btn-step" :disabled="!validateStep2()"
+                                    @click="requestConfirmation">
+                                    Enviar
+                                </button>
+                            </div>
                         </div>
-                    </Transition>
+
+                        <!-- Confirmation popup -->
+                        <Transition name="confirm-fade">
+                            <div v-if="showConfirmation" class="confirm-overlay" @click.self="cancelConfirmation">
+                                <div class="confirm-box">
+                                    <h3>Confirme seus dados</h3>
+                                    <div class="confirm-data">
+                                        <div class="confirm-row"><strong>Nome:</strong> {{ form.fullName }}</div>
+                                        <div class="confirm-row"><strong>Empresa:</strong> {{ form.companyName }}</div>
+                                        <div class="confirm-row"><strong>Documento:</strong> {{ form.cnpjCpf }}</div>
+                                        <div class="confirm-row"><strong>Email:</strong> {{ form.email }}</div>
+                                        <div class="confirm-row"><strong>WhatsApp:</strong> +55 {{ form.phone }}</div>
+                                        <div class="confirm-row"><strong>Plano:</strong> {{ form.plan }}</div>
+                                        <div class="confirm-row"><strong>Período:</strong> {{ form.billingCycle }}
+                                        </div>
+                                        <div class="confirm-row"><strong>Atendentes:</strong> {{ form.attendantCount }}
+                                        </div>
+                                        <div v-if="form.extraInstagram" class="confirm-row"><strong>Instagram
+                                                extra:</strong> {{ form.extraInstagram }}</div>
+                                        <div v-if="form.extraFacebook" class="confirm-row"><strong>Facebook
+                                                extra:</strong> {{ form.extraFacebook }}</div>
+                                        <div v-if="form.extraWhatsappOficial" class="confirm-row"><strong>WhatsApp
+                                                Oficial
+                                                extra:</strong> {{ form.extraWhatsappOficial }}</div>
+                                        <div v-if="form.extraWhatsappParalela" class="confirm-row"><strong>WhatsApp
+                                                Paralela
+                                                extra:</strong> {{ form.extraWhatsappParalela }}</div>
+                                        <div class="confirm-row"><strong>Gestor IA:</strong> {{ form.wantsGestorIA ?
+                                            'Sim'
+                                            : 'Não' }}</div>
+                                        <div v-if="form.bonuses.length" class="confirm-row">
+                                            <strong>Bônus:</strong> {{ form.bonuses.join(', ') }}
+                                        </div>
+                                    </div>
+                                    <div class="confirm-actions">
+                                        <button id="confirm-no-btn" type="button" class="btn-step-outline"
+                                            @click="cancelConfirmation">
+                                            Não, editar
+                                        </button>
+                                        <button id="confirm-yes-btn" type="submit" class="btn-step"
+                                            :disabled="isSubmitting" @click="confirmAndSubmit">
+                                            {{ isSubmitting ? 'Enviando...' : 'Confirmo' }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </Transition>
+                    </form>
 
                     <!-- Success popup -->
                     <Transition name="confirm-fade">
