@@ -198,9 +198,12 @@ export function useCadastroForm() {
                 timestamp: new Date().toISOString()
             }
 
+            // Usamos mode: 'no-cors' e text/plain para evitar que o navegador bloqueie por CORS.
+            // O servidor ainda receberá o corpo JSON normalmente.
             await fetch(WEBHOOK_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(data)
             })
         } catch {
