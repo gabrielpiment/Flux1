@@ -39,7 +39,8 @@
                         </ul>
                     </div>
                     <div class="card-action">
-                        <button class="btn-pill">Vamos começar <span>ACESSO IMEDIATO</span></button>
+                        <button class="btn-pill" @click="openModal('Digital Flux')">Vamos começar <span>ACESSO
+                                IMEDIATO</span></button>
                     </div>
                 </div>
 
@@ -77,7 +78,8 @@
                         </ul>
                     </div>
                     <div class="card-action">
-                        <button class="btn-pill">Vamos começar <span>ACESSO IMEDIATO</span></button>
+                        <button class="btn-pill" @click="openModal('Pro Digital Flux')">Vamos começar <span>ACESSO
+                                IMEDIATO</span></button>
                     </div>
                 </div>
             </div>
@@ -197,11 +199,21 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <!-- Registration Modal -->
+    <CadastroModal />
+
 </template>
+
+<script setup lang="ts">
+import CadastroModal from '~/components/CadastroModal.vue'
+import PricingTable from '~/components/PricingTable.vue'
+import { useCadastroForm } from '~/composables/useCadastroForm'
+
+const { openModal } = useCadastroForm()
+</script>
 
 <style scoped>
 .pricing-extra-cta {
