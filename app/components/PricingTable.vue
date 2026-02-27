@@ -135,7 +135,7 @@
     background: rgba(255, 255, 255, 0.02);
     font-weight: 700;
     font-size: 1rem;
-    color: var(--primary-color);
+    color: #0072f5;
 }
 
 .feature-col {
@@ -159,7 +159,7 @@
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--primary-color);
+    color: #0072f5;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 

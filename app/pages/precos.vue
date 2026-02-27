@@ -12,7 +12,7 @@
                 <div class="pricing-card" v-motion-fade-visible>
                     <div class="card-accent accent-green"></div>
                     <div class="card-header">
-                        <span class="plan-label">PLANO DIGITAL FLUX</span>
+                        <span class="plan-label">DIGITAL FLUX</span>
                         <div class="price-main">
                             <span class="value">R$ 75 por usuario/mês</span>
                         </div>
@@ -33,7 +33,8 @@
                             <li class="check">Logs de atividade</li>
                             <li class="bonus-item">
                                 <span class="gift-emoji">🎁</span>
-                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span class="unlock-shimmer">DESBLOQUEAR</span></span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span
+                                        class="unlock-shimmer">DESBLOQUEAR</span></span>
                             </li>
                         </ul>
                     </div>
@@ -70,7 +71,8 @@
                             </li>
                             <li class="bonus-item">
                                 <span class="gift-emoji">🎁</span>
-                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span class="unlock-shimmer">DESBLOQUEAR</span></span>
+                                <span>BONUS ESPECIAL PLANO TRIMESTRAL <span
+                                        class="unlock-shimmer">DESBLOQUEAR</span></span>
                             </li>
                         </ul>
                     </div>
@@ -208,8 +210,8 @@
 }
 
 .btn-secondary-outline {
-    background: rgba(31, 105, 255, 0.05);
-    border: 1.5px solid #1f69ff;
+    background: rgba(0, 114, 245, 0.05);
+    border: 1.5px solid #0072f5;
     color: #fff;
     padding: 0.9rem 3rem;
     border-radius: 99px;
@@ -218,16 +220,16 @@
     text-decoration: none;
     display: inline-block;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 15px rgba(31, 105, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 114, 245, 0.1);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary-outline:hover {
-    background: #1f69ff;
+    background: #0072f5;
     color: #fff;
     transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(31, 105, 255, 0.4);
-    border-color: #3b82f6;
+    box-shadow: 0 10px 25px rgba(0, 114, 245, 0.4);
+    border-color: #0072f5;
 }
 
 html {
@@ -284,7 +286,7 @@ html {
 
 .ai-manager-card {
     margin-top: 3rem;
-    background: rgba(13, 17, 23, 0.6);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 2.5rem;
@@ -370,12 +372,12 @@ html {
     content: "•";
     position: absolute;
     left: 0;
-    color: #1f69ff;
+    color: #0072f5;
     font-size: 1.2rem;
 }
 
 .btn-primary-pill {
-    background: #1f69ff;
+    background: #0072f5;
     color: #fff;
     border: none;
     padding: 1rem 2.5rem;
@@ -389,7 +391,7 @@ html {
 
 .btn-primary-pill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(31, 105, 255, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 114, 245, 0.4);
     filter: brightness(1.1);
 }
 
@@ -397,7 +399,7 @@ html {
     padding-top: 180px;
     padding-bottom: 80px;
     min-height: 100vh;
-    background: #0d1117;
+    background: #0a0a0a;
 }
 
 .pricing-header {
@@ -426,7 +428,7 @@ html {
 }
 
 .pricing-card {
-    background: #171f1b;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
     padding: 2.5rem 2rem;
     display: flex;
@@ -457,7 +459,7 @@ html {
 .pricing-card:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.1);
-    background: #1c2621;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .card-header {
@@ -800,17 +802,42 @@ html {
 }
 
 @keyframes shake {
-    0% { transform: rotate(0deg); }
-    10% { transform: rotate(-10deg); }
-    20% { transform: rotate(12deg); }
-    30% { transform: rotate(-10deg); }
-    40% { transform: rotate(9deg); }
-    50% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(12deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    40% {
+        transform: rotate(9deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes shimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
 }
 </style>
