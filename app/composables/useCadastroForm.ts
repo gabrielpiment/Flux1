@@ -90,7 +90,7 @@ watch(computedBonuses, (val) => {
 })
 
 export function useCadastroForm() {
-    const WEBHOOK_URL = 'https://back.fluxconversa.com.br/api/webhooks/f8086251-c7a8-4d53-80dd-da0f507c567c'
+    const WEBHOOK_URL = '/api/webhook'
 
     function openModal(plan: string) {
         form.value.plan = plan
@@ -202,8 +202,7 @@ export function useCadastroForm() {
             // O servidor ainda receberá o corpo JSON normalmente.
             await fetch(WEBHOOK_URL, {
                 method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'text/plain' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             })
         } catch {
