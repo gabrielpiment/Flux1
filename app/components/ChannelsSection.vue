@@ -15,7 +15,7 @@
             <circle cx="260" cy="260" r="190" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"
               stroke-dasharray="5 14" />
             <line v-for="(ch, i) in channels" :key="'line-' + i" x1="260" y1="260" :x2="lineX2(ch.angle)"
-              :y2="lineY2(ch.angle)" :stroke="currentActive === i ? 'rgba(31,105,255,0.6)' : 'rgba(255,255,255,0.07)'"
+              :y2="lineY2(ch.angle)" :stroke="currentActive === i ? 'rgba(0,114,245,0.6)' : 'rgba(255,255,255,0.07)'"
               stroke-width="1.5" />
           </svg>
 

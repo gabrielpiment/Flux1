@@ -99,7 +99,7 @@ const faqs = [
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 60%, rgba(31, 105, 255, 0.05) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 50% 60%, rgba(0, 114, 245, 0.05) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -115,8 +115,8 @@ const faqs = [
   font-weight: 800;
   letter-spacing: 0.18em;
   color: var(--accent-primary);
-  background: rgba(31, 105, 255, 0.1);
-  border: 1px solid rgba(31, 105, 255, 0.25);
+  background: rgba(0, 114, 245, 0.1);
+  border: 1px solid rgba(0, 114, 245, 0.25);
   border-radius: 99px;
   padding: 0.35rem 1rem;
   margin-bottom: 1.25rem;
@@ -154,13 +154,13 @@ const faqs = [
 }
 
 .faq-item:hover {
-  border-color: rgba(31, 105, 255, 0.25);
-  background: rgba(31, 105, 255, 0.03);
+  border-color: rgba(0, 114, 245, 0.25);
+  background: rgba(0, 114, 245, 0.03);
 }
 
 .faq-item--open {
-  border-color: rgba(31, 105, 255, 0.3);
-  background: rgba(31, 105, 255, 0.04);
+  border-color: rgba(0, 114, 245, 0.3);
+  background: rgba(0, 114, 245, 0.04);
 }
 
 /* Question row */
@@ -194,8 +194,8 @@ const faqs = [
 
 .faq-chevron--open {
   transform: rotate(180deg);
-  background: rgba(31, 105, 255, 0.15);
-  border-color: rgba(31, 105, 255, 0.35);
+  background: rgba(0, 114, 245, 0.15);
+  border-color: rgba(0, 114, 245, 0.35);
   color: var(--accent-primary);
 }
 

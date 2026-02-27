@@ -1,9 +1,6 @@
 <template>
-  <section
-    id="video-section"
-    class="video-section video-section--parallax"
-    :style="{ transform: `translateY(${videoShift}px)` }"
-  >
+  <section id="video-section" class="video-section video-section--parallax"
+    :style="{ transform: `translateY(${videoShift}px)` }">
     <div class="container">
       <div class="video-wrapper" @click="$emit('open-modal')">
         <img src="/images/capa-video.png" alt="Thumbnail do Vídeo Flux" class="video-thumbnail" loading="lazy">
@@ -75,7 +72,7 @@ onUnmounted(() => {
   height: 36px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(15, 27, 32, 0.85);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
   color: #fff;
   cursor: pointer;
@@ -86,7 +83,7 @@ onUnmounted(() => {
 }
 
 .video-dismiss-btn:hover {
-  background: rgba(31, 105, 255, 0.3);
+  background: rgba(0, 114, 245, 0.3);
   transform: scale(1.1);
 }
 
@@ -94,9 +91,9 @@ onUnmounted(() => {
 .video-fade-leave-active {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
 .video-fade-leave-to {
   opacity: 0;
   transform: translateY(40px);
 }
 </style>
-

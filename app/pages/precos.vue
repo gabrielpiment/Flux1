@@ -372,7 +372,7 @@ html {
     content: "•";
     position: absolute;
     left: 0;
-    color: #0072f5;
+    color: var(--accent-primary);
     font-size: 1.2rem;
 }
 
@@ -399,7 +399,7 @@ html {
     padding-top: 180px;
     padding-bottom: 80px;
     min-height: 100vh;
-    background: #0a0a0a;
+    background: var(--bg-main);
 }
 
 .pricing-header {

@@ -15,7 +15,7 @@
           <div class="chat-demo-header">
             <div class="chat-demo-avatar">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="color:#fff">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
               </svg>
             </div>
             <div class="chat-demo-info">
@@ -40,14 +40,10 @@
                 </div>
 
                 <!-- Regular message -->
-                <div
-                  v-else
-                  class="cmsg"
-                  :class="msg.from === 'client' ? 'cmsg--client' : 'cmsg--ai'"
-                >
+                <div v-else class="cmsg" :class="msg.from === 'client' ? 'cmsg--client' : 'cmsg--ai'">
                   <div v-if="msg.from === 'ai'" class="cmsg__mini-avatar">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" style="color:#fff">
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                     </svg>
                   </div>
                   <div class="cmsg__content">
@@ -63,10 +59,10 @@
             <transition name="typing-fade">
               <div v-if="isTyping" class="typing-indicator" :class="typingFrom === 'client' ? 'typing-client' : ''">
                 <div v-if="typingFrom === 'ai'" class="cmsg__mini-avatar">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" style="color:#fff">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-                </svg>
-              </div>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" style="color:#fff">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                </div>
                 <div class="typing-dots">
                   <span></span><span></span><span></span>
                 </div>
@@ -80,16 +76,20 @@
                   <span class="label-event-text">🤖 Flux IA adicionou etiquetas automaticamente</span>
                 </div>
                 <div class="chat-labels">
-                  <span class="chat-pill" style="background:rgba(139,92,246,.18);color:#c4b5fd;border:1px solid rgba(139,92,246,.35);">
+                  <span class="chat-pill"
+                    style="background:rgba(139,92,246,.18);color:#c4b5fd;border:1px solid rgba(139,92,246,.35);">
                     🏷 Lead Quente
                   </span>
-                  <span class="chat-pill" style="background:rgba(6,182,212,.14);color:#67e8f9;border:1px solid rgba(6,182,212,.3);">
+                  <span class="chat-pill"
+                    style="background:rgba(6,182,212,.14);color:#67e8f9;border:1px solid rgba(6,182,212,.3);">
                     🎯 Interesse: Growth
                   </span>
-                  <span class="chat-pill" style="background:rgba(34,197,94,.14);color:#86efac;border:1px solid rgba(34,197,94,.28);">
+                  <span class="chat-pill"
+                    style="background:rgba(34,197,94,.14);color:#86efac;border:1px solid rgba(34,197,94,.28);">
                     📌 Equipe Comercial
                   </span>
-                  <span class="chat-pill" style="background:rgba(251,146,60,.14);color:#fdba74;border:1px solid rgba(251,146,60,.3);">
+                  <span class="chat-pill"
+                    style="background:rgba(251,146,60,.14);color:#fdba74;border:1px solid rgba(251,146,60,.3);">
                     ⏰ Follow-up 3 dias
                   </span>
                 </div>
@@ -104,7 +104,8 @@
             </div>
             <button class="chat-send-btn" aria-label="enviar">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                <path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z" stroke-linejoin="round"/>
+                <path d="M22 2L11 13" />
+                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke-linejoin="round" />
               </svg>
             </button>
           </div>
@@ -128,19 +129,19 @@ interface ChatMsg {
 const SCRIPT: ChatMsg[] = [
   { type: 'date', text: 'Hoje, 14:02' },
   { from: 'client', text: 'Oi! Quero saber mais sobre os planos 😊', time: '14:02' },
-  { from: 'ai',     text: 'Olá! Que bom ter você aqui. Temos planos a partir de R$97/mês. Qual é o tamanho da sua equipe?', time: '14:02' },
+  { from: 'ai', text: 'Olá! Que bom ter você aqui. Temos planos a partir de R$97/mês. Qual é o tamanho da sua equipe?', time: '14:02' },
   { from: 'client', text: 'Somos 8 pessoas no time de vendas.', time: '14:03' },
-  { from: 'ai',     text: 'Perfeito! Para 8 pessoas o plano Growth é ideal — inclui omnichannel, IA nativa e relatórios em tempo real. Quer receber o link para teste grátis? 🚀', time: '14:03' },
+  { from: 'ai', text: 'Perfeito! Para 8 pessoas o plano Growth é ideal — inclui omnichannel, IA nativa e relatórios em tempo real. Quer receber o link para teste grátis? 🚀', time: '14:03' },
   { from: 'client', text: 'Sim! Me manda 👍', time: '14:04' },
-  { from: 'ai',     text: 'Pronto! Link enviado. Qualquer dúvida é só chamar — estou disponível 24h 😉', time: '14:04' },
+  { from: 'ai', text: 'Pronto! Link enviado. Qualquer dúvida é só chamar — estou disponível 24h 😉', time: '14:04' },
 ]
 
 const visibleMessages = ref<ChatMsg[]>([])
-const isTyping        = ref(false)
-const typingFrom      = ref<'ai' | 'client'>('ai')
-const showLabels      = ref(false)
-const chatBody        = ref<HTMLElement | null>(null)
-let   timeouts: ReturnType<typeof setTimeout>[] = []
+const isTyping = ref(false)
+const typingFrom = ref<'ai' | 'client'>('ai')
+const showLabels = ref(false)
+const chatBody = ref<HTMLElement | null>(null)
+let timeouts: ReturnType<typeof setTimeout>[] = []
 
 function scrollBottom() {
   nextTick(() => {
@@ -227,23 +228,44 @@ const vReveal = {
 <style scoped>
 .glow-bg {
   position: absolute;
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(31,105,255,.07) 0%, transparent 70%);
-  filter: blur(80px); pointer-events: none; z-index: 1;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 114, 245, .07) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
 }
-.glow-1 { top:-10%; left:-10%; }
-.glow-2 { bottom:-10%; right:-10%; background:radial-gradient(circle, rgba(14,165,233,.05) 0%, transparent 70%); }
-.relative { position: relative; } .z-10 { z-index: 10; }
+
+.glow-1 {
+  top: -10%;
+  left: -10%;
+}
+
+.glow-2 {
+  bottom: -10%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(14, 165, 233, .05) 0%, transparent 70%);
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}
 
 /* ── Wrapper ────────────────────────────────── */
 .chat-demo-wrapper {
   max-width: 720px;
   margin: 0 auto;
-  background: rgba(255,255,255,.025);
-  border: 1px solid rgba(255,255,255,.09);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .09);
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .5), 0 0 0 1px rgba(255, 255, 255, .04);
 }
 
 /* ── Header ──────────────────────────────────── */
@@ -252,41 +274,90 @@ const vReveal = {
   align-items: center;
   gap: .85rem;
   padding: 1rem 1.5rem;
-  background: rgba(255,255,255,.03);
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: rgba(0, 114, 245, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
 
 .chat-demo-avatar {
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg,#1f69ff,#00b3ff);
-  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0072f5, #00b3ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.chat-demo-avatar { font-size:0; }
-.chat-demo-info { flex: 1; display:flex; flex-direction:column; gap:2px; }
-.chat-demo-name { font-size:.9rem; font-weight:700; color:#fff; }
-.chat-demo-status { font-size:.72rem; color: rgba(255,255,255,.45); display:flex; align-items:center; gap:5px; }
+.chat-demo-avatar {
+  font-size: 0;
+}
+
+.chat-demo-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat-demo-name {
+  font-size: .9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.chat-demo-status {
+  font-size: .72rem;
+  color: rgba(255, 255, 255, .45);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 .status-pulse {
-  display:inline-block; width:7px; height:7px; border-radius:50%;
-  background:#4ade80; box-shadow:0 0 6px #4ade80;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
   animation: pulse-dot 1.8s ease-in-out infinite;
 }
 
 @keyframes pulse-dot {
-  0%,100%{ opacity:1; transform:scale(1); }
-  50%    { opacity:.6; transform:scale(.85); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .6;
+    transform: scale(.85);
+  }
 }
 
-.chat-demo-badges { display:flex; gap:.4rem; flex-shrink:0; }
-.chat-badge {
-  font-size:.62rem; font-weight:700; padding:.25rem .6rem; border-radius:99px;
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:rgba(255,255,255,.6);
+.chat-demo-badges {
+  display: flex;
+  gap: .4rem;
+  flex-shrink: 0;
 }
+
+.chat-badge {
+  font-size: .62rem;
+  font-weight: 700;
+  padding: .25rem .6rem;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: rgba(255, 255, 255, .6);
+}
+
 .chat-badge--ai {
-  background:rgba(31,105,255,.15); border-color:rgba(31,105,255,.35); color:#93c5fd;
+  background: rgba(0, 114, 245, .15);
+  border-color: rgba(0, 114, 245, .35);
+  color: #93c5fd;
 }
 
 /* ── Body / scroll ─────────────────────────── */
@@ -294,132 +365,252 @@ const vReveal = {
   height: 340px;
   overflow-y: auto;
   padding: 1.25rem 1.5rem;
-  display:flex; flex-direction:column; gap:.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
   scrollbar-width: none;
 }
-.chat-demo-body::-webkit-scrollbar { display:none; }
-.chat-demo-messages { display:flex; flex-direction:column; gap:.6rem; }
+
+.chat-demo-body::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-demo-messages {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
 
 /* Date separator */
 .chat-date-sep {
-  text-align:center; margin:.4rem 0;
+  text-align: center;
+  margin: .4rem 0;
 }
+
 .chat-date-sep span {
-  font-size:.65rem; color:rgba(255,255,255,.25);
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06);
-  border-radius:99px; padding:.2rem .75rem;
+  font-size: .65rem;
+  color: rgba(255, 255, 255, .25);
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .06);
+  border-radius: 99px;
+  padding: .2rem .75rem;
 }
 
 /* ── Messages ─────────────────────────────── */
-.cmsg { display:flex; align-items:flex-end; gap:.6rem; }
-.cmsg--client { flex-direction:row-reverse; }
+.cmsg {
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+}
+
+.cmsg--client {
+  flex-direction: row-reverse;
+}
 
 .cmsg__mini-avatar {
-  width:28px; height:28px; border-radius:50%; flex-shrink:0;
-  background:linear-gradient(135deg,#1f69ff,#00b3ff);
-  display:flex; align-items:center; justify-content:center;
-  align-self:flex-end;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #0072f5, #00b3ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
 }
 
 
-.cmsg__content { display:flex; flex-direction:column; gap:3px; max-width:72%; }
-.cmsg--client .cmsg__content { align-items:flex-end; }
+.cmsg__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 72%;
+}
 
-.cmsg__sender { font-size:.65rem; font-weight:700; color:rgba(255,255,255,.35); margin-left:2px; }
+.cmsg--client .cmsg__content {
+  align-items: flex-end;
+}
+
+.cmsg__sender {
+  font-size: .65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .35);
+  margin-left: 2px;
+}
 
 .cmsg__bubble {
-  padding:.65rem 1rem;
-  border-radius:18px;
-  font-size:.84rem; line-height:1.5; color:rgba(255,255,255,.88);
+  padding: .65rem 1rem;
+  border-radius: 18px;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .88);
 }
 
 .cmsg--ai .cmsg__bubble {
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  border-bottom-left-radius:4px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-bottom-left-radius: 4px;
 }
 
 .cmsg--client .cmsg__bubble {
-  background:linear-gradient(135deg,rgba(31,105,255,.75),rgba(0,150,255,.6));
-  border:1px solid rgba(31,105,255,.4);
-  border-bottom-right-radius:4px;
-  color:#fff;
+  background: linear-gradient(135deg, rgba(0, 114, 245, .75), rgba(0, 150, 255, .6));
+  border: 1px solid rgba(0, 114, 245, .4);
+  border-bottom-right-radius: 4px;
+  color: #fff;
 }
 
-.cmsg__time { font-size:.6rem; color:rgba(255,255,255,.25); }
+.cmsg__time {
+  font-size: .6rem;
+  color: rgba(255, 255, 255, .25);
+}
 
 /* ── Typing indicator ─────────────────────── */
 .typing-indicator {
-  display:flex; align-items:flex-end; gap:.6rem; margin-top:.4rem;
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  margin-top: .4rem;
 }
-.typing-client { flex-direction:row-reverse; }
+
+.typing-client {
+  flex-direction: row-reverse;
+}
 
 .typing-dots {
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
-  border-radius:18px; border-bottom-left-radius:4px;
-  padding:.6rem .9rem; display:flex; gap:4px; align-items:center;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  padding: .6rem .9rem;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
-.typing-client .typing-dots { border-radius:18px; border-bottom-right-radius:4px; border-bottom-left-radius:18px; }
+
+.typing-client .typing-dots {
+  border-radius: 18px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 18px;
+}
+
 .typing-dots span {
-  width:6px; height:6px; border-radius:50%;
-  background:rgba(255,255,255,.4);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .4);
   animation: typing-bounce 1.2s ease-in-out infinite;
 }
-.typing-dots span:nth-child(2) { animation-delay:.2s; }
-.typing-dots span:nth-child(3) { animation-delay:.4s; }
+
+.typing-dots span:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: .4s;
+}
 
 @keyframes typing-bounce {
-  0%,60%,100%{ transform:translateY(0); opacity:.4; }
-  30%         { transform:translateY(-5px); opacity:1; }
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: .4;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
 }
 
 /* ── Labels ───────────────────────────────── */
 .chat-labels-row {
-  display:flex; flex-direction:column; gap:.6rem;
-  margin-top:.8rem; border-top:1px solid rgba(255,255,255,.06); padding-top:.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-top: .8rem;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  padding-top: .8rem;
 }
 
 .label-event-text {
-  font-size:.7rem; color:rgba(255,255,255,.3); text-align:center;
+  font-size: .7rem;
+  color: rgba(255, 255, 255, .3);
+  text-align: center;
 }
 
-.chat-labels { display:flex; flex-wrap:wrap; gap:.45rem; justify-content:center; }
+.chat-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  justify-content: center;
+}
 
 .chat-pill {
-  font-size:.72rem; font-weight:700;
-  padding:.32rem .75rem; border-radius:99px;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .32rem .75rem;
+  border-radius: 99px;
 }
 
 /* ── Footer ───────────────────────────────── */
 .chat-demo-footer {
-  display:flex; align-items:center; gap:.75rem;
-  padding:.9rem 1.5rem;
-  background:rgba(255,255,255,.02);
-  border-top:1px solid rgba(255,255,255,.06);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .9rem 1.5rem;
+  background: rgba(255, 255, 255, .02);
+  border-top: 1px solid rgba(255, 255, 255, .06);
 }
 
 .chat-input-fake {
-  flex:1; background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:99px; padding:.55rem 1rem;
-  font-size:.82rem; color:rgba(255,255,255,.2);
+  flex: 1;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 99px;
+  padding: .55rem 1rem;
+  font-size: .82rem;
+  color: rgba(255, 255, 255, .2);
 }
 
 .chat-send-btn {
-  width:38px; height:38px; border-radius:50%; flex-shrink:0;
-  background:linear-gradient(135deg,#1f69ff,#00b3ff);
-  border:none; cursor:pointer; color:#fff;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 4px 14px rgba(31,105,255,.4);
-  transition:transform .2s ease;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #0072f5, #00b3ff);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 114, 245, .4);
+  transition: transform .2s ease;
 }
-.chat-send-btn:hover { transform:scale(1.08); }
+
+.chat-send-btn:hover {
+  transform: scale(1.08);
+}
 
 /* ── Transitions ─────────────────────────── */
-.msg-fade-enter-active { transition: all .4s cubic-bezier(.16,1,.3,1); }
-.msg-fade-enter-from   { opacity:0; transform:translateY(10px); }
+.msg-fade-enter-active {
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+}
 
-.typing-fade-enter-active, .typing-fade-leave-active { transition: opacity .3s ease; }
-.typing-fade-enter-from, .typing-fade-leave-to       { opacity:0; }
+.msg-fade-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.typing-fade-enter-active,
+.typing-fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.typing-fade-enter-from,
+.typing-fade-leave-to {
+  opacity: 0;
+}
 </style>

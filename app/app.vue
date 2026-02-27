@@ -34,11 +34,9 @@ onUnmounted(() => {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  background: radial-gradient(
-    800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(31, 105, 255, 0.08),
-    transparent 80%
-  );
+  background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(0, 114, 245, 0.08),
+      transparent 80%);
   opacity: 0;
   transition: opacity 1s ease;
 }
