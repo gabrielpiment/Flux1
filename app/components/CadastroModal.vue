@@ -825,16 +825,15 @@ defineExpose({ isOpen })
 
 /* ── Confirmation overlay ────────────────── */
 .confirm-overlay {
-    position: absolute;
+    position: fixed;
     inset: 0;
-    z-index: 20;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(6px);
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    border-radius: 24px;
 }
 
 .confirm-box {
