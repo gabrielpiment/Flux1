@@ -5,6 +5,7 @@
     <VideoModal :is-open="videoModal.isOpen.value" @close="videoModal.close" />
     <ConsiderDoneSection />
     <FlowSection />
+    <InteractiveKanbanSection />
     <FeaturesSection />
     <ChannelsSection />
     <StatisticsSection />
@@ -23,6 +24,7 @@ import VideoSection from '../components/VideoSection.vue'
 import VideoModal from '../components/VideoModal.vue'
 import ConsiderDoneSection from '../components/ConsiderDoneSection.vue'
 import FlowSection from '../components/FlowSection.vue'
+import InteractiveKanbanSection from '../components/InteractiveKanbanSection.vue'
 import FeaturesSection from '../components/FeaturesSection.vue'
 import ChannelsSection from '../components/ChannelsSection.vue'
 import StatisticsSection from '../components/StatisticsSection.vue'
@@ -39,6 +41,7 @@ export default defineComponent({
     VideoModal,
     ConsiderDoneSection,
     FlowSection,
+    InteractiveKanbanSection,
     FeaturesSection,
     ChannelsSection,
     StatisticsSection,
