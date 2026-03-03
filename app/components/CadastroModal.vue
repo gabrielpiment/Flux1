@@ -94,12 +94,12 @@
                             <div class="form-group">
                                 <label>Período de assinatura</label>
                                 <div class="toggle-group">
-                                    <button id="billing-mensal-btn"
+                                    <button id="billing-mensal-btn" type="button"
                                         :class="['toggle-btn', { active: form.billingCycle === 'mensal' }]"
                                         @click="form.billingCycle = 'mensal'">
                                         Mensal
                                     </button>
-                                    <button id="billing-trimestral-btn"
+                                    <button id="billing-trimestral-btn" type="button"
                                         :class="['toggle-btn', { active: form.billingCycle === 'trimestral' }]"
                                         @click="form.billingCycle = 'trimestral'">
                                         Trimestral
@@ -111,11 +111,11 @@
                             <div class="form-group">
                                 <label for="cadastro-atendentes">Quantidade de atendentes (mín. 2)</label>
                                 <div class="number-stepper">
-                                    <button class="stepper-btn"
+                                    <button type="button" class="stepper-btn"
                                         @click="form.attendantCount = Math.max(2, form.attendantCount - 1)">−</button>
                                     <input id="cadastro-atendentes" v-model.number="form.attendantCount" type="number"
                                         min="2" />
-                                    <button class="stepper-btn" @click="form.attendantCount++">+</button>
+                                    <button type="button" class="stepper-btn" @click="form.attendantCount++">+</button>
                                 </div>
                             </div>
 
@@ -173,11 +173,13 @@
                             <div class="form-group">
                                 <label>Gestor de Automação (IA)</label>
                                 <div class="toggle-group">
-                                    <button id="gestor-sim-btn" :class="['toggle-btn', { active: form.wantsGestorIA }]"
+                                    <button id="gestor-sim-btn" type="button"
+                                        :class="['toggle-btn', { active: form.wantsGestorIA }]"
                                         @click="form.wantsGestorIA = true">
                                         Sim
                                     </button>
-                                    <button id="gestor-nao-btn" :class="['toggle-btn', { active: !form.wantsGestorIA }]"
+                                    <button id="gestor-nao-btn" type="button"
+                                        :class="['toggle-btn', { active: !form.wantsGestorIA }]"
                                         @click="form.wantsGestorIA = false">
                                         Não
                                     </button>
