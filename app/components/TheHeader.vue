@@ -15,7 +15,7 @@
           <NuxtLink v-else :to="link.href">{{ link.label }}</NuxtLink>
         </div>
         <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link">Entrar</a>
-        <button class="btn-cta neon">Teste grátis</button>
+        <NuxtLink to="/precos" class="btn-cta neon">Teste grátis</NuxtLink>
       </div>
 
       <button id="hamburger-btn" class="hamburger" :class="{ active: isMobileMenuOpen }"
@@ -37,7 +37,7 @@
         </div>
         <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link"
           @click="closeMobileMenu">Entrar</a>
-        <button class="btn-cta neon" @click="closeMobileMenu">Teste grátis</button>
+        <NuxtLink to="/precos" class="btn-cta neon" @click="closeMobileMenu">Teste grátis</NuxtLink>
       </div>
     </nav>
 
