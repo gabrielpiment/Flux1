@@ -1,14 +1,11 @@
 <template>
-  <ProductTemplate
-    eyebrow="Fintech & Bancos"
-    :title-lines="['Segurança & Agilidade', 'No setor financeiro']"
+  <ProductTemplate eyebrow="Fintech e Bancos" :title-lines="['Segurança e Agilidade', 'No setor financeiro']"
     description="Conformidade total com LGPD e segurança bancária para automatizar cobranças, onboarding e suporte financeiro."
     :features="[
       { icon: '🔒', title: 'Segurança de Dados', description: 'Ambientes isolados e criptografia de ponta a ponta para dados sensíveis.' },
       { icon: '💳', title: 'Gestão de Cobrança', description: 'Envio automático de boletos, lembretes de vencimento e negociação de dívidas por IA.' },
       { icon: '📝', title: 'Onboarding Digital', description: 'Coleta e validação de documentos automatizada para abertura de contas.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Compliance & Eficiência',
         description: 'Reduza o custo operacional de Compliance enquanto melhora a experiência de uso dos seus clientes.',
@@ -19,8 +16,7 @@
         ],
         visualLabel: 'Financial Flow'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

@@ -1,14 +1,11 @@
 <template>
-  <ProductTemplate
-    eyebrow="E-commerce"
-    :title-lines="['Venda 24/7', 'No Varejo Digital']"
+  <ProductTemplate eyebrow="E-commerce" :title-lines="['Venda 24/7', 'No Varejo Digital']"
     description="Aumente seu ROI com automações de recuperação de carrinho, sugestões personalizadas de produtos e rastreio de pedidos via WhatsApp."
     :features="[
       { icon: '🛒', title: 'Recuperação de Carrinho', description: 'Disparos automáticos quando o cliente abandona a compra, com oferta de cupons dinâmicos.' },
       { icon: '📦', title: 'Rastreio Logístico', description: 'Mantenha o cliente informado sobre cada etapa da entrega sem sobrecarregar o suporte.' },
       { icon: '🔮', title: 'Upsell Inteligente', description: 'IA que sugere produtos complementares baseada no histórico de navegação e compra.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Social Commerce de Elite',
         description: 'Integre seu catálogo Shopify, Nuvemshop ou VTEX diretamente na Flux e venda por onde o cliente preferir.',
@@ -19,8 +16,7 @@
         ],
         visualLabel: 'Retail Workflow'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">
