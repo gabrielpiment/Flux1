@@ -1,19 +1,25 @@
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
-    const WEBHOOK_URL = 'https://back.fluxconversa.com.br/api/webhooks/f8086251-c7a8-4d53-80dd-da0f507c567c'
+    const TARGET_URLS = [
+        'https://back.fluxconversa.com.br/api/webhooks/f8086251-c7a8-4d53-80dd-da0f507c567c',
+        'https://webhook.elevenapp.com.br/webhook/a7efda7d-91fc-4f50-a84a-79fe0abdba2a'
+    ]
 
-    try {
-        await fetch(WEBHOOK_URL, {
+    // Send to all webhooks in parallel
+    const results = await Promise.allSettled(
+        TARGET_URLS.map(url => fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body)
-        })
-        return { success: true }
-    } catch (error) {
-        console.error('Webhook proxy error:', error)
-        throw createError({
-            statusCode: 500,
-            statusMessage: 'Error forwarding webhook'
-        })
-    }
+        }))
+    )
+
+    // Log errors if any
+    results.forEach((res, index) => {
+        if (res.status === 'rejected') {
+            console.error(`Webhook failed for ${TARGET_URLS[index]}:`, res.reason)
+        }
+    })
+
+    return { success: true }
 })
