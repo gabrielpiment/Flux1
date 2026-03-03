@@ -41,9 +41,9 @@
           <div class="newsletter-signup">
             <div class="newsletter-options">
               <span>INSCREVER-SE COM</span>
-              <a href="#" class="whatsapp-link">WHATSAPP</a>
+              <NuxtLink to="/precos" class="whatsapp-link">WHATSAPP</NuxtLink>
               <span>OU</span>
-              <a href="#" class="email-link">EMAIL</a>
+              <NuxtLink to="/precos" class="email-link">EMAIL</NuxtLink>
             </div>
             <div class="newsletter-input">
               <input type="email" placeholder="Inscreva-me no newsletter do WhatsApp">
@@ -56,47 +56,47 @@
       <div class="footer-links">
         <div class="footer-column">
           <h4>PRODUTO</h4>
-          <a href="#">Agentes de IA</a>
-          <a href="#">Caixa de entrada omnichannel</a>
-          <a href="#">Integrações</a>
-          <a href="#">Relatórios e análises</a>
-          <a href="#">Flux AI</a>
-          <a href="#">Jornadas de IA</a>
+          <NuxtLink to="/precos">Agentes de IA</NuxtLink>
+          <NuxtLink to="/precos">Caixa de entrada omnichannel</NuxtLink>
+          <NuxtLink to="/precos">Integrações</NuxtLink>
+          <NuxtLink to="/precos">Relatórios e análises</NuxtLink>
+          <NuxtLink to="/precos">Flux AI</NuxtLink>
+          <NuxtLink to="/precos">Jornadas de IA</NuxtLink>
           <NuxtLink to="/precos">Preços</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>SOLUÇÕES</h4>
-          <a href="#">Captura e conversão de leads</a>
-          <a href="#">Atendimento ao cliente</a>
-          <a href="#">Reengajamento do cliente</a>
-          <a href="#">Aumentar receita</a>
-          <a href="#">Marketing no WhatsApp</a>
+          <NuxtLink to="/precos">Captura e conversão de leads</NuxtLink>
+          <NuxtLink to="/precos">Atendimento ao cliente</NuxtLink>
+          <NuxtLink to="/precos">Reengajamento do cliente</NuxtLink>
+          <NuxtLink to="/precos">Aumentar receita</NuxtLink>
+          <NuxtLink to="/precos">Marketing no WhatsApp</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>CANAIS</h4>
-          <a href="#">WhatsApp</a>
-          <a href="#">Email</a>
-          <a href="#">Chat ao vivo</a>
-          <a href="#">Voz</a>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">Todos os canais</a>
+          <NuxtLink to="/precos">WhatsApp</NuxtLink>
+          <NuxtLink to="/precos">Email</NuxtLink>
+          <NuxtLink to="/precos">Chat ao vivo</NuxtLink>
+          <NuxtLink to="/precos">Voz</NuxtLink>
+          <NuxtLink to="/precos">Instagram</NuxtLink>
+          <NuxtLink to="/precos">Facebook</NuxtLink>
+          <NuxtLink to="/precos">Todos os canais</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>INDÚSTRIAS</h4>
-          <a href="#">Viagens e lazer</a>
-          <a href="#">Varejo e e-commerce</a>
-          <a href="#">Restaurantes e hospitalidade</a>
-          <a href="#">Automotivo</a>
-          <a href="#">Energia e serviços públicos</a>
-          <a href="#">Serviços financeiros</a>
+          <NuxtLink to="/precos">Viagens e lazer</NuxtLink>
+          <NuxtLink to="/precos">Varejo e e-commerce</NuxtLink>
+          <NuxtLink to="/precos">Restaurantes e hospitalidade</NuxtLink>
+          <NuxtLink to="/precos">Automotivo</NuxtLink>
+          <NuxtLink to="/precos">Energia e serviços públicos</NuxtLink>
+          <NuxtLink to="/precos">Serviços financeiros</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>FLUX</h4>
-          <a href="#">Sobre nós</a>
-          <a href="#">Carreiras</a>
-          <a href="#">Parcerias</a>
-          <a href="#">Fale conosco</a>
+          <NuxtLink to="/precos">Sobre nós</NuxtLink>
+          <NuxtLink to="/precos">Carreiras</NuxtLink>
+          <NuxtLink to="/precos">Parcerias</NuxtLink>
+          <NuxtLink to="/precos">Fale conosco</NuxtLink>
           <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener">Entrar</a>
           <NuxtLink to="/termos">Termos de Uso</NuxtLink>
           <NuxtLink to="/privacidade">Política de Privacidade</NuxtLink>

@@ -3,7 +3,7 @@
     <div class="industry-content">
       <h3>{{ industry.title }}</h3>
       <p>{{ industry.description }}</p>
-      <a href="#" class="industry-link">{{ industry.linkText }} →</a>
+      <NuxtLink to="/precos" class="industry-link">{{ industry.linkText }} →</NuxtLink>
     </div>
   </div>
 </template>

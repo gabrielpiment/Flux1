@@ -23,7 +23,7 @@
           </li>
         </ul>
         <div class="flow-cta">
-          <NuxtLink class="btn-primary" to="#demo">
+          <NuxtLink class="btn-primary" to="/precos">
             Criar minha automação
           </NuxtLink>
         </div>

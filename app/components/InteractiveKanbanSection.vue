@@ -136,7 +136,7 @@
       </div>
 
       <div class="kanban-cta" v-motion-fade-visible>
-        <NuxtLink to="#demo" class="btn-primary">
+        <NuxtLink to="/precos" class="btn-primary">
           Simular agora mesmo
         </NuxtLink>
       </div>
