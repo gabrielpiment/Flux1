@@ -202,7 +202,7 @@ const columns = ref<Column[]>([
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 0%, rgba(31, 105, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(31, 105, 255, 0.05) 0%, transparent 100%);
   pointer-events: none;
 }
 
