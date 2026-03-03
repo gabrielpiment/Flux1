@@ -254,12 +254,12 @@ const columns = ref<Column[]>([
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  min-height: 850px;
+  min-height: 600px;
 }
 
 .kanban-column {
   border-radius: 20px;
-  padding: 30px 10px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   position: relative;
