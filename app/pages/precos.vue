@@ -7,7 +7,7 @@
                 </h1>
             </div>
 
-            <div class="pricing-grid">
+            <div id="pricing-plans" class="pricing-grid">
                 <!-- Digital Flux Plan -->
                 <div class="pricing-card" v-motion-fade-visible>
                     <div class="card-accent accent-green"></div>
@@ -168,7 +168,7 @@
                 </p>
 
                 <div class="pricing-bottom-action">
-                    <button class="btn-white-outline">Quero personalizar meu plano</button>
+                    <a href="#pricing-plans" class="btn-white-outline">Quero personalizar meu plano</a>
                 </div>
 
                 <!-- AI Manager Section -->
@@ -288,6 +288,8 @@ html {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-white-outline:hover {
