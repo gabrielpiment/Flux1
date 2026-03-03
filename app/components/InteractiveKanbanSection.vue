@@ -412,17 +412,49 @@ const columns = ref<Column[]>([
 
 @media (max-width: 1200px) {
   .kanban-board {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 300px); /* Maintain columns side-by-side */
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) transparent;
   }
 }
 
 @media (max-width: 768px) {
+  .kanban-board-wrapper {
+    margin: 0 -20px; /* Pull to edges */
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .kanban-board-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
   .kanban-board {
-    grid-template-columns: 1fr;
+    display: flex;
+    grid-template-columns: none;
+    gap: 16px;
+    width: max-content;
+    min-height: auto;
+    padding: 10px 0 30px;
   }
   
   .kanban-column {
-    min-height: auto;
+    width: 280px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+
+  .kanban-header {
+    margin-bottom: 50px;
+  }
+
+  .kanban-header h2 {
+    font-size: 2rem;
   }
 }
 </style>
