@@ -283,9 +283,10 @@
                                 <div class="success-icon">✅</div>
                                 <h3>Cadastro enviado com sucesso!</h3>
                                 <p>Em breve nossa equipe entrará em contato.</p>
-                                <button id="success-close-btn" class="btn-step" @click="closeSuccess">
-                                    Fechar
-                                </button>
+                                <a id="success-entrar-btn" href="https://crm.fluxconversa.com.br/login" target="_blank"
+                                    rel="noopener" class="btn-step flex-center">
+                                    Entrar
+                                </a>
                             </div>
                         </div>
                     </Transition>
@@ -581,6 +582,13 @@ defineExpose({ isOpen })
 .btn-step-outline:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.35);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .step-actions {
