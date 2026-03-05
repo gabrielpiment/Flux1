@@ -15,6 +15,26 @@
           'Gestão de trocas e devoluções'
         ],
         visualLabel: 'Retail Workflow'
+      },
+      {
+        title: 'Logística Proativa via IA',
+        description: 'Mantenha o cliente informado sobre cada etapa da entrega sem sobrecarregar sua equipe de suporte.',
+        items: [
+          'Rastreio de pedidos automático',
+          'Notificação de atrasos via WhatsApp',
+          'Proof of Delivery digital'
+        ],
+        visualLabel: 'Logistics Tracker'
+      },
+      {
+        title: 'Recuperação de Carrinho 2.0',
+        description: 'Nossa IA entra em contato no momento certo com cupons dinâmicos para garantir que a venda aconteça.',
+        items: [
+          'Disparos baseados em valor do carrinho',
+          'Assistência consultiva p/ dúvidas',
+          'Análise de causa de abandono'
+        ],
+        visualLabel: 'Cart Recovery'
       }
     ]" />
 </template>

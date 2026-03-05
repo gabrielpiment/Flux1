@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Conversão 3x Superior',
-        description: 'Empresas que utilizam automação de captura Flux registram um aumento médio de 300% na taxa de conversão.',
+        title: 'Lead Scoring Inteligente',
+        description: 'Não perca tempo com curiosos. Nossa IA qualifica cada lead baseado no perfil e comportamento, entregando apenas as melhores oportunidades para seu time.',
         items: [
-          'Agendamento automático de reuniões',
-          'Roteamento por intenção de compra',
-          'Testes A/B de abordagens de IA'
+          'Qualificação demográfica e comportamental',
+          'Priorização automática em tempo real',
+          'Enriquecimento de dados (Empresa, Cargo)'
         ],
-        visualLabel: 'Conversion Funnel'
+        visualLabel: 'Lead Scoring'
+      },
+      {
+        title: 'Agendamento em Segundos',
+        description: 'Reduza a fricção no topo do funil. Deixe que o lead agende uma reunião ou demonstração diretamente no chat, sincronizado com sua agenda.',
+        items: [
+          'Integração com Google Calendar e Outlook',
+          'Lembretes automáticos pré-reunião',
+          'Roteamento por zona geográfica'
+        ],
+        visualLabel: 'Booking Flow'
+      },
+      {
+        title: 'Fluxos de Atribuição',
+        description: 'Saiba exatamente de onde vêm seus leads. Integre seus anúncios do Facebook, Google e TikTok diretamente à Flux.',
+        items: [
+          'Captura nativa de anúncios (CTWA)',
+          'Rastreamento de UTMs e origem',
+          'Dashboards de ROI por campanha'
+        ],
+        visualLabel: 'Ads Attribution'
       }
     ]"
   />

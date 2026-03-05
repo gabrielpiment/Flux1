@@ -67,28 +67,28 @@
           <h4>SOLUÇÕES</h4>
           <NuxtLink to="/captura-conversao">Captura e conversão de leads</NuxtLink>
           <NuxtLink to="/atendimento-cliente">Atendimento ao cliente</NuxtLink>
-          <NuxtLink to="/precos">Reengajamento do cliente</NuxtLink>
-          <NuxtLink to="/precos">Aumentar receita</NuxtLink>
+          <NuxtLink to="/reengajamento-cliente">Reengajamento do cliente</NuxtLink>
+          <NuxtLink to="/aumentar-receita">Aumentar receita</NuxtLink>
           <NuxtLink to="/canais/whatsapp">Marketing no WhatsApp</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>CANAIS</h4>
           <NuxtLink to="/canais/whatsapp">WhatsApp</NuxtLink>
-          <NuxtLink to="/precos">Email</NuxtLink>
-          <NuxtLink to="/precos">Chat ao vivo</NuxtLink>
-          <NuxtLink to="/precos">Voz</NuxtLink>
+          <NuxtLink to="/canais/email">Email</NuxtLink>
+          <NuxtLink to="/canais/chat-ao-vivo">Chat ao vivo</NuxtLink>
+          <NuxtLink to="/canais/voz">Voz</NuxtLink>
           <NuxtLink to="/canais/instagram">Instagram</NuxtLink>
-          <NuxtLink to="/precos">Facebook</NuxtLink>
-          <NuxtLink to="/precos">Todos os canais</NuxtLink>
+          <NuxtLink to="/canais/facebook">Facebook</NuxtLink>
+          <NuxtLink to="/canais/todos-canais">Todos os canais</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>INDÚSTRIAS</h4>
           <NuxtLink to="/industrias/varejo-ecommerce">Varejo e e-commerce</NuxtLink>
           <NuxtLink to="/industrias/servicos-financeiros">Serviços financeiros</NuxtLink>
-          <NuxtLink to="/precos">Viagens e lazer</NuxtLink>
-          <NuxtLink to="/precos">Restaurantes e hospitalidade</NuxtLink>
-          <NuxtLink to="/precos">Automotivo</NuxtLink>
-          <NuxtLink to="/precos">Energia e serviços públicos</NuxtLink>
+          <NuxtLink to="/industrias/viagens-lazer">Viagens e lazer</NuxtLink>
+          <NuxtLink to="/industrias/restaurantes-hospitalidade">Restaurantes e hospitalidade</NuxtLink>
+          <NuxtLink to="/industrias/automotivo">Automotivo</NuxtLink>
+          <NuxtLink to="/industrias/energia-servicos">Energia e serviços públicos</NuxtLink>
         </div>
         <div class="footer-column">
           <h4>FLUX</h4>

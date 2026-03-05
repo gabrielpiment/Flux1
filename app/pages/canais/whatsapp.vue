@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Escalabilidade sem Limites',
-        description: 'Tenha centenas de atendentes em um único número oficial de WhatsApp.',
+        title: 'API Cloud Oficial (WABA)',
+        description: 'Utilize a infraestrutura oficial da Meta para garantir máxima estabilidade, sem riscos de banimento e com suporte a grandes volumes.',
         items: [
-          'Transferência interna de chats',
-          'Resumo de conversas por IA',
-          'Botões interativos e listas'
+          'Selo de verificação oficial',
+          'Webhooks de entrega e leitura',
+          'Escalabilidade Tier 3 (Ilimitado)'
         ],
-        visualLabel: 'WhatsApp Business'
+        visualLabel: 'Official API'
+      },
+      {
+        title: 'Campanhas de Alta Performance',
+        description: 'Envie mensagens em massa de forma segmentada e acompanhe os cliques em tempo real no seu dashboard.',
+        items: [
+          'Botões interativos e listas',
+          'Modelos de mensagem aprovados pela Meta',
+          'Rastreamento de cliques em CTAs'
+        ],
+        visualLabel: 'Marketing Blasts'
+      },
+      {
+        title: 'Atendimento Multi-Agente',
+        description: 'Um único número para centenas de atendentes trabalharem de forma organizada e colaborativa.',
+        items: [
+          'Distribuição automática de chats',
+          'Notas internas para supervisores',
+          'Relatórios de produtividade por atendente'
+        ],
+        visualLabel: 'Agent Workspace'
       }
     ]"
   />

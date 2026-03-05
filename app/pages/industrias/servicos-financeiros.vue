@@ -7,14 +7,34 @@
       { icon: '📝', title: 'Onboarding Digital', description: 'Coleta e validação de documentos automatizada para abertura de contas.' }
     ]" :details="[
       {
-        title: 'Compliance & Eficiência',
-        description: 'Reduza o custo operacional de Compliance enquanto melhora a experiência de uso dos seus clientes.',
+        title: 'Security & Compliance',
+        description: 'Operamos sob os mais rígidos padrões de segurança, garantindo a privacidade dos dados bancários e sensíveis.',
         items: [
-          'Integração com bureaus de crédito',
-          'Assinatura digital integrada',
-          'Relatórios de auditoria completa'
+          'Conformidade total com a LGPD',
+          'Criptografia de ponta a ponta',
+          'Mascaramento de dados sensíveis'
         ],
-        visualLabel: 'Financial Flow'
+        visualLabel: 'Secure Banking'
+      },
+      {
+        title: 'KYC e Onboarding Digital',
+        description: 'Acelere a abertura de contas e validação de documentos através de fluxos automatizados de visão computacional.',
+        items: [
+          'Validação de documentos via chat',
+          'Prova de vida (Liveness) por imagem',
+          'Triagem automática de perfis'
+        ],
+        visualLabel: 'KYC Workflow'
+      },
+      {
+        title: 'Autoatendimento Financeiro',
+        description: 'Reduza a carga do call center permitindo que o cliente consulte saldos, faturas e negocie dívidas via IA.',
+        items: [
+          'Emissão de 2ª via de boleto',
+          'Consulta de extratos e limites',
+          'Acordos de negociação automáticos'
+        ],
+        visualLabel: 'Financial Bot'
       }
     ]" />
 </template>

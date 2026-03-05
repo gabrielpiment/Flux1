@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Resolução no Primeiro Contato',
-        description: 'Reduza o volume de tickets repetitivos e foque na estratégia do sucesso do cliente.',
+        title: 'FCR: Resolução no Primeiro Contato',
+        description: 'Aumente sua taxa de resolução sem intervenção humana. Nossa IA resolve dúvidas complexas buscando dados na sua base de conhecimento.',
         items: [
-          'Base de conhecimento dinâmica',
-          'Automação de processos recorrentes',
-          'Relatórios de gaps de atendimento'
+          'Respostas contextualizadas e precisas',
+          'Busca em documentos e manuais internos',
+          'Redução de tickets repetitivos em até 70%'
         ],
-        visualLabel: 'Support Metrics'
+        visualLabel: 'Resolution Engine'
+      },
+      {
+        title: 'Satisfação sob Controle',
+        description: 'Meça o sucesso de cada interação automaticamente. Colete feedback e identifique promotores da sua marca em tempo real.',
+        items: [
+          'Pesquisas de CSAT e NPS nativas',
+          'Análise de sentimento pós-atendimento',
+          'Relatórios de evolução do suporte'
+        ],
+        visualLabel: 'Experience Metrics'
+      },
+      {
+        title: 'Omnichannel Verdadeiro',
+        description: 'Dê ao seu cliente a liberdade de escolher o canal, sem que seu time perca o contexto da conversa.',
+        items: [
+          'Histórico unificado entre todos os canais',
+          'Transição fluida entre IA e suporte humano',
+          'Gestão de filas por nível de urgência'
+        ],
+        visualLabel: 'Omnichannel View'
       }
     ]"
   />

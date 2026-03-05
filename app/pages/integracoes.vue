@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Automatize Fora da Caixa',
-        description: 'Nossa camada de integração permite que ações na Flux disparem fluxos complexos em outros softwares.',
+        title: 'Ecossistema Conectado',
+        description: 'Mantenha sua stack de ferramentas atualizada. A Flux atua como o hub central da sua comunicação com o cliente.',
         items: [
-          'Automação de faturamento',
-          'Atualização de status de entrega',
-          'Enriquecimento de leads automático'
+          'Sincronização com Shopify e VTEX',
+          'Atualização automática de CRM (Salesforce/HubSpot)',
+          'Gatilhos para disparos em ERPs'
         ],
-        visualLabel: 'Integration Flow'
+        visualLabel: 'Partners Ecosystem'
+      },
+      {
+        title: 'API Enterprise Documentada',
+        description: 'Para empresas com necessidades personalizadas, oferecemos uma API REST robusta e webhooks escaláveis.',
+        items: [
+          'Documentação Swagger completa',
+          'Segurança via Token/OAuth 2.0',
+          'Endpoints de alta disponibilidade'
+        ],
+        visualLabel: 'Dev Portal'
+      },
+      {
+        title: 'Automação Full-Stack',
+        description: 'Vá além do chat. Conecte dados de transações reais aos seus fluxos de atendimento automático.',
+        items: [
+          'Enriquecimento de dados via webhook',
+          'Validação de CPF/CNPJ em tempo real',
+          'Integração com gateways de pagamento'
+        ],
+        visualLabel: 'Fullstack Integrations'
       }
     ]"
   />

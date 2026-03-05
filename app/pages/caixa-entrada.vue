@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Produtividade Aumentada',
-        description: 'Ferramentas de resposta rápida e automação de inbox que reduzem em até 60% o tempo médio de resposta.',
+        title: 'Produtividade de Elite',
+        description: 'Ferramentas desenhadas para reduzir a carga cognitiva do time e acelerar o tempo de resolução (TMR).',
         items: [
-          'Respostas rápidas inteligentes',
-          'Etiquetas de organização avançada',
+          'Respostas rápidas baseadas em IA',
+          'Tags e filtros inteligentes por intenção',
           'Atalhos de teclado para power users'
         ],
-        visualLabel: 'Inbox Interface'
+        visualLabel: 'Productivity UI'
+      },
+      {
+        title: 'Gestão de SLA e Prazos',
+        description: 'Garanta que nenhum cliente fique sem resposta. Configure alertas e priorizações automáticas baseadas em tempo de espera.',
+        items: [
+          'Contagem regressiva de SLA visível',
+          'Escalonamento automático de tickets',
+          'Relatórios de gaps de atendimento'
+        ],
+        visualLabel: 'SLA Dashboard'
+      },
+      {
+        title: 'Colaboração em Tempo Real',
+        description: 'Elimine silos de informação. Sua equipe pode colaborar internamente sem que o cliente veja as notas de bastidores.',
+        items: [
+          'Notas internas privadas (Mentions)',
+          'Transferência com contexto total',
+          'Visualização de quem está digitando'
+        ],
+        visualLabel: 'Team Collaboration'
       }
     ]"
   />

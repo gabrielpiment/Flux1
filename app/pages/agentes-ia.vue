@@ -11,23 +11,33 @@
     :details="[
       {
         title: 'IA Treinada no Seu Negócio',
-        description: 'Diferente de chatbots genéricos, os Agentes Flux são moldados pela cultura e dados da sua empresa.',
+        description: 'Diferente de chatbots genéricos, os Agentes Flux são alimentados diretamente pela sua base de conhecimento (PDF, URLs, manuais), garantindo respostas precisas e alinhadas à sua marca.',
         items: [
-          'Treinamento em múltiplos idiomas',
-          'Tom de voz personalizável',
-          'Proteção de dados e privacidade'
+          'Treinamento em múltiplos idiomas e dialetos',
+          'Tom de voz e personalidade ajustáveis',
+          'Processamento de Linguagem Natural (LLM) proprietário'
         ],
-        visualLabel: 'Training Preview'
+        visualLabel: 'Training Engine'
       },
       {
-        title: 'Transição Fluida para Humano',
-        description: 'Sempre que a complexidade exigir, a IA transfere o lead para um humano com todo o histórico e resumo da conversa.',
+        title: 'Transição Inteligente (Handoff)',
+        description: 'A IA reconhece quando um problema exige intervenção humana e transfere o atendimento para o especialista certo, enviando um resumo completo da conversa.',
         items: [
-          'Resumos automáticos de atendimento',
-          'Análise de sentimento em tempo real',
-          'Distribuição inteligente de tickets'
+          'Resumos automatizados via IA',
+          'Análise de sentimento para priorização',
+          'Distribuição por competências do operador'
         ],
-        visualLabel: 'Handoff Workflow'
+        visualLabel: 'Handoff Flow'
+      },
+      {
+        title: 'Multimodalidade e Canais',
+        description: 'Seus agentes de IA operam em todos os canais, processando texto, áudio e até imagens para uma resolução completa.',
+        items: [
+          'Transcrição de áudios do WhatsApp',
+          'Interpretação de comprovantes e documentos',
+          'Respostas contextualizadas por imagem'
+        ],
+        visualLabel: 'Multimodal AI'
       }
     ]"
   />

@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Engajamento que Converte',
-        description: 'Aproveite o pico de interesse dos seus seguidores com interações imediatas impulsionadas por IA.',
+        title: 'Engajamento via Stories',
+        description: 'Responda a menções e reações nos Stories automaticamente, convertendo engajamento social em leads qualificados.',
         items: [
-          'Gatilhos por palavras-chave',
-          'Fluxos de FAQ automáticos',
-          'Análise de performance de posts'
+          'Auto-reply para menções nos Stories',
+          'Início de automação via palavras-chave',
+          'Captura de leads via Quick Replies'
         ],
-        visualLabel: 'Instagram Engagement'
+        visualLabel: 'Story Automation'
+      },
+      {
+        title: 'DM Automation para E-commerce',
+        description: 'Automatize o atendimento direto (DM) e integre seu catálogo de produtos para vendas assistidas no app.',
+        items: [
+          'Envio de cartões de produto',
+          'Rastreamento de pedidos via Direct',
+          'Integração com Instagram Shopping'
+        ],
+        visualLabel: 'Social Sales'
+      },
+      {
+        title: 'Gestão Unificada de Comentários',
+        description: 'Responda a comentários em posts e anúncios automaticamente, levando a conversa para o Direct.',
+        items: [
+          'Filtro de palavras proibidas',
+          'Resposta automática em posts orgânicos',
+          'Acompanhamento de anúncios (Boosted)'
+        ],
+        visualLabel: 'Comment Management'
       }
     ]"
   />

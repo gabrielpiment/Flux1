@@ -10,14 +10,34 @@
     ]"
     :details="[
       {
-        title: 'Segurança & Compliance',
-        description: 'Sua IA opera em um ambiente seguro, respeitando a LGPD e garantindo que seus dados nunca treinem modelos públicos.',
+        title: 'Diferencial Tecnológico',
+        description: 'Nossa IA foi treinada especificamente para o mercado brasileiro, entendendo gírias, abreviações e intenções complexas.',
         items: [
-          'Criptografia de ponta a ponta',
-          'Controle de acesso granular',
-          'Auditoria completa de decisões da IA'
+          'LLM ajustado para atendimento (SFT)',
+          'Baixíssima latência de resposta',
+          'Proteção contra alucinações de IA'
         ],
-        visualLabel: 'Secure AI Layers'
+        visualLabel: 'AI Knowledge'
+      },
+      {
+        title: 'Segurança & LGPD Nativa',
+        description: 'Seus dados são seus. Operamos em um ambiente isolado (Sandboxed) onde suas informações nunca são vazadas ou usadas por terceiros.',
+        items: [
+          'Criptografia AES-256 e SSL/TLS',
+          'Anonimização de dados sensíveis',
+          'Logs de auditoria em tempo real'
+        ],
+        visualLabel: 'Security Core'
+      },
+      {
+        title: 'Aprendizado Contínuo',
+        description: 'A Flux AI aprende com os feedbacks (RLHF) e melhora a precisão das respostas a cada nova interação.',
+        items: [
+          'Treinamento reativo via feedback',
+          'Identificação de novos tópicos (Clustering)',
+          'Otimização automática de prompts'
+        ],
+        visualLabel: 'Self-Learning'
       }
     ]"
   />
