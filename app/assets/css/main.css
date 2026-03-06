@@ -1643,7 +1643,6 @@ a {
     padding: 6rem 2rem 2rem;
 }
 
-.drawer-content .nav-dropdown a,
 .drawer-content .login-link {
     display: block;
     padding: 0.75rem 1rem;
@@ -1654,10 +1653,50 @@ a {
     transition: all 0.2s ease;
 }
 
-.drawer-content .nav-dropdown a:hover,
-.drawer-content .login-link:hover {
+.drawer-content .mobile-nav-item>a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.mobile-dropdown-title {
+    display: block;
+    padding: 0.75rem 1rem 0.4rem;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+}
+
+.mobile-submenu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-sub-link {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.drawer-content .login-link:hover,
+.drawer-content .mobile-nav-item>a:hover {
     color: #fff;
     background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-item {
+    width: 100%;
 }
 
 .drawer-content .btn-cta.neon {
