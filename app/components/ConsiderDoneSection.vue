@@ -48,7 +48,34 @@
                   </div>
                   <div class="cmsg__content">
                     <div v-if="msg.from === 'ai'" class="cmsg__sender">Flux IA</div>
-                    <div class="cmsg__bubble">{{ msg.text }}</div>
+
+                    <!-- Video Message Item -->
+                    <div v-if="msg.text === 'VIDEO_MESSAGE'" class="video-msg-container">
+                      <div class="video-msg-card" @click="emit('play-video')">
+                        <div class="video-card-thumb">
+                          <div class="video-card-overlay">
+                            <div class="play-icon-pulse">
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                              </svg>
+                            </div>
+                          </div>
+                          <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
+                        </div>
+                        <div class="video-card-info">
+                          <span class="v-duration">Assista e pare de aceitar esse amadorismo no whatsapp hoje</span>
+                        </div>
+                      </div>
+
+                      <!-- Inline Hint -->
+                      <div class="video-inline-hint">
+                        <div class="hint-pulse"></div>
+                        <span>Clique para assistir agora</span>
+                      </div>
+                    </div>
+
+                    <!-- Regular Bubble -->
+                    <div v-else class="cmsg__bubble">{{ msg.text }}</div>
                     <span class="cmsg__time">{{ msg.time }}</span>
                   </div>
                 </div>
@@ -97,6 +124,18 @@
             </transition>
           </div>
 
+          <!-- Floating Click Instruction -->
+          <transition name="msg-fade">
+            <div v-if="showLabels" class="click-instruction" v-motion-pop-visible>
+              <div class="instruction-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 13l5 5 5-5M12 18V6" />
+                </svg>
+              </div>
+              <span>Clique no vídeo acima para assistir a demonstração real</span>
+            </div>
+          </transition>
+
           <!-- Input area (decorative) -->
           <div class="chat-demo-footer">
             <div class="chat-input-fake">
@@ -119,6 +158,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
+const emit = defineEmits(['play-video'])
+
 interface ChatMsg {
   type?: string
   from?: 'client' | 'ai'
@@ -129,11 +170,13 @@ interface ChatMsg {
 const SCRIPT: ChatMsg[] = [
   { type: 'date', text: 'Hoje, 14:02' },
   { from: 'client', text: 'Oi! Quero saber mais sobre os planos 😊', time: '14:02' },
-  { from: 'ai', text: 'Olá! Que bom ter você aqui. Temos planos a partir de R$97/mês. Qual é o tamanho da sua equipe?', time: '14:02' },
+  { from: 'ai', text: 'Olá! Que bom ter você aqui. Temos planos a partir de R$150/mês. Qual é o tamanho da sua equipe?', time: '14:02' },
   { from: 'client', text: 'Somos 8 pessoas no time de vendas.', time: '14:03' },
   { from: 'ai', text: 'Perfeito! Para 8 pessoas o plano Growth é ideal — inclui omnichannel, IA nativa e relatórios em tempo real. Quer receber o link para teste grátis? 🚀', time: '14:03' },
   { from: 'client', text: 'Sim! Me manda 👍', time: '14:04' },
-  { from: 'ai', text: 'Pronto! Link enviado. Qualquer dúvida é só chamar — estou disponível 24h 😉', time: '14:04' },
+  { from: 'ai', text: 'Pronto! Link enviado. Assista abaixo:', time: '14:04' },
+  { from: 'ai', text: 'VIDEO_MESSAGE', time: '14:05' },
+  { from: 'ai', text: 'Qualquer dúvida é só chamar — estou disponível 24h 😉', time: '14:05' },
 ]
 
 const visibleMessages = ref<ChatMsg[]>([])
@@ -362,7 +405,7 @@ const vReveal = {
 
 /* ── Body / scroll ─────────────────────────── */
 .chat-demo-body {
-  height: 340px;
+  height: 520px;
   overflow-y: auto;
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -456,6 +499,139 @@ const vReveal = {
   background: linear-gradient(135deg, rgba(0, 114, 245, .75), rgba(0, 150, 255, .6));
   border: 1px solid rgba(0, 114, 245, .4);
   border-bottom-right-radius: 4px;
+  color: #fff;
+}
+
+/* ── Video Message Inside ConsiderDone ─────── */
+.video-msg-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.video-msg-card {
+  margin-top: 4px;
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.video-msg-card:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.video-inline-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(31, 105, 255, 0.08);
+  border: 1px solid rgba(31, 105, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 99px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  animation: slide-in-hint 0.5s ease-out forwards;
+}
+
+.hint-pulse {
+  width: 8px;
+  height: 8px;
+  background: #1f69ff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #1f69ff;
+  animation: pulse-hint 1.5s infinite;
+}
+
+@keyframes pulse-hint {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(31, 105, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px rgba(31, 105, 255, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(31, 105, 255, 0);
+  }
+}
+
+@keyframes slide-in-hint {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .video-msg-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+}
+
+.video-card-thumb {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+
+.v-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.video-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.play-icon-pulse {
+  width: 36px;
+  height: 36px;
+  background: var(--accent-primary, #0072f5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 114, 245, 0.4);
+}
+
+.video-card-info {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.v-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
   color: #fff;
 }
 
@@ -612,5 +788,69 @@ const vReveal = {
 .typing-fade-enter-from,
 .typing-fade-leave-to {
   opacity: 0;
+}
+
+/* ── Click Instruction ───────────────────── */
+.click-instruction {
+  position: absolute;
+  right: -240px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  background: rgba(31, 105, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 105, 255, 0.3);
+  padding: 1rem;
+  border-radius: 16px;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 20;
+}
+
+.instruction-arrow {
+  color: var(--accent-primary, #1f69ff);
+  animation: bounce-horizontal 2s infinite;
+}
+
+@keyframes bounce-horizontal {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .click-instruction {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 90%;
+    margin: 1rem auto;
+    background: rgba(31, 105, 255, 0.15);
+  }
+
+  .instruction-arrow {
+    transform: rotate(0deg);
+  }
 }
 </style>

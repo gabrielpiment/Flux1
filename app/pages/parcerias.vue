@@ -1,46 +1,40 @@
 <template>
-  <ProductTemplate
-    eyebrow="Ecossistema"
-    :title-lines="['Cresça Junto com', 'A Nossa Plataforma']"
+  <ProductTemplate eyebrow="Ecossistema" :title-lines="['Cresça Junto com', 'A Nossa Plataforma']"
     description="Seja um parceiro Flux e ofereça a melhor tecnologia de IA para seus clientes enquanto aumenta sua receita recorrente."
     :features="[
-      { icon: '🤝', title: 'Parceria de Revenda', description: 'Implemente a Flux em seus clientes e ganhe comissão recorrente vitalícia.' },
-      { icon: '🔌', title: 'Parceria Tech', description: 'Integre sua solução via API e crie experiências únicas para o mercado.' },
-      { icon: '🎓', title: 'Certificação Flux', description: 'Torne-se um especialista certificado em nossa IA e ganhe visibilidade.' }
-    ]"
-    :details="[
+      { icon: '🤝', title: 'Programa de Indicação', description: 'Seja recompensado por cada novo cliente que você trouxer para a Flux.' },
+      { icon: '🛠️', title: 'Suporte Comercial', description: 'Acesso direto ao nosso time para ajudar no fechamento das suas propostas.' },
+      { icon: '🎓', title: 'Treinamento Master', description: 'Capacite sua equipe para dominar todas as funcionalidades da nossa plataforma.' }
+    ]" :details="[
       {
-        title: 'Programa de Canais',
-        description: 'Desenhado para agências, consultorias e empresas de tecnologia que querem estar na vanguarda da IA.',
+        title: 'Vantagens do Parceiro',
+        description: 'Cresça junto com a Flux através de um modelo de parceria focado em resultados reais.',
         items: [
-          'Gestor de conta dedicado',
-          'Material de marketing white-label',
-          'Treinamento técnico e comercial'
+          'Painel de gestão de indicações',
+          'Material de vendas white-label',
+          'Suporte prioritário na engenharia'
         ],
-        visualLabel: 'Partnership Program'
+        visualLabel: 'Partner Benefits'
       },
       {
-        title: 'API Enterprise p/ Parceiros',
-        description: 'Nossa documentação completa permite que você construa extensões e novos aplicativos sobre a engine Flux.',
+        title: 'Integração e Suporte',
+        description: 'Não deixamos você sozinho. Oferecemos todo o apoio necessário para o sucesso dos seus clientes.',
         items: [
-          'Webhooks e APIs de baixa latência',
-          'Ambiente de Sandbox dedicado',
-          'Suporte técnico prioritário p/ devs'
+          'Documentação de API completa',
+          'Webinars técnicos exclusivos',
+          'Gerente de conta dedicado'
         ],
-        visualLabel: 'Dev Ecosystem'
+        visualLabel: 'Ops Support'
       },
       {
         title: 'Vantagens Exclusivas',
         description: 'Parceiros Flux têm acesso antecipado a novas funcionalidades e suporte direto da nossa engenharia.',
         items: [
-          'Early access (Beta testing)',
-          'Co-marketing e eventos conjuntos',
           'Eventos exclusivos para parceiros'
         ],
         visualLabel: 'Exclusive Perks'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

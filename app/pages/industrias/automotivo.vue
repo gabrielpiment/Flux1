@@ -1,20 +1,16 @@
 <template>
-  <ProductTemplate
-    eyebrow="Setor"
-    :title-lines="['Setor Automotivo', 'Acelere suas Vendas']"
+  <ProductTemplate eyebrow="Setor" :title-lines="['Setor Automotivo', 'Acelere suas Vendas']"
     description="Da qualificação do lead ao agendamento do test-drive. Mantenha o motor do seu atendimento ligado 24h por dia, 7 dias por semana."
     :features="[
       { icon: '🚗', title: 'Qualificação de Leads', description: 'Bots que entendem o perfil do comprador e direcionam para o vendedor certo.' },
       { icon: '🛠️', title: 'Lembrete de Revisão', description: 'Notificações automáticas baseadas em quilometragem ou data da última visita.' },
       { icon: '📅', title: 'Test-drive Online', description: 'Agendamento simplificado sem a necessidade de ligações telefônicas.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Showroom Digital 24/7',
         description: 'Exiba seu estoque de veículos com fotos, vídeos e fichas técnicas de forma interativa diretamente no chat.',
         items: [
           'Catálogo sincronizado com o DMS',
-          'Cálculo de parcelas em tempo real',
           'Agendamento de test-drive (Bot)'
         ],
         visualLabel: 'Virtual Showroom'
@@ -39,8 +35,7 @@
         ],
         visualLabel: 'Dealer Analytics'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

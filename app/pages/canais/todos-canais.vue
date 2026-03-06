@@ -1,46 +1,42 @@
 <template>
-  <ProductTemplate
-    eyebrow="Canais"
-    :title-lines="['Todos os Canais', 'Uma Só Experiência']"
+  <ProductTemplate eyebrow="Canais" :title-lines="['Todos os Canais', 'Uma Só Experiência']"
     description="Centralize WhatsApp, Instagram, Messenger, Email, Chat e muito mais em uma interface única. Seja onipresente sem a complexidade."
     :features="[
-      { icon: '🔗', title: 'Omnichannel Real', description: 'O cliente começa no Instagram e termina no WhatsApp sem perder o contexto.' },
-      { icon: '📱', title: 'Novos Canais Rápidos', description: 'Integre Telegram, SMS e Google Business Messages com poucos cliques.' },
-      { icon: '🖥️', title: 'Inbox Centralizado', description: 'Sua equipe trabalha em apenas uma tela, independentemente do canal de origem.' }
-    ]"
-    :details="[
+      { icon: '🔗', title: 'Omnichannel Integrado', description: 'WhatsApp, Instagram, Facebook, E-mail e Chat Web unificados em uma única tela.' },
+      { icon: '🛒', title: 'Marketplaces em Breve', description: 'Integrações com OLX e Mercado Livre estão em estágio avançado de desenvolvimento.' },
+      { icon: '🖥️', title: 'Inbox Centralizado', description: 'Sua equipe trabalha em apenas uma interface, independentemente da origem do contato.' }
+    ]" :details="[
       {
-        title: 'Sincronização Total de Contexto',
-        description: 'Nunca pergunte a mesma coisa duas vezes. A Flux mantém o histórico unificado independente de onde o cliente chama.',
+        title: 'Histórico Unificado',
+        description: 'Mantenha o contexto da conversa mesmo que o cliente alterne entre seus canais oficiais.',
         items: [
-          'Identidade única do cliente (Unified ID)',
-          'Timeline cronológica multi-canal',
-          'Notas compartilhadas entre equipes'
+          'Linha do tempo consolidada por cliente',
+          'Identidade única independente da plataforma',
+          'Transferência entre atendentes com contexto'
         ],
-        visualLabel: 'Unified Context'
+        visualLabel: 'Unified History'
       },
       {
-        title: 'Omnichannel Analytics',
-        description: 'Compare a performance de cada canal em um único dashboard estratégico e realoque seu time onde há mais demanda.',
+        title: 'Performance por Canal',
+        description: 'Entenda quais pontos de contato são mais eficientes para sua estratégia comercial.',
         items: [
-          'Mapa de calor por canal de entrada',
-          'Velocidade de resolução comparativa',
-          'Análise de sentimento por plataforma'
+          'Volume de mensagens por plataforma',
+          'Tempo médio de resposta por canal',
+          'Taxa de resolução por origem'
         ],
-        visualLabel: 'Strategic BI'
+        visualLabel: 'Channel Insights'
       },
       {
-        title: 'Novos Canais em 1-Clique',
-        description: 'Esteja pronto para o futuro. Ative novos canais como Telegram, SMS, Google e Apple Business sem precisar de código.',
+        title: 'Expansão Contínua',
+        description: 'Estamos constantemente homologando novos canais para garantir que sua marca esteja onde o cliente está.',
         items: [
-          'Integrações no-code nativas',
-          'Padronização de experiência de marca',
-          'Gestão de custos centralizada'
+          'Homologação de APIs oficiais',
+          'Segurança e conformidade em cada canal',
+          'Atualizações de recursos sem custo extra'
         ],
-        visualLabel: 'Scale Engine'
+        visualLabel: 'Roadmap'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

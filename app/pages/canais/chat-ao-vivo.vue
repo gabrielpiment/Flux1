@@ -1,14 +1,11 @@
 <template>
-  <ProductTemplate
-    eyebrow="Canal"
-    :title-lines="['Chat ao Vivo', 'Conversão em Segundos']"
+  <ProductTemplate eyebrow="Canal" :title-lines="['Chat ao Vivo', 'Conversão em Segundos']"
     description="Capture visitantes no momento de maior interesse. Nosso widget de chat é leve, personalizável e integrado a todos os seus fluxos de IA."
     :features="[
       { icon: '💬', title: 'Widget Customizável', description: 'Ajuste cores, fontes e posição para combinar perfeitamente com sua marca.' },
       { icon: '🔔', title: 'Gatilhos Proativos', description: 'Inicie conversas baseadas no tempo de navegação ou páginas visitadas.' },
       { icon: '🤝', title: 'Hand-off para Humanos', description: 'Transição suave da IA para atendentes humanos quando necessário.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Proatividade Conversacional',
         description: 'Não espere o cliente chamar. Use a IA para identificar o momento certo de oferecer ajuda baseado no comportamento.',
@@ -30,17 +27,16 @@
         visualLabel: 'Connected Data'
       },
       {
-        title: 'Mobile App para Operadores',
-        description: 'Atenda de qualquer lugar com nosso app nativo para iOS e Android, com notificações push em tempo real.',
+        title: 'Acesso Mobile via Navegador',
+        description: 'Atenda seus clientes de qualquer lugar acessando a plataforma diretamente pelo navegador do seu smartphone.',
         items: [
-          'Upload de arquivos via câmera',
-          'Notas de voz integradas',
-          'Gestão de equipe em tempo real'
+          'Interface otimizada para telas pequenas',
+          'Gestão de conversas em tempo real',
+          'Acesso a todo o histórico de mensagens'
         ],
-        visualLabel: 'Mobile Support'
+        visualLabel: 'Mobile Access'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

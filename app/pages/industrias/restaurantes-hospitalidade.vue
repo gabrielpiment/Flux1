@@ -1,46 +1,42 @@
 <template>
-  <ProductTemplate
-    eyebrow="Setor"
-    :title-lines="['Restaurantes', 'E Hospitalidade']"
+  <ProductTemplate eyebrow="Setor" :title-lines="['Restaurantes', 'E Hospitalidade']"
     description="Otimize reservas, pedidos e feedback. Deixe a IA cuidar da logística do atendimento enquanto você foca na qualidade do serviço."
     :features="[
-      { icon: '🍽️', title: 'Reserva de Mesas', description: 'Confirmação e gestão de fila de espera automatizada via chat.' },
-      { icon: '📜', title: 'Cardápio Digital', description: 'Acesso rápido a menus interativos e recebimento de pedidos diretamente pelo canal oficial.' },
-      { icon: '⭐', title: 'Feedback em Tempo Real', description: 'Colete avaliações dos clientes logo após a experiência e gere insights.' }
-    ]"
-    :details="[
+      { icon: '📅', title: 'Reservas de Mesa', description: 'Automatize o agendamento de mesas e evite filas de espera pelo WhatsApp.' },
+      { icon: '📍', title: 'Informações Locais', description: 'Responda instantaneamente sobre horários, localização e opções do menu.' },
+      { icon: '⭐', title: 'Feedback de Clientes', description: 'Colete avaliações após a visita para melhorar constantemente seu serviço.' }
+    ]" :details="[
       {
-        title: 'Delivery e Pedidos via Chat',
-        description: 'Elimine taxas exageradas de marketplaces. Tenha seu próprio canal de vendas direto no WhatsApp com pagamento integrado.',
+        title: 'Agendamento Prático',
+        description: 'Facilite a vida do seu cliente permitindo que ele reserve seu lugar em segundos, sem precisar ligar.',
         items: [
-          'Cardápio digital interativo',
-          'Impressão automática na cozinha',
-          'Atualização de status de preparo'
+          'Confirmação de reserva automática',
+          'Lembretes de horário via WhatsApp',
+          'Gestão de cancelamentos simplificada'
         ],
-        visualLabel: 'Direct Ordering'
+        visualLabel: 'Booking Helper'
       },
       {
-        title: 'Reservas e Fila de Espera',
-        description: 'Otimize a ocupação das suas mesas com um sistema de reservas inteligente que reduz o no-show.',
+        title: 'Atendimento ao Visitante',
+        description: 'Tire dúvidas frequentes sobre o estabelecimento de forma automatizada e eficiente.',
         items: [
-          'Lembretes de reserva proativos',
-          'Fila de espera digital via QR Code',
-          'Gestão de ocupação em tempo real'
+          'Respostas sobre horários e feriados',
+          'Localização e direções integradas',
+          'Dúvidas sobre o menu e ingredientes'
         ],
-        visualLabel: 'Table Management'
+        visualLabel: 'Info Desk'
       },
       {
-        title: 'Feedback e Reputação',
-        description: 'Colete avaliações dos clientes no calor do momento e melhore sua nota no Google e TripAdvisor.',
+        title: 'Relacionamento Pós-Visita',
+        description: 'Mantenha seus clientes engajados e retorne mais vezes com uma comunicação próxima.',
         items: [
-          'Pesquisa NPS após o pagamento',
-          'Alertas de baixa pontuação (Crise)',
-          'Automação de fidelidade (Cashback)'
+          'Pesquisas de satisfação rápidas',
+          'Envio de novidades e eventos',
+          'Canal direto para sugestões'
         ],
-        visualLabel: 'Reputation AI'
+        visualLabel: 'Engagement Hub'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

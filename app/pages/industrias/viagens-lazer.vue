@@ -1,46 +1,42 @@
 <template>
-  <ProductTemplate
-    eyebrow="Setor"
-    :title-lines="['Viagens e Lazer', 'Experiências Fluídas']"
+  <ProductTemplate eyebrow="Setor" :title-lines="['Viagens e Lazer', 'Experiências Fluídas']"
     description="Do check-in à recomendação local. Automatize o suporte em viagens e garanta que o único foco do seu cliente seja aproveitar o destino."
     :features="[
-      { icon: '✈️', title: 'Envio de Itinerários', description: 'Confirmações de reserva e arquivos de passagem disparados automaticamente via WhatsApp.' },
-      { icon: '🌍', title: 'Concierge IA', description: 'Assistente 24h para tirar dúvidas sobre clima, locais turísticos e regras de bagagem.' },
-      { icon: '📅', title: 'Gestão de Cancelamento', description: 'Processos automatizados para remarcações e reembolsos com agilidade.' }
-    ]"
-    :details="[
+      { icon: '✈️', title: 'Suporte ao Viajante', description: 'Atendimento instantâneo para dúvidas sobre voos, vouchers e roteiros 24/7.' },
+      { icon: '🏨', title: 'Gestão de Reservas', description: 'Confirmação automática de agendamentos e envio de vouchers via WhatsApp.' },
+      { icon: '🗺️', title: 'Check-in Ágil', description: 'Envio de lembretes e links de check-in para melhorar a experiência do cliente.' }
+    ]" :details="[
       {
-        title: 'Concierge IA 24/7',
-        description: 'Ofereça um assistente pessoal para cada viajante, disponível para tirar dúvidas e fazer recomendações a qualquer hora.',
+        title: 'Experiência do Passageiro',
+        description: 'Garanta que seu cliente tenha todas as informações na palma da mão, onde quer que ele esteja.',
         items: [
-          'Dicas de locais e gastronomia',
-          'Informações de voo em tempo real',
-          'Suporte multilíngue para estrangeiros'
+          'Envio automático de bilhetes e reservas',
+          'Suporte multicanal para emergências',
+          'Atendimento proativo pré-embarque'
         ],
-        visualLabel: 'AI Concierge'
+        visualLabel: 'Guest Journey'
       },
       {
-        title: 'Gestão de Crises e Remarcações',
-        description: 'Em caso de atrasos ou cancelamentos, a Flux orquestra a comunicação em massa e oferece opções rápidas de solução.',
+        title: 'Automação de Reservas',
+        description: 'Reduza processos manuais integrando sua central de atendimento aos sistemas de reserva.',
         items: [
-          'Avisos proativos de alteração',
-          'Remarcação simplificada no chat',
-          'Processamento de reembolsos (Bot)'
+          'Sincronização de status de viagem',
+          'Geração de protocolos automática',
+          'Histórico de preferências do viajante'
         ],
-        visualLabel: 'Crisis Control'
+        visualLabel: 'Booking Flow'
       },
       {
-        title: 'Fidelização de Hóspedes',
-        description: 'Mantenha o contato pós-viagem para garantir o retorno do cliente com ofertas personalizadas.',
+        title: 'Fidelização e Suporte',
+        description: 'Mantenha o viajante engajado com sua marca através de um atendimento de classe mundial.',
         items: [
-          'Pesquisas de satisfação automáticas',
-          'Ofertas de upsell para próximas estadias',
-          'Gestão de programas de milhagem'
+          'Pesquisas de satisfação pós-viagem',
+          'Canal direto para feedback e elogios',
+          'Respostas rápidas para problemas comuns'
         ],
-        visualLabel: 'Guest Loyalty'
+        visualLabel: 'Loyalty & Support'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

@@ -6,7 +6,7 @@
           <span class="eyebrow">Fale Conosco</span>
           <h1 class="text-gradient">Estamos a um <br><span>clique de distância</span></h1>
           <p class="subtitle">
-            Dúvidas, sugestões ou interesse em nossos planos enterprise? 
+            Dúvidas, sugestões ou interesse em nossos planos enterprise?
             Escolha o melhor canal e fale com nossa equipe.
           </p>
         </div>
@@ -18,18 +18,18 @@
         <div class="contact-grid">
           <div class="contact-form-wrap" v-motion-fade-visible>
             <h3>Envie uma mensagem</h3>
-            <form @submit.prevent class="contact-form">
+            <form @submit.prevent="handleSubmit" class="contact-form">
               <div class="form-group">
-                <input type="text" placeholder="Seu nome completo" required>
+                <input v-model="formData.nome" type="text" placeholder="Seu nome completo" required>
               </div>
               <div class="form-group">
-                <input type="email" placeholder="E-mail corporativo" required>
+                <input v-model="formData.email" type="email" placeholder="E-mail corporativo" required>
               </div>
               <div class="form-group">
-                <input type="text" placeholder="WhatsApp (com DDD)" required>
+                <input v-model="formData.whatsapp" type="text" placeholder="WhatsApp (com DDD)" required>
               </div>
               <div class="form-group">
-                <select required>
+                <select v-model="formData.assunto" required>
                   <option value="" disabled selected>Assunto</option>
                   <option>Vendas Enterprise</option>
                   <option>Suporte Técnico</option>
@@ -38,11 +38,27 @@
                 </select>
               </div>
               <div class="form-group">
-                <textarea placeholder="Como podemos ajudar?" rows="5" required></textarea>
+                <textarea v-model="formData.mensagem" placeholder="Como podemos ajudar?" rows="5" required></textarea>
               </div>
-              <button type="submit" class="btn-primary" style="width: 100%;">Enviar Mensagem</button>
+              <button type="submit" class="btn-primary" :disabled="isSubmitting" style="width: 100%;">
+                {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
+              </button>
             </form>
           </div>
+
+          <!-- Modal de Sucesso -->
+          <Teleport to="body">
+            <Transition name="fade">
+              <div v-if="showSuccessModal" class="modal-overlay" @click="showSuccessModal = false">
+                <div class="modal-content" @click.stop v-motion-pop>
+                  <div class="success-icon">✅</div>
+                  <h3>Mensagem Enviada!</h3>
+                  <p>Recebemos seu contato. Nossa equipe retornará em breve pelo seu e-mail ou WhatsApp.</p>
+                  <button class="btn-primary" @click="showSuccessModal = false">Entendido</button>
+                </div>
+              </div>
+            </Transition>
+          </Teleport>
 
           <div class="contact-info-wrap">
             <div class="info-card" v-motion-fade-visible>
@@ -53,7 +69,7 @@
                 <a href="https://wa.me/5500000000000" class="info-link">Iniciar conversa →</a>
               </div>
             </div>
-            
+
             <div class="info-card" v-motion-fade-visible>
               <div class="info-icon">📧</div>
               <div>
@@ -79,6 +95,36 @@
 </template>
 
 <script setup lang="ts">
+import { ref, reactive } from 'vue'
+
+const isSubmitting = ref(false)
+const showSuccessModal = ref(false)
+
+const formData = reactive({
+  nome: '',
+  email: '',
+  whatsapp: '',
+  assunto: '',
+  mensagem: ''
+})
+
+const handleSubmit = async () => {
+  isSubmitting.value = true
+
+  // Simula um delay de rede
+  await new Promise(resolve => setTimeout(resolve, 1500))
+
+  isSubmitting.value = false
+  showSuccessModal.value = true
+
+  // Limpa o formulário
+  formData.nome = ''
+  formData.email = ''
+  formData.whatsapp = ''
+  formData.assunto = ''
+  formData.mensagem = ''
+}
+
 useHead({
   title: 'Fale Conosco | Flux - Suporte e Vendas',
   meta: [
@@ -144,8 +190,8 @@ useHead({
   gap: 20px;
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
   width: 100%;
   padding: 18px 25px;
@@ -158,8 +204,8 @@ useHead({
   transition: all 0.3s ease;
 }
 
-.form-group input:focus, 
-.form-group select:focus, 
+.form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--accent-primary);
   background: rgba(255, 255, 255, 0.05);
@@ -221,7 +267,75 @@ useHead({
   box-shadow: 0 10px 30px rgba(31, 105, 255, 0.3);
 }
 
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #0a0a0c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 32px;
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.modal-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.modal-content .btn-primary {
+  width: 100%;
+}
+
+/* Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 @media (max-width: 1024px) {
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

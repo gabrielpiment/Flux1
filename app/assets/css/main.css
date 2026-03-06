@@ -269,7 +269,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 140px 0 380px;
+    padding: 140px 0 160px;
     /* extra bottom padding to give room for the video overlap */
     overflow: visible;
     z-index: 2;
@@ -408,7 +408,7 @@ a {
 /* Video Section (V4 Ultra-Premium) */
 /* Consider Done Section (V4) */
 .consider-done {
-    padding: 160px 0;
+    padding: 100px 0 160px;
     position: relative;
     overflow: hidden;
 }

@@ -1,9 +1,12 @@
 <template>
   <div id="index-page">
     <HeroSection />
-    <VideoSection @open-modal="videoModal.open" />
-    <VideoModal :is-open="videoModal.isOpen.value" @close="videoModal.close" />
-    <ConsiderDoneSection />
+    <VerticalVideoModal 
+      :is-open="verticalVideo.isOpen.value" 
+      :video-src="verticalVideo.videoSrc.value" 
+      @close="verticalVideo.close" 
+    />
+    <ConsiderDoneSection @play-video="verticalVideo.open('/videos/apresentacao.mp4')" />
     <FlowSection />
     <InteractiveKanbanSection />
     <FeaturesSection />
@@ -18,10 +21,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useVideoModal } from '../composables/useVideoModal'
+import { useVerticalVideoModal } from '../composables/useVerticalVideoModal'
 import HeroSection from '../components/HeroSection.vue'
-import VideoSection from '../components/VideoSection.vue'
-import VideoModal from '../components/VideoModal.vue'
+import VerticalVideoModal from '../components/VerticalVideoModal.vue'
 import ConsiderDoneSection from '../components/ConsiderDoneSection.vue'
 import FlowSection from '../components/FlowSection.vue'
 import InteractiveKanbanSection from '../components/InteractiveKanbanSection.vue'
@@ -37,8 +39,7 @@ export default defineComponent({
   name: 'IndexPage',
   components: {
     HeroSection,
-    VideoSection,
-    VideoModal,
+    VerticalVideoModal,
     ConsiderDoneSection,
     FlowSection,
     InteractiveKanbanSection,
@@ -51,8 +52,8 @@ export default defineComponent({
     CtaSection
   },
   setup() {
-    const videoModal = useVideoModal()
-    return { videoModal }
+    const verticalVideo = useVerticalVideoModal()
+    return { verticalVideo }
   }
 })
 </script>

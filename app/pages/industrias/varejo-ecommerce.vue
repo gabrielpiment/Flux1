@@ -2,39 +2,39 @@
   <ProductTemplate eyebrow="E-commerce" :title-lines="['Venda 24/7', 'No Varejo Digital']"
     description="Aumente seu ROI com automações de recuperação de carrinho, sugestões personalizadas de produtos e rastreio de pedidos via WhatsApp."
     :features="[
-      { icon: '🛒', title: 'Recuperação de Carrinho', description: 'Disparos automáticos quando o cliente abandona a compra, com oferta de cupons dinâmicos.' },
-      { icon: '📦', title: 'Rastreio Logístico', description: 'Mantenha o cliente informado sobre cada etapa da entrega sem sobrecarregar o suporte.' },
-      { icon: '🔮', title: 'Upsell Inteligente', description: 'IA que sugere produtos complementares baseada no histórico de navegação e compra.' }
+      { icon: '💬', title: 'Venda Consultiva', description: 'Dê suporte personalizado para transformar dúvidas em carrinhos fechados no WhatsApp.' },
+      { icon: '📦', title: 'Status de Pedido', description: 'Integre via API para informar automaticamente o status da entrega ao seu cliente.' },
+      { icon: '🎯', title: 'Qualificação de Leads', description: 'Identifique o interesse do cliente antes de direcionar para o time de vendas.' }
     ]" :details="[
       {
-        title: 'Social Commerce de Elite',
-        description: 'Integre seu catálogo Shopify, Nuvemshop ou VTEX diretamente na Flux e venda por onde o cliente preferir.',
+        title: 'Agilidade no Atendimento',
+        description: 'Reduza o tempo de espera e evite que seu cliente procure a concorrência por falta de resposta rápida.',
         items: [
-          'Sincronização de estoque real-time',
-          'Checkout transparente via chat',
-          'Gestão de trocas e devoluções'
+          'Respostas rápidas para dúvidas frequentes',
+          'Distribuição inteligente de leads comerciais',
+          'Histórico de navegação integrado via Webhook'
         ],
-        visualLabel: 'Retail Workflow'
+        visualLabel: 'Sales Speed'
       },
       {
-        title: 'Logística Proativa via IA',
-        description: 'Mantenha o cliente informado sobre cada etapa da entrega sem sobrecarregar sua equipe de suporte.',
+        title: 'Pós-Venda Eficiente',
+        description: 'Transforme a experiência de entrega em um diferencial competitivo para sua loja.',
         items: [
-          'Rastreio de pedidos automático',
-          'Notificação de atrasos via WhatsApp',
-          'Proof of Delivery digital'
+          'Consulta de pedidos simplificada',
+          'Centralização de solicitações de suporte',
+          'Pesquisas de satisfação pós-atendimento'
         ],
-        visualLabel: 'Logistics Tracker'
+        visualLabel: 'Customer Success'
       },
       {
-        title: 'Recuperação de Carrinho 2.0',
-        description: 'Nossa IA entra em contato no momento certo com cupons dinâmicos para garantir que a venda aconteça.',
+        title: 'Triagem de Interesse',
+        description: 'Entenda o que seu cliente procura antes mesmo de iniciar o atendimento humano.',
         items: [
-          'Disparos baseados em valor do carrinho',
-          'Assistência consultiva p/ dúvidas',
-          'Análise de causa de abandono'
+          'Perguntas de qualificação automáticas',
+          'Segmentação de leads por categoria',
+          'Fluxos de nutrição via WhatsApp'
         ],
-        visualLabel: 'Cart Recovery'
+        visualLabel: 'Lead Engine'
       }
     ]" />
 </template>

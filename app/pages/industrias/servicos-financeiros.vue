@@ -2,39 +2,39 @@
   <ProductTemplate eyebrow="Fintech e Bancos" :title-lines="['Segurança e Agilidade', 'No setor financeiro']"
     description="Conformidade total com LGPD e segurança bancária para automatizar cobranças, onboarding e suporte financeiro."
     :features="[
-      { icon: '🔒', title: 'Segurança de Dados', description: 'Ambientes isolados e criptografia de ponta a ponta para dados sensíveis.' },
-      { icon: '💳', title: 'Gestão de Cobrança', description: 'Envio automático de boletos, lembretes de vencimento e negociação de dívidas por IA.' },
-      { icon: '📝', title: 'Onboarding Digital', description: 'Coleta e validação de documentos automatizada para abertura de contas.' }
+      { icon: '🔒', title: 'Segurança Prioritária', description: 'Criptografia de ponta a ponta e ambiente seguro para lidar com dados sensíveis.' },
+      { icon: '📊', title: 'Triagem de Perfil', description: 'Colete informações iniciais para qualificar o atendimento antes do consultor assumir.' },
+      { icon: '⚡', title: 'Agilidade Operacional', description: 'Reduza filas de espera com automações inteligentes de triagem financeira.' }
     ]" :details="[
       {
-        title: 'Security & Compliance',
-        description: 'Operamos sob os mais rígidos padrões de segurança, garantindo a privacidade dos dados bancários e sensíveis.',
+        title: 'Segurança e Conformidade',
+        description: 'Operamos seguindo as melhores práticas de proteção de dados para garantir a privacidade absoluta.',
         items: [
-          'Conformidade total com a LGPD',
-          'Criptografia de ponta a ponta',
-          'Mascaramento de dados sensíveis'
+          'Protocolos de segurança robustos',
+          'Auditoria de registros de acesso',
+          'Mascaramento de informações sensíveis'
         ],
-        visualLabel: 'Secure Banking'
+        visualLabel: 'Secure Core'
       },
       {
-        title: 'KYC e Onboarding Digital',
-        description: 'Acelere a abertura de contas e validação de documentos através de fluxos automatizados de visão computacional.',
+        title: 'Triagem Inteligente',
+        description: 'Identifique o perfil do cliente e o motivo do contato antes de direcionar para o especialista.',
         items: [
-          'Validação de documentos via chat',
-          'Prova de vida (Liveness) por imagem',
-          'Triagem automática de perfis'
+          'Coleta automatizada de dados básicos',
+          'Validação de CPF/CNPJ via integração',
+          'Direcionamento por nível de urgência'
         ],
-        visualLabel: 'KYC Workflow'
+        visualLabel: 'Smarter Routing'
       },
       {
-        title: 'Autoatendimento Financeiro',
-        description: 'Reduza a carga do call center permitindo que o cliente consulte saldos, faturas e negocie dívidas via IA.',
+        title: 'Eficiência no Atendimento',
+        description: 'Dê ao seu time as ferramentas necessárias para resolver pendências financeiras com rapidez.',
         items: [
-          'Emissão de 2ª via de boleto',
-          'Consulta de extratos e limites',
-          'Acordos de negociação automáticos'
+          'Histórico completo de interações',
+          'Transferência ativa com resumo',
+          'Modelos de resposta padronizados'
         ],
-        visualLabel: 'Financial Bot'
+        visualLabel: 'Ops Excellence'
       }
     ]" />
 </template>

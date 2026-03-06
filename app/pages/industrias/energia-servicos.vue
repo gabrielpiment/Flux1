@@ -1,14 +1,11 @@
 <template>
-  <ProductTemplate
-    eyebrow="Setor"
-    :title-lines="['Energia e Serviços', 'Atendimento Eficiente']"
+  <ProductTemplate eyebrow="Setor" :title-lines="['Energia e Serviços', 'Atendimento Eficiente']"
     description="Automatize avisos de manutenção, envio de faturas e solicitações de reparo. Ofereça um serviço essencial com agilidade digital."
     :features="[
-      { icon: '⚡', title: 'Segunda Via de Conta', description: 'Emissão automática de faturas e códigos de barras diretamente no chat.' },
-      { icon: '⚠️', title: 'Status de Manutenção', description: 'Informe clientes sobre interrupções programmadas na região via geolocalização.' },
-      { icon: '📝', title: 'Registro de Ocorrências', description: 'Abertura de chamados de reparo com envio de fotos e localização real.' }
-    ]"
-    :details="[
+      { icon: '⚡', title: 'Segunda Via de Conta', description: 'Emissão de faturas e códigos de barras (via integração com apps externos).' },
+      { icon: '⚠️', title: 'Status de Manutenção', description: 'Informe clientes sobre interrupções (via integração com apps externos).' },
+      { icon: '📝', title: 'Registro de Ocorrências', description: 'Abertura de chamados de reparo (via integração com apps externos).' }
+    ]" :details="[
       {
         title: 'Autoatendimento de Faturas',
         description: 'Reduza drasticamente o volume de chamadas básicas permitindo o acesso rápido a faturas e códigos de barras.',
@@ -39,8 +36,7 @@
         ],
         visualLabel: 'Mass Alerts'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">
