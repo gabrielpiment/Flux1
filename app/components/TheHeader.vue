@@ -8,10 +8,17 @@
       </div>
 
       <div class="nav-links">
-        <div v-for="link in navLinks" :key="link.label" class="nav-dropdown">
-          <a v-if="link.hasDropdown" href="#" class="dropdown-trigger">
-            {{ link.label }} <span class="dropdown-arrow">▼</span>
-          </a>
+        <div v-for="link in navLinks" :key="link.label" class="nav-item-container">
+          <div v-if="link.hasDropdown" class="nav-dropdown">
+            <a href="#" class="dropdown-trigger" @click.prevent>
+              {{ link.label }} <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <NuxtLink v-for="sub in link.submenu" :key="sub.label" :to="sub.href" class="dropdown-item">
+                {{ sub.label }}
+              </NuxtLink>
+            </div>
+          </div>
           <NuxtLink v-else :to="link.href">{{ link.label }}</NuxtLink>
         </div>
         <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link">Entrar</a>
@@ -29,10 +36,16 @@
     <!-- Mobile Drawer -->
     <nav id="drawer" class="drawer" :class="{ 'is-open': isMobileMenuOpen }" :aria-hidden="!isMobileMenuOpen">
       <div class="drawer-content">
-        <div v-for="link in navLinks" :key="link.label" class="nav-dropdown">
-          <a v-if="link.hasDropdown" href="#" class="dropdown-trigger">
-            {{ link.label }} <span class="dropdown-arrow">▼</span>
-          </a>
+        <div v-for="link in navLinks" :key="link.label" class="mobile-nav-item">
+          <div v-if="link.hasDropdown" class="mobile-dropdown">
+            <span class="mobile-dropdown-title">{{ link.label }}</span>
+            <div class="mobile-submenu">
+              <NuxtLink v-for="sub in link.submenu" :key="sub.label" :to="sub.href" class="mobile-sub-link"
+                @click="closeMobileMenu">
+                {{ sub.label }}
+              </NuxtLink>
+            </div>
+          </div>
           <NuxtLink v-else :to="link.href" @click="closeMobileMenu">{{ link.label }}</NuxtLink>
         </div>
         <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link"

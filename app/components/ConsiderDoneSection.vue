@@ -30,6 +30,33 @@
             </div>
           </div>
 
+          <!-- Labels (Fixed at the top, outside scrollable body) -->
+          <transition name="msg-fade">
+            <div v-if="showLabels" class="chat-labels-fixed">
+              <div class="chat-label-event">
+                <span class="label-event-text">🤖 Flux IA adicionou etiquetas automaticamente</span>
+              </div>
+              <div class="chat-labels">
+                <span class="chat-pill"
+                  style="background:rgba(139,92,246,.18);color:#c4b5fd;border:1px solid rgba(139,92,246,.35);">
+                  🏷 Lead Quente
+                </span>
+                <span class="chat-pill"
+                  style="background:rgba(6,182,212,.14);color:#67e8f9;border:1px solid rgba(6,182,212,.3);">
+                  🎯 Interesse: Growth
+                </span>
+                <span class="chat-pill"
+                  style="background:rgba(34,197,94,.14);color:#86efac;border:1px solid rgba(34,197,94,.28);">
+                  📌 Equipe Comercial
+                </span>
+                <span class="chat-pill"
+                  style="background:rgba(251,146,60,.14);color:#fdba74;border:1px solid rgba(251,146,60,.3);">
+                  ⏰ Follow-up 3 dias
+                </span>
+              </div>
+            </div>
+          </transition>
+
           <!-- Messages area -->
           <div class="chat-demo-body" ref="chatBody">
             <transition-group name="msg-fade" tag="div" class="chat-demo-messages">
@@ -50,28 +77,36 @@
                     <div v-if="msg.from === 'ai'" class="cmsg__sender">Flux IA</div>
 
                     <!-- Video Message Item -->
-                    <div v-if="msg.text === 'VIDEO_MESSAGE'" class="video-msg-container">
-                      <div class="video-msg-card" @click="emit('play-video')">
-                        <div class="video-card-thumb">
-                          <div class="video-card-overlay">
-                            <div class="play-icon-pulse">
-                              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                              </svg>
+                    <div v-if="msg.text === 'VIDEO_MESSAGE'" class="video-msg-wrapper">
+                      <div class="video-msg-container">
+                        <div class="video-msg-card" @click="emit('play-video')">
+                          <div class="video-card-thumb">
+                            <div class="video-card-overlay">
+                              <div class="play-icon-pulse">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                              </div>
                             </div>
+                            <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
                           </div>
-                          <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
+                          <div class="video-card-info">
+                            <span class="v-duration">Assista e pare de aceitar esse amadorismo no whatsapp hoje</span>
+                          </div>
                         </div>
-                        <div class="video-card-info">
-                          <span class="v-duration">Eu desafio você a assistir esse video e continuar aceitando a bagunça
-                            que é seu atendimento hoje!</span>
+
+                        <!-- Inline Hint (Beside video) -->
+                        <div class="video-inline-hint">
+                          <div class="hint-pulse"></div>
+                          <span>Clique para assistir agora</span>
                         </div>
                       </div>
 
-                      <!-- Inline Hint -->
-                      <div class="video-inline-hint">
-                        <div class="hint-pulse"></div>
-                        <span>Clique para assistir agora</span>
+                      <!-- Fazer Teste Grátis strictly BELOW video -->
+                      <div class="video-action-area">
+                        <NuxtLink to="/precos" class="chat-shimmer-btn">
+                          Fazer Teste Grátis Agora 🚀
+                        </NuxtLink>
                       </div>
                     </div>
 
@@ -93,33 +128,6 @@
                 </div>
                 <div class="typing-dots">
                   <span></span><span></span><span></span>
-                </div>
-              </div>
-            </transition>
-
-            <!-- Labels (auto-shown after last message) -->
-            <transition name="msg-fade">
-              <div v-if="showLabels" class="chat-labels-row">
-                <div class="chat-label-event">
-                  <span class="label-event-text">🤖 Flux IA adicionou etiquetas automaticamente</span>
-                </div>
-                <div class="chat-labels">
-                  <span class="chat-pill"
-                    style="background:rgba(139,92,246,.18);color:#c4b5fd;border:1px solid rgba(139,92,246,.35);">
-                    🏷 Lead Quente
-                  </span>
-                  <span class="chat-pill"
-                    style="background:rgba(6,182,212,.14);color:#67e8f9;border:1px solid rgba(6,182,212,.3);">
-                    🎯 Interesse: Growth
-                  </span>
-                  <span class="chat-pill"
-                    style="background:rgba(34,197,94,.14);color:#86efac;border:1px solid rgba(34,197,94,.28);">
-                    📌 Equipe Comercial
-                  </span>
-                  <span class="chat-pill"
-                    style="background:rgba(251,146,60,.14);color:#fdba74;border:1px solid rgba(251,146,60,.3);">
-                    ⏰ Follow-up 3 dias
-                  </span>
                 </div>
               </div>
             </transition>
@@ -225,8 +233,14 @@ function runSequence() {
         isTyping.value = false
         visibleMessages.value.push(msg)
         scrollBottom()
+
+        // Trigger labels earlier (when video message or first AI message appears)
+        if (i === 2) {
+          schedule(() => { showLabels.value = true }, 500)
+        }
+
         if (isLast) {
-          // Show labels after last AI message
+          // Additional labels trigger redundancy
           schedule(() => { showLabels.value = true; scrollBottom() }, 400)
 
           // NUDGE: If user hasn't watched after 10 seconds, send a reminder
@@ -487,6 +501,53 @@ const vReveal = {
   align-items: flex-end;
 }
 
+.drawer-content .mobile-nav-item>a,
+.drawer-content .mobile-dropdown-title,
+.drawer-content .login-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-title {
+  color: #fff !important;
+  opacity: 0.5;
+  font-size: 0.8rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+.mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-sub-link {
+  padding: 0.6rem 1rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.mobile-sub-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.drawer-content .login-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .cmsg__sender {
   font-size: .65rem;
   font-weight: 700;
@@ -516,6 +577,13 @@ const vReveal = {
 }
 
 /* ── Video Message Inside ConsiderDone ─────── */
+.video-msg-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
 .video-msg-container {
   display: flex;
   align-items: center;
@@ -766,20 +834,24 @@ const vReveal = {
   }
 }
 
-/* ── Labels ───────────────────────────────── */
-.chat-labels-row {
+/* ── Labels (Fixed) ───────────────────────── */
+.chat-labels-fixed {
   display: flex;
   flex-direction: column;
   gap: .6rem;
-  margin-top: .8rem;
-  border-top: 1px solid rgba(255, 255, 255, .06);
-  padding-top: .8rem;
+  padding: 1rem 1.5rem 1.25rem;
+  background: rgba(13, 17, 23, 0.4);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  position: relative;
+  z-index: 5;
 }
 
 .label-event-text {
-  font-size: .7rem;
-  color: rgba(255, 255, 255, .3);
+  font-size: .75rem;
+  color: rgba(255, 255, 255, .4);
   text-align: center;
+  font-weight: 500;
 }
 
 .chat-labels {
@@ -794,6 +866,50 @@ const vReveal = {
   font-weight: 700;
   padding: .32rem .75rem;
   border-radius: 99px;
+}
+
+/* ── Shimmer Button ──────────────────────── */
+.video-action-area {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.chat-shimmer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #1f69ff, #00b3ff);
+  color: #fff;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(31, 105, 255, 0.4);
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.chat-shimmer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(31, 105, 255, 0.6);
+}
+
+.chat-shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: rotate(45deg);
+  animation: shimmer-swipe 2.5s infinite;
 }
 
 /* ── Footer ───────────────────────────────── */
