@@ -1,12 +1,12 @@
 <template>
   <div id="index-page">
     <HeroSection />
-    <VerticalVideoModal 
-      :is-open="verticalVideo.isOpen.value" 
-      :video-src="verticalVideo.videoSrc.value" 
-      @close="verticalVideo.close" 
-    />
-    <ConsiderDoneSection @play-video="verticalVideo.open('/videos/apresentacao.mp4')" />
+    <VerticalVideoModal :is-open="verticalVideo.isOpen.value" :video-src="verticalVideo.videoSrc.value"
+      @close="verticalVideo.close" />
+    <ConsiderDoneSection :has-watched="verticalVideo.hasBeenOpened.value"
+      @play-video="verticalVideo.open('/videos/apresentacao.mp4')" />
+    <VideoFloatingPrompt :has-been-opened="verticalVideo.hasBeenOpened.value"
+      @open="verticalVideo.open('/videos/apresentacao.mp4')" />
     <FlowSection />
     <InteractiveKanbanSection />
     <FeaturesSection />
@@ -34,6 +34,7 @@ import TestimonialsSection from '../components/TestimonialsSection.vue'
 import IndustriesSection from '../components/IndustriesSection.vue'
 import FaqSection from '../components/FaqSection.vue'
 import CtaSection from '../components/CtaSection.vue'
+import VideoFloatingPrompt from '../components/VideoFloatingPrompt.vue'
 
 export default defineComponent({
   name: 'IndexPage',
@@ -49,7 +50,8 @@ export default defineComponent({
     TestimonialsSection,
     IndustriesSection,
     FaqSection,
-    CtaSection
+    CtaSection,
+    VideoFloatingPrompt
   },
   setup() {
     const verticalVideo = useVerticalVideoModal()

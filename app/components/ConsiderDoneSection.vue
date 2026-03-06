@@ -161,6 +161,10 @@ import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const emit = defineEmits(['play-video'])
 
+const props = defineProps<{
+  hasWatched?: boolean
+}>()
+
 interface ChatMsg {
   type?: string
   from?: 'client' | 'ai'
@@ -224,6 +228,18 @@ function runSequence() {
         if (isLast) {
           // Show labels after last AI message
           schedule(() => { showLabels.value = true; scrollBottom() }, 400)
+
+          // NUDGE: If user hasn't watched after 10 seconds, send a reminder
+          schedule(() => {
+            if (!props.hasWatched) {
+              visibleMessages.value.push({
+                from: 'ai',
+                text: 'Percebi que ainda não viu o vídeo... ele é curto e vai te mostrar como escalar seu atendimento agora! 🚀',
+                time: '14:06'
+              })
+              scrollBottom()
+            }
+          }, 10000)
         }
       }, t)
       t += 400
