@@ -60,21 +60,21 @@ onUnmounted(() => {
 <style scoped>
 .video-fab-container {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 2.5rem;
+    right: 2.5rem;
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 12px;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(31, 105, 255, 0.4);
-    padding: 10px 16px;
+    gap: 16px;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(31, 105, 255, 0.5);
+    padding: 12px 24px 12px 14px;
     border-radius: 99px;
     cursor: pointer;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 20px rgba(31, 105, 255, 0.2);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(31, 105, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .video-fab-container:hover {
