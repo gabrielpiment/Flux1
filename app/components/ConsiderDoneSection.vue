@@ -609,15 +609,63 @@ const vReveal = {
 }
 
 .play-icon-pulse {
-  width: 36px;
-  height: 36px;
-  background: var(--accent-primary, #0072f5);
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent-primary, #0072f5), var(--accent-secondary, #00b3ff));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0 0 15px rgba(0, 114, 245, 0.4);
+  box-shadow: 0 0 20px rgba(0, 114, 245, 0.6), 0 0 40px rgba(0, 114, 245, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: pulse-ring 2s infinite, shimmer-icon 2s infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.play-icon-pulse::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: rotate(45deg);
+  animation: shimmer-swipe 3s infinite;
+}
+
+@keyframes shimmer-swipe {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translate(100%, 100%) rotate(45deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 114, 245, 0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(0, 114, 245, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 114, 245, 0);
+  }
 }
 
 .video-card-info {
