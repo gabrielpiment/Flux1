@@ -1,17 +1,14 @@
 <template>
-  <ProductTemplate
-    eyebrow="Crescimento"
-    :title-lines="['Transforme Visitantes', 'Em clientes fiéis']"
+  <ProductTemplate eyebrow="Crescimento" :title-lines="['Transforme Visitantes', 'Em clientes fiéis']"
     description="Automatize a captura de leads e acelere a conversão com jornadas personalizadas que respondem em tempo real."
     :features="[
       { icon: '🎯', title: 'Qualificação Automática', description: 'Nossa IA identifica leads quentes e coleta dados essenciais antes de passar para o humano.' },
       { icon: '🔄', title: 'Reengajamento Ativo', description: 'Recupere carrinhos abandonados e reative clientes inativos com disparos inteligentes.' },
       { icon: '🔗', title: 'Multi-origem', description: 'Capture leads de anúncios (Click-to-WA), sites e redes sociais em um único fluxo.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Lead Scoring Inteligente',
-        description: 'Não perca tempo com curiosos. Nossa IA qualifica cada lead baseado no perfil e comportamento, entregando apenas as melhores oportunidades para seu time.',
+        description: 'Não perca tempo com curiosos. Nossa IA pode ser treinado para qualificar cada lead baseado no perfil e comportamento, entregando apenas as melhores oportunidades para seu time.',
         items: [
           'Qualificação demográfica e comportamental',
           'Priorização automática em tempo real',
@@ -23,7 +20,7 @@
         title: 'Agendamento em Segundos',
         description: 'Reduza a fricção no topo do funil. Deixe que o lead agende uma reunião ou demonstração diretamente no chat, sincronizado com sua agenda.',
         items: [
-          'Integração com Google Calendar e Outlook',
+          'Integração com Google Calendar',
           'Lembretes automáticos pré-reunião',
           'Roteamento por zona geográfica'
         ],
@@ -31,16 +28,14 @@
       },
       {
         title: 'Fluxos de Atribuição',
-        description: 'Saiba exatamente de onde vêm seus leads. Integre seus anúncios do Facebook, Google e TikTok diretamente à Flux.',
+        description: 'Saiba exatamente de onde vêm seus leads. Integre seus anúncios do Facebook e Instagram diretamente à Flux.',
         items: [
           'Captura nativa de anúncios (CTWA)',
           'Rastreamento de UTMs e origem',
-          'Dashboards de ROI por campanha'
         ],
         visualLabel: 'Ads Attribution'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

@@ -1,17 +1,13 @@
 <template>
-  <ProductTemplate
-    eyebrow="Suporte"
-    :title-lines="['Atendimento de Elite', 'Sem filas de espera']"
+  <ProductTemplate eyebrow="Suporte" :title-lines="['Atendimento de Elite', 'Sem filas de espera']"
     description="Ofereça um suporte que encanta. Resolva problemas complexos com IA e mantenha o toque humano onde ele é indispensável."
     :features="[
       { icon: '⭐', title: 'CSAT & NPS Nativo', description: 'Meça a satisfação do cliente automaticamente após cada interação.' },
-      { icon: '🦾', title: 'Sugestões de Resposta', description: 'A IA sugere a melhor solução baseada em tickets anteriores resolvidos.' },
       { icon: '📈', title: 'SLA Dashboard', description: 'Garanta que nenhum cliente espere além do tempo estabelecido.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'FCR: Resolução no Primeiro Contato',
-        description: 'Aumente sua taxa de resolução sem intervenção humana. Nossa IA resolve dúvidas complexas buscando dados na sua base de conhecimento.',
+        description: 'Aumente sua taxa de resolução sem intervenção humana. Nossa IA pode ser treinada para resolver dúvidas complexas buscando dados na sua base de conhecimento.',
         items: [
           'Respostas contextualizadas e precisas',
           'Busca em documentos e manuais internos',
@@ -24,7 +20,6 @@
         description: 'Meça o sucesso de cada interação automaticamente. Colete feedback e identifique promotores da sua marca em tempo real.',
         items: [
           'Pesquisas de CSAT e NPS nativas',
-          'Análise de sentimento pós-atendimento',
           'Relatórios de evolução do suporte'
         ],
         visualLabel: 'Experience Metrics'
@@ -39,8 +34,7 @@
         ],
         visualLabel: 'Omnichannel View'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

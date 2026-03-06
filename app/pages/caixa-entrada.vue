@@ -1,21 +1,18 @@
 <template>
-  <ProductTemplate
-    eyebrow="Omnichannel"
-    :title-lines="['Uma única caixa', 'Para todos os canais']"
+  <ProductTemplate eyebrow="Omnichannel" :title-lines="['Uma única caixa', 'Para todos os canais']"
     description="Centralize WhatsApp, Instagram, Email e Chat em uma interface poderosa desenhada para alta performance e colaboração."
     :features="[
       { icon: '📥', title: 'Inbox Unificado', description: 'Esqueça abas abertas. Gerencie todas as interações da sua marca em um só lugar.' },
       { icon: '👥', title: 'Equipe Colaborativa', description: 'Mencione colegas, transfira chats e trabalhe em conjunto para resolver tickets.' },
       { icon: '🕵️', title: 'Histórico Completo', description: 'Veja a jornada completa do cliente em todos os canais cronologicamente.' }
-    ]"
-    :details="[
+    ]" :details="[
       {
         title: 'Produtividade de Elite',
         description: 'Ferramentas desenhadas para reduzir a carga cognitiva do time e acelerar o tempo de resolução (TMR).',
         items: [
-          'Respostas rápidas baseadas em IA',
-          'Tags e filtros inteligentes por intenção',
-          'Atalhos de teclado para power users'
+          'Respostas rápidas',
+          'Tags e filtros inteligentes',
+          'Atalhos de teclado'
         ],
         visualLabel: 'Productivity UI'
       },
@@ -39,8 +36,7 @@
         ],
         visualLabel: 'Team Collaboration'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">
