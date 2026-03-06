@@ -63,7 +63,8 @@
                           <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
                         </div>
                         <div class="video-card-info">
-                          <span class="v-duration">Assista e pare de aceitar esse amadorismo no whatsapp hoje</span>
+                          <span class="v-duration">Eu desafio você a assistir esse video e continuar aceitando a bagunça
+                            que é seu atendimento hoje!</span>
                         </div>
                       </div>
 
@@ -169,14 +170,10 @@ interface ChatMsg {
 
 const SCRIPT: ChatMsg[] = [
   { type: 'date', text: 'Hoje, 14:02' },
-  { from: 'client', text: 'Oi! Quero saber mais sobre os planos 😊', time: '14:02' },
-  { from: 'ai', text: 'Olá! Que bom ter você aqui. Temos planos a partir de R$150/mês. Qual é o tamanho da sua equipe?', time: '14:02' },
-  { from: 'client', text: 'Somos 8 pessoas no time de vendas.', time: '14:03' },
-  { from: 'ai', text: 'Perfeito! Para 8 pessoas o plano Growth é ideal — inclui omnichannel, IA nativa e relatórios em tempo real. Quer receber o link para teste grátis? 🚀', time: '14:03' },
-  { from: 'client', text: 'Sim! Me manda 👍', time: '14:04' },
-  { from: 'ai', text: 'Pronto! Link enviado. Assista abaixo:', time: '14:04' },
-  { from: 'ai', text: 'VIDEO_MESSAGE', time: '14:05' },
-  { from: 'ai', text: 'Qualquer dúvida é só chamar — estou disponível 24h 😉', time: '14:05' },
+  { from: 'client', text: 'Oi! Quero saber mais sobre o Flux 😊', time: '14:02' },
+  { from: 'ai', text: 'Olá! Temos planos a partir de R$150/mês. Assista abaixo como acabamos com o amadorismo no WhatsApp:', time: '14:02' },
+  { from: 'ai', text: 'VIDEO_MESSAGE', time: '14:03' },
+  { from: 'ai', text: 'Qualquer dúvida é só chamar 😉', time: '14:04' },
 ]
 
 const visibleMessages = ref<ChatMsg[]>([])
@@ -208,10 +205,10 @@ function runSequence() {
         visibleMessages.value.push(msg)
         scrollBottom()
       }, t)
-      t += 300
+      t += 200
     } else {
       // Show typing indicator
-      const typingDelay = msg.from === 'ai' ? 1200 : 700
+      const typingDelay = msg.from === 'ai' ? 800 : 500
       schedule(() => {
         typingFrom.value = msg.from as 'ai' | 'client'
         isTyping.value = true
@@ -226,10 +223,10 @@ function runSequence() {
         scrollBottom()
         if (isLast) {
           // Show labels after last AI message
-          schedule(() => { showLabels.value = true; scrollBottom() }, 800)
+          schedule(() => { showLabels.value = true; scrollBottom() }, 400)
         }
       }, t)
-      t += 600
+      t += 400
     }
   })
 }
