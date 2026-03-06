@@ -79,19 +79,22 @@
                     <!-- Video Message Item -->
                     <div v-if="msg.text === 'VIDEO_MESSAGE'" class="video-msg-wrapper">
                       <div class="video-msg-container">
-                        <div class="video-msg-card" @click="emit('play-video')">
-                          <div class="video-card-thumb">
-                            <div class="video-card-overlay">
-                              <div class="play-icon-pulse">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
+                        <div class="led-glow-wrapper">
+                          <div class="led-glow"></div>
+                          <div class="video-msg-card" @click="emit('play-video')">
+                            <div class="video-card-thumb">
+                              <div class="video-card-overlay">
+                                <div class="play-icon-pulse">
+                                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                  </svg>
+                                </div>
                               </div>
+                              <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
                             </div>
-                            <img src="/images/capa-video.png" alt="Demo" class="v-thumb-img">
-                          </div>
-                          <div class="video-card-info">
-                            <span class="v-duration">Assista e pare de aceitar esse amadorismo no whatsapp hoje</span>
+                            <div class="video-card-info">
+                              <span class="v-duration">Assista e pare de aceitar esse amadorismo no whatsapp hoje</span>
+                            </div>
                           </div>
                         </div>
 
@@ -591,16 +594,64 @@ const vReveal = {
   width: 100%;
 }
 
+/* ── Video LED Glow Effect ────────────────── */
+.led-glow-wrapper {
+  position: relative;
+  padding: 3px;
+  border-radius: 14px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+      #1f69ff, #00b3ff, #1f69ff,
+      #00b3ff, #1f69ff);
+  background-size: 400% 400%;
+  border-radius: 15px;
+  z-index: 0;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: led-shimmer 3s ease infinite;
+}
+
+@keyframes led-shimmer {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+  }
+
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.9;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.5;
+  }
+}
+
 .video-msg-card {
-  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
   width: 200px;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.05);
+  background: #0d1117;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .video-msg-card:hover {
