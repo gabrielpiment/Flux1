@@ -7,34 +7,34 @@
       { icon: '💰', title: 'ROI por Canal', description: 'Identifique quais canais de comunicação trazem o maior retorno financeiro para o seu negócio.' }
     ]" :details="[
       {
-        title: 'Visão Analítica Completa',
-        description: 'Não apenas dados, mas insights prontos para ação. Entenda onde sua operação está perdendo eficiência.',
+        title: 'Visibilidade Operacional',
+        description: 'Acompanhe a volumetria da sua operação e identifique horários de pico para otimizar seu time.',
         items: [
           'Distribuição de chamados por horário e canal',
-          'Motivos de atendimento mais frequentes',
-          'Heatmap de demanda para otimização de turnos'
+          'Visão de tickets ativos e pendentes',
+          'Métricas de volume por atendente'
         ],
         visualLabel: 'Operational Insights'
       },
       {
-        title: 'Rastreamento de Conversão',
-        description: 'Saiba exatamente como cada interação contribui para o seu faturamento final.',
+        title: 'Métricas de Conversão',
+        description: 'Entenda como os contatos estão fluindo pelos seus canais de atendimento.',
         items: [
-          'Atribuição de vendas por canal de origem',
-          'Rastreamento de cliques em CTAs dentro do chat',
-          'Taxa de conversão de atendimentos em vendas'
+          'Atribuição básica de origem por canal',
+          'Taxa de finalização de atendimentos',
+          'Volume de novos leads gerados'
         ],
         visualLabel: 'Conversion tracking'
       },
       {
-        title: 'Governança e Exportação',
-        description: 'Seus dados onde você precisa deles. Mantenha o controle total sobre a informação gerada na plataforma.',
+        title: 'Exportação e Governança',
+        description: 'Seus dados sob seu controle. Exporte as informações necessárias para suas análises externas.',
         items: [
-          'Agendamento de relatórios por e-mail para diretoria',
-          'Exportação completa em múltiplos formatos (CSV, PDF, JSON)',
-          'Conector nativo para ferramentas de BI (PowerBI, Looker)'
+          'Exportação manual de logs de atendimento',
+          'Relatórios em formato CSV e Excel',
+          'Histórico de interações disponível para consulta'
         ],
-        visualLabel: 'Data Governance'
+        visualLabel: 'Data Control'
       }
     ]" />
 </template>

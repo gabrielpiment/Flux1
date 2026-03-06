@@ -1,46 +1,42 @@
 <template>
-  <ProductTemplate
-    eyebrow="Canal"
-    :title-lines="['E-mail Marketing', 'Omnichannel e Integrado']"
-    description="Vá além da simples mensagem. Integre suas campanhas de e-mail ao fluxo de atendimento e garanta uma experiência contínua para seu cliente."
+  <ProductTemplate eyebrow="Canais" :title-lines="['E-mail Centralizado', 'Simples e Direto']"
+    description="Receba e envie seus e-mails diretamente pela plataforma. Gerencie suas mensagens eletrônicas junto com seus outros canais de atendimento."
     :features="[
-      { icon: '📧', title: 'Editores Visuais', description: 'Crie layouts profissionais com arrastar e soltar, totalmente responsivos.' },
-      { icon: '🔗', title: 'Domínios Verificados', description: 'Segurança e alta taxa de entrega garantidas com autenticação SPF/DKIM.' },
-      { icon: '⚡', title: 'Gatilhos Inteligentes', description: 'Dispare e-mails baseados em ações do cliente no seu site ou no WhatsApp.' }
-    ]"
-    :details="[
+      { icon: '📩', title: 'Recebimento Básico', description: 'Receba seus e-mails em tempo real na sua caixa de entrada unificada.' },
+      { icon: '📤', title: 'Envio de Respostas', description: 'Responda aos seus clientes de forma rápida sem sair da interface da Flux.' },
+      { icon: '📎', title: 'Gestão de Anexos', description: 'Visualize e envie arquivos anexados às suas conversas de e-mail.' }
+    ]" :details="[
       {
-        title: 'Automação Omnichannel',
-        description: 'Crie jornadas que cruzam canais. Se o cliente não responde no e-mail, a Flux dispara um lembrete no WhatsApp.',
+        title: 'Tudo em um só lugar',
+        description: 'Elimine a necessidade de trocar entre abas. Seus e-mails aparecem organizados ao lado das suas outras conversas.',
         items: [
-          'Transição inteligente entre canais',
-          'Workflows de nutrição complexos',
-          'Relatórios de clique跨channel'
+          'Interface limpa e intuitiva',
+          'Histórico de mensagens por contato',
+          'Visualização de destinatários e remetentes'
         ],
-        visualLabel: 'Omnichannel Flow'
+        visualLabel: 'Unified Inbox'
       },
       {
-        title: 'Entregabilidade de Elite',
-        description: 'Infraestrutura de ponta e consultoria técnica para garantir que sua mensagem chegue na caixa de entrada, não no spam.',
+        title: 'Foco na Conversa',
+        description: 'Trate o e-mail como mais um canal de atendimento direto, focando na resolução do problema do cliente.',
         items: [
-          'Monitoramento de reputação de IP',
-          'Limpeza automática de listas (Bounce)',
-          'Autenticação BIMI e DMARC'
+          'Respostas rápidas para produtividade',
+          'Marcação de e-mails lidos/não lidos',
+          'Filtro simples de busca por e-mail'
         ],
-        visualLabel: 'Inbox Delivery'
+        visualLabel: 'Email Management'
       },
       {
-        title: 'Conteúdo Dinâmico via IA',
-        description: 'Gere centenas de variações de e-mail personalizadas com IA para aumentar suas taxas de engajamento.',
+        title: 'Configuração Rápida',
+        description: 'Conecte sua conta de e-mail em poucos minutos e comece a atender seus clientes imediatamente.',
         items: [
-          'Ajuste de tom de voz via IA',
-          'Linhas de assunto preditivas',
-          'Otimização de horário de envio'
+          'Configuração via IMAP/SMTP',
+          'Integração direta com o provedor',
+          'Suporte a domínios personalizados'
         ],
-        visualLabel: 'AI Copywriter'
+        visualLabel: 'Quick Setup'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

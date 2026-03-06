@@ -2,39 +2,39 @@
   <ProductTemplate eyebrow="Ecossistema" :title-lines="['Conectividade Total', 'Sem Silos de Dados']"
     description="Integre a Flux nativamente aos CRMs, ERPs e meios de pagamento que seu negócio já utiliza. A informação flui livremente para uma visão 360° real."
     :features="[
-      { icon: '🔌', title: 'Webhooks & API REST', description: 'Conectividade ilimitada via Webhooks ou nossa API Enterprise documentada para desenvolvedores.' },
-      { icon: '🏢', title: 'CRMs e ERPs', description: 'Sincronize contatos e vendas com Salesforce, HubSpot, RD Station, SAP e centenas de outros.' },
-      { icon: '🔄', title: 'Fluxos Transacionais', description: 'Gatilhos baseados em eventos reais do seu negócio, como abandono de carrinho ou confirmação de pagamento.' }
+      { icon: '🔌', title: 'Webhooks & API REST', description: 'Conectividade ilimitada para enviar e receber dados do seu sistema via API.' },
+      { icon: '🏢', title: 'Conectividade Custom', description: 'Integre com seus sistemas internos, CRMs ou ERPs via requisições HTTP.' },
+      { icon: '🔄', title: 'Sincronização de Dados', description: 'Mantenha os cadastros de clientes atualizados entre a Flux e suas outras ferramentas.' }
     ]" :details="[
       {
-        title: 'Hub Central de Comunicação',
-        description: 'A Flux atua como a camada inteligente que une todas as suas ferramentas de negócio em uma interface de conversação única.',
+        title: 'Hub de Automação',
+        description: 'A Flux atua como uma ponte entre seus canais de atendimento e o banco de dados da sua empresa.',
         items: [
-          'Sincronização bidirecional de dados de clientes',
-          'Atualização de status de pedidos em tempo real',
-          'Enriquecimento de perfil com dados de ferramentas externas'
+          'Disparo de webhooks em eventos específicos',
+          'Consulta de informações externas via API no fluxo',
+          'Enriquecimento de perfil com metadados'
         ],
-        visualLabel: 'Connected Ecosystem'
+        visualLabel: 'Automation Hub'
       },
       {
-        title: 'API Enterprise Escalável',
-        description: 'Construída para alta disponibilidade, nossa API permite que grandes organizações criem experiências personalizadas sobre a infraestrutura da Flux.',
+        title: 'API de Alta Disponibilidade',
+        description: 'Documentação robusta para que seus desenvolvedores criem integrações profundas com nossa infraestrutura.',
         items: [
-          'Documentação Swagger completa e atualizada',
-          'Autenticação segura via OAuth 2.0 e Bearer tokens',
-          'Endpoints otimizados para alto volume de requisições'
+          'Documentação Swagger completa',
+          'Segurança via Token de Acesso',
+          'Limites de requisições de classe Enterprise'
         ],
-        visualLabel: 'Dev Experience'
+        visualLabel: 'Developer Portal'
       },
       {
-        title: 'Automação de Ponta a Ponta',
-        description: 'Vá além do chat básico. Integre a lógica do seu negócio diretamente nos fluxos de atendimento humano e automático.',
+        title: 'Lógica Corporativa',
+        description: 'Personalize o fluxo de atendimento de acordo com as regras de negócio da sua organização.',
         items: [
-          'Validação de dados sensíveis via API segura',
-          'Integração nativa com gateways de pagamento (Stripe, Pagar.me)',
-          'Disparos automáticos baseados em comportamento no seu site/app'
+          'Validação de dados (CPF, Pedido) via API externa',
+          'Integração com CRMs do mercado via Webhook',
+          'Atualização de status de atendimento em sistemas externos'
         ],
-        visualLabel: 'Business Logic'
+        visualLabel: 'Business Rules'
       }
     ]" />
 </template>

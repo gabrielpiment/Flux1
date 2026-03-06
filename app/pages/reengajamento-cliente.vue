@@ -26,13 +26,14 @@
         visualLabel: 'Loyalty Engine'
       },
       {
-        title: 'Omnichannel Follow-ups',
-        description: 'Se o cliente não viu o e-mail, tente o WhatsApp. Tudo orquestrado pela Flux.',
+        title: 'Omnichannel Retenção',
+        description: 'Mantenha-se presente na jornada do cliente em múltiplos pontos de contato.',
         items: [
-          'Recuperação de carrinhos multi-canal',
-          'Estratégias comerciais e disparos de reengajamento'
+          'Campanhas de reativação via listas de contatos',
+          'Lembretes de recorrência ou suporte preventivo',
+          'Disparos de novidades para clientes segmentados'
         ],
-        visualLabel: 'Sequence Flow'
+        visualLabel: 'Retention Flow'
       }
     ]" />
 </template>

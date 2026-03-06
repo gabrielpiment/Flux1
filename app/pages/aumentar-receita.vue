@@ -1,46 +1,42 @@
 <template>
-  <ProductTemplate
-    eyebrow="Crescimento"
-    :title-lines="['Aumente sua Receita', 'Com Assistência de IA']"
-    description="Transforme cada conversa em uma oportunidade de venda. Nossa IA identifica intenções de compra e sugere o produto perfeito no momento certo."
+  <ProductTemplate eyebrow="Vendas" :title-lines="['Mais Vendas', 'Com Respostas Ágeis']"
+    description="Transforme curiosidade em faturamento. Reduza o tempo de resposta comercial e garanta que nenhum lead quente esfrie esperando atendimento."
     :features="[
-      { icon: '💰', title: 'Upsell & Cross-sell', description: 'Sugestões automatizadas de produtos complementares durante e após o atendimento.' },
-      { icon: '🚨', title: 'Recuperação de Vendas', description: 'Recupere carrinhos abandonados e boletos vencidos com fluxos de conversão via WhatsApp.' },
-      { icon: '📊', title: 'Atribuição de Vendas', description: 'Saiba exatamente quais canais e automações estão gerando mais lucro para seu negócio.' }
-    ]"
-    :details="[
+      { icon: '🎯', title: 'Qualificação de Leads', description: 'Colete informações críticas automaticamente antes de passar para um vendedor.' },
+      { icon: '🚀', title: 'Distribuição Ágil', description: 'Direcione leads qualificados para o vendedor disponível no canal preferido do cliente.' },
+      { icon: '📊', title: 'Origem de Venda', description: 'Identifique quais canais e campanhas estão gerando os leads de maior qualidade.' }
+    ]" :details="[
       {
-        title: 'Cross-Sell & Upsell Automático',
-        description: 'A Flux identifica o interesse do cliente durante a conversa e sugere produtos complementares que aumentam o ticket médio.',
+        title: 'Triagem Comercial Inteligente',
+        description: 'Elimine o trabalho manual de qualificação e deixe seu time focar apenas em fechar negócios.',
         items: [
-          'Recomendações baseadas em histórico de compra',
-          'Ofertas por tempo limitado (Scarcity)',
-          'Vendas guiadas por IA consultiva'
+          'Coleta automatizada de dados de perfil',
+          'Perguntas de qualificação pré-atendimento',
+          'Segmentação por interesse demonstrado'
         ],
-        visualLabel: 'Revenue Upsell'
+        visualLabel: 'Lead Qualification'
       },
       {
-        title: 'Checkout Seguro no Chat',
-        description: 'Reduza a jornada de compra permitindo que o cliente finalize o pedido sem sair da conversa oficial.',
+        title: 'Atendimento Consultivo',
+        description: 'Dê ao seu vendedor todo o contexto que ele precisa para realizar uma venda consultiva de alto impacto.',
         items: [
-          'Integração com Stripe, Pagar.me e outros',
-          'Geração de Pix e boletos automáticos',
-          'Confirmação de pagamento em tempo real'
+          'Histórico de navegação e interesse do lead',
+          'Transferência ativa com resumo contextual',
+          'Acesso rápido a materiais de apoio no chat'
         ],
-        visualLabel: 'Seamless Checkout'
+        visualLabel: 'Sales Support'
       },
       {
-        title: 'Recuperação de Vendas',
-        description: 'Nossa IA entra em cena nos momentos críticos, recuperando vendas que seriam perdidas por falta de atenção humana.',
+        title: 'Foco em Conversão',
+        description: 'Otimize cada etapa da jornada de compra através de uma comunicação fluida e sem atritos.',
         items: [
-          'Abandono de carrinho automático',
-          'Recuperação de boleto não pago',
-          'Acompanhamento de abandono de checkout'
+          'Respostas instantâneas para dúvidas comuns',
+          'Encaminhamento direto para checkout (link externo)',
+          'Acompanhamento de status de negociações'
         ],
-        visualLabel: 'Sales Recovery'
+        visualLabel: 'Conversion Focus'
       }
-    ]"
-  />
+    ]" />
 </template>
 
 <script setup lang="ts">

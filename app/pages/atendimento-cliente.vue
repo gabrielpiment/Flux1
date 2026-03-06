@@ -20,7 +20,7 @@
         description: 'Transforme cada atendimento em um insight valioso. Colete feedbacks detalhados e identifique promotores da sua marca.',
         items: [
           'Pesquisas de CSAT e NPS integradas',
-          'Análise de sentimento das interações',
+          'Monitoramento de tempo de resposta por atendente',
           'Relatórios de evolução da qualidade do suporte'
         ],
         visualLabel: 'Experience Metrics'
