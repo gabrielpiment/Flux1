@@ -65,16 +65,21 @@ onUnmounted(() => {
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 16px;
     background: rgba(10, 10, 10, 0.9);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(31, 105, 255, 0.5);
-    padding: 12px 24px 12px 14px;
+    padding: 14px 28px 14px 14px;
     border-radius: 99px;
     cursor: pointer;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
         0 0 30px rgba(31, 105, 255, 0.3);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-fab-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .video-fab-container:hover {
