@@ -44,7 +44,7 @@ export const navLinks: NavItem[] = [
         ]
     },
     {
-        label: 'Indústrias',
+        label: 'Setores',
         href: '#',
         hasDropdown: true,
         submenu: [

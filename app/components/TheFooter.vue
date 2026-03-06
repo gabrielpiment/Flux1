@@ -82,7 +82,7 @@
           <NuxtLink to="/canais/todos-canais">Todos os canais</NuxtLink>
         </div>
         <div class="footer-column">
-          <h4>INDÚSTRIAS</h4>
+          <h4>SETORES</h4>
           <NuxtLink to="/industrias/varejo-ecommerce">Varejo e e-commerce</NuxtLink>
           <NuxtLink to="/industrias/servicos-financeiros">Serviços financeiros</NuxtLink>
           <NuxtLink to="/industrias/viagens-lazer">Viagens e lazer</NuxtLink>
