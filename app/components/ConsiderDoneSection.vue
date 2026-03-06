@@ -605,23 +605,28 @@ const vReveal = {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  /* Reduced darkness to show video clearly */
 }
 
 .play-icon-pulse {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--accent-primary, #0072f5), var(--accent-secondary, #00b3ff));
+  width: 64px;
+  /* Increased size */
+  height: 64px;
+  background: #ffffff;
+  /* Contrast white background */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(0, 114, 245, 0.6), 0 0 40px rgba(0, 114, 245, 0.3);
+  color: var(--accent-primary, #0072f5);
+  /* Brand color on icon */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(0, 114, 245, 0.6);
   position: relative;
   overflow: hidden;
-  animation: pulse-ring 2s infinite, shimmer-icon 2s infinite;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: pulse-ring 2s infinite;
+  border: 3px solid #ffffff;
+  z-index: 5;
 }
 
 .play-icon-pulse::after {
