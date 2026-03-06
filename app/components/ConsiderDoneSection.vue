@@ -105,7 +105,7 @@
                       <!-- Fazer Teste Grátis strictly BELOW video -->
                       <div class="video-action-area">
                         <NuxtLink to="/precos" class="chat-shimmer-btn">
-                          Fazer Teste Grátis Agora 🚀
+                          Fazer Teste Grátis Agora
                         </NuxtLink>
                       </div>
                     </div>
