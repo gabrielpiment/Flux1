@@ -1,40 +1,40 @@
 <template>
-  <ProductTemplate eyebrow="Dados & Insights" :title-lines="['Transforme Dados', 'Em decisões reais']"
-    description="Dashboards em tempo real que mostram a saúde da sua operação, performance do time e sentimento dos seus clientes."
+  <ProductTemplate eyebrow="Dados & Análise" :title-lines="['Inteligência Operacional', 'Baseada em Fatos']"
+    description="Dashboards detalhados que revelam a saúde da sua operação, a performance do seu time e o comportamento real dos seus clientes."
     :features="[
-      { icon: '📊', title: 'Dashboards Real-time', description: 'Monitore KPIs críticos no exato momento em que as coisas acontecem.' },
-      { icon: '⏳', title: 'Métricas de Performance', description: 'Tempo Médio de Atendimento (TMA) e Tempo Médio de Resposta (TMR).' },
-      { icon: '📉', title: 'Análise de Conversão', description: 'Entenda quais canais e automações estão gerando mais receita direta.' }
+      { icon: '📊', title: 'BI em Tempo Real', description: 'Acompanhe o volume de atendimentos e gargalos operacionais no exato momento em que ocorrem.' },
+      { icon: '📈', title: 'Performance da Equipe', description: 'Métricas individuais e coletivas de TMA, TMR e eficácia na resolução de problemas.' },
+      { icon: '💰', title: 'ROI por Canal', description: 'Identifique quais canais de comunicação trazem o maior retorno financeiro para o seu negócio.' }
     ]" :details="[
       {
-        title: 'Insights',
-        description: 'Tome decisões baseadas em fatos.',
+        title: 'Visão Analítica Completa',
+        description: 'Não apenas dados, mas insights prontos para ação. Entenda onde sua operação está perdendo eficiência.',
         items: [
-          'Detecção de gargalos de atendimento',
-          'Relatórios de conversas com clientes',
-          'Heatmap de horários de pico'
+          'Distribuição de chamados por horário e canal',
+          'Motivos de atendimento mais frequentes',
+          'Heatmap de demanda para otimização de turnos'
         ],
-        visualLabel: 'Insights Engine'
+        visualLabel: 'Operational Insights'
       },
       {
-        title: 'Rastreamento de dados',
-        description: 'Saiba exatamente quanto cada centavo investido em automação está retornando para o seu negócio.',
+        title: 'Rastreamento de Conversão',
+        description: 'Saiba exatamente como cada interação contribui para o seu faturamento final.',
         items: [
-          'Rastreamento de links de conversão via pixel',
-          'Rastreamento de cliques no link de conversão',
-          'Dashboard de performance de vendas'
+          'Atribuição de vendas por canal de origem',
+          'Rastreamento de cliques em CTAs dentro do chat',
+          'Taxa de conversão de atendimentos em vendas'
         ],
-        visualLabel: 'ROI Analytics'
+        visualLabel: 'Conversion tracking'
       },
       {
-        title: 'Exportação e Automação',
-        description: 'Receba os dados onde você precisar. Automatize o envio de relatórios para stakeholders e parceiros.',
+        title: 'Governança e Exportação',
+        description: 'Seus dados onde você precisa deles. Mantenha o controle total sobre a informação gerada na plataforma.',
         items: [
-          'Envios agendados via E-mail/WhatsApp',
-          'Exportações em CSV, PDF e JSON',
-          'Integração com PowerBI e Looker'
+          'Agendamento de relatórios por e-mail para diretoria',
+          'Exportação completa em múltiplos formatos (CSV, PDF, JSON)',
+          'Conector nativo para ferramentas de BI (PowerBI, Looker)'
         ],
-        visualLabel: 'Data Export'
+        visualLabel: 'Data Governance'
       }
     ]" />
 </template>

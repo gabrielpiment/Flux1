@@ -1,38 +1,38 @@
 <template>
-  <ProductTemplate eyebrow="Omnichannel" :title-lines="['Uma única caixa', 'Para todos os canais']"
-    description="Centralize WhatsApp, Instagram, Email e Chat em uma interface poderosa desenhada para alta performance e colaboração."
+  <ProductTemplate eyebrow="Omnichannel" :title-lines="['Uma única caixa', 'Para todo o seu time']"
+    description="Centralize WhatsApp, Instagram, Email e Chat em uma interface desenhada para alta performance humana e colaboração entre departamentos."
     :features="[
-      { icon: '📥', title: 'Inbox Unificado', description: 'Esqueça abas abertas. Gerencie todas as interações da sua marca em um só lugar.' },
-      { icon: '👥', title: 'Equipe Colaborativa', description: 'Mencione colegas, transfira chats e trabalhe em conjunto para resolver tickets.' },
-      { icon: '🕵️', title: 'Histórico Completo', description: 'Veja a jornada completa do cliente em todos os canais cronologicamente.' }
+      { icon: '📥', title: 'Inbox Unificado', description: 'Gerencie todas as interações da sua marca em uma única tela, sem trocar de abas.' },
+      { icon: '👥', title: 'Gestão de Equipes', description: 'Organize atendentes por departamentos, turnos ou níveis de especialidade.' },
+      { icon: '🕵️', title: 'Contexto 360°', description: 'Veja o histórico completo do cliente e interações passadas antes mesmo de responder.' }
     ]" :details="[
       {
-        title: 'Produtividade de Elite',
-        description: 'Ferramentas desenhadas para reduzir a carga cognitiva do time e acelerar o tempo de resolução (TMR).',
+        title: 'Produtividade Humana de Elite',
+        description: 'Ferramentas criadas para remover a fricção do dia a dia e permitir que seu time foque no que realmente importa: o cliente.',
         items: [
-          'Respostas rápidas',
-          'Tags e filtros inteligentes',
-          'Atalhos de teclado'
+          'Biblioteca de respostas rápidas padronizadas',
+          'Tags de organização por assunto ou urgência',
+          'Atalhos de teclado para navegação ultra-veloz'
         ],
         visualLabel: 'Productivity UI'
       },
       {
-        title: 'Gestão de SLA e Prazos',
-        description: 'Garanta que nenhum cliente fique sem resposta. Configure alertas e priorizações automáticas baseadas em tempo de espera.',
+        title: 'Monitoramento em Tempo Real',
+        description: 'Supervisores podem acompanhar a carga de trabalho do time e intervir em conversas críticas para garantir a qualidade.',
         items: [
-          'Contagem regressiva de SLA visível',
-          'Escalonamento automático de tickets',
-          'Relatórios de gaps de atendimento'
+          'Visão geral da fila de espera por canal',
+          'Sussurro (notas que só o atendente vê)',
+          'Painel de produtividade individual e coletiva'
         ],
-        visualLabel: 'SLA Dashboard'
+        visualLabel: 'Supervisor Dashboard'
       },
       {
-        title: 'Colaboração em Tempo Real',
-        description: 'Elimine silos de informação. Sua equipe pode colaborar internamente sem que o cliente veja as notas de bastidores.',
+        title: 'Colaboração sem Barreiras',
+        description: 'Elimine a troca de mensagens externa para resolver um ticket. Comunique-se com seus colegas dentro do próprio chat.',
         items: [
-          'Notas internas privadas (Mentions)',
-          'Transferência com contexto total',
-          'Visualização de quem está digitando'
+          'Menções internas (@name) em notas privadas',
+          'Transferência de chamados com histórico preservado',
+          'Indicador de presença para evitar duplicidade de resposta'
         ],
         visualLabel: 'Team Collaboration'
       }

@@ -1,38 +1,39 @@
 <template>
-  <ProductTemplate eyebrow="Suporte" :title-lines="['Atendimento de Elite', 'Sem filas de espera']"
-    description="Ofereça um suporte que encanta. Resolva problemas complexos com IA e mantenha o toque humano onde ele é indispensável."
+  <ProductTemplate eyebrow="Suporte" :title-lines="['Atendimento de Elite', 'Eficácia em cada Ticket']"
+    description="Ofereça um suporte que encanta. Alie a agilidade da automação ao toque humano indispensável para resolver problemas complexos."
     :features="[
       { icon: '⭐', title: 'CSAT & NPS Nativo', description: 'Meça a satisfação do cliente automaticamente após cada interação.' },
-      { icon: '📈', title: 'SLA Dashboard', description: 'Garanta que nenhum cliente espere além do tempo estabelecido.' }
+      { icon: '📈', title: 'SLA Dashboard', description: 'Garanta que nenhum cliente espere além do tempo estabelecido com alertas de atraso.' }
     ]" :details="[
       {
-        title: 'FCR: Resolução no Primeiro Contato',
-        description: 'Aumente sua taxa de resolução sem intervenção humana. Nossa IA pode ser treinada para resolver dúvidas complexas buscando dados na sua base de conhecimento.',
+        title: 'Orquestração de Filas e Fluxos',
+        description: 'Gerencie o volume de atendimentos com inteligência, garantiendo que cada cliente seja direcionado ao especialista correto.',
         items: [
-          'Respostas contextualizadas e precisas',
-          'Busca em documentos e manuais internos',
-          'Redução de tickets repetitivos em até 70%'
+          'Distribuição automática por carga de trabalho',
+          'Níveis de prioridade baseados no perfil do cliente',
+          'Transmissão suave entre canais sem perda de contexto'
         ],
-        visualLabel: 'Resolution Engine'
+        visualLabel: 'Queue Management'
       },
       {
-        title: 'Satisfação sob Controle',
-        description: 'Meça o sucesso de cada interação automaticamente. Colete feedback e identifique promotores da sua marca em tempo real.',
+        title: 'Satisfação e Feedback Contínuo',
+        description: 'Transforme cada atendimento em um insight valioso. Colete feedbacks detalhados e identifique promotores da sua marca.',
         items: [
-          'Pesquisas de CSAT e NPS nativas',
-          'Relatórios de evolução do suporte'
+          'Pesquisas de CSAT e NPS integradas',
+          'Análise de sentimento das interações',
+          'Relatórios de evolução da qualidade do suporte'
         ],
         visualLabel: 'Experience Metrics'
       },
       {
-        title: 'Omnichannel Verdadeiro',
-        description: 'Dê ao seu cliente a liberdade de escolher o canal, sem que seu time perca o contexto da conversa.',
+        title: 'Colaboração Humana em Escala',
+        description: 'Dê ao seu time as ferramentas para trabalharem juntos. Resolva problemas complexos com o apoio de toda a organização.',
         items: [
-          'Histórico unificado entre todos os canais',
-          'Transição fluida entre IA e suporte humano',
-          'Gestão de filas por nível de urgência'
+          'Notas internas privadas para especialistas',
+          'Histórico completo de interações passadas',
+          'Transferência de chats com resumo contextualizado'
         ],
-        visualLabel: 'Omnichannel View'
+        visualLabel: 'Collaborative Support'
       }
     ]" />
 </template>

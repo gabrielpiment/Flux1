@@ -1,40 +1,40 @@
 <template>
-  <ProductTemplate eyebrow="Ecossistema" :title-lines="['Conecte a Flux', 'Com suas ferramentas']"
-    description="Integre nativamente com os CRMs, ERPs e ferramentas que você já usa. Dados fluindo sem atrito para uma visão 360 do seu negócio."
+  <ProductTemplate eyebrow="Ecossistema" :title-lines="['Conectividade Total', 'Sem Silos de Dados']"
+    description="Integre a Flux nativamente aos CRMs, ERPs e meios de pagamento que seu negócio já utiliza. A informação flui livremente para uma visão 360° real."
     :features="[
-      { icon: '🔌', title: 'Webhooks & API', description: 'Integre qualquer sistema via Webhooks ou utilize nossa API Enterprise documentada.' },
-      { icon: '🧱', title: 'Integrações Nativas', description: 'Conecte com N8N, Dify, Typebot, Dialogflowe centenas de outros.' },
-      { icon: '🔄', title: 'Sincronização 2-Way', description: 'Mantenha dados atualizados em tempo real em todas as suas plataformas.' }
+      { icon: '🔌', title: 'Webhooks & API REST', description: 'Conectividade ilimitada via Webhooks ou nossa API Enterprise documentada para desenvolvedores.' },
+      { icon: '🏢', title: 'CRMs e ERPs', description: 'Sincronize contatos e vendas com Salesforce, HubSpot, RD Station, SAP e centenas de outros.' },
+      { icon: '🔄', title: 'Fluxos Transacionais', description: 'Gatilhos baseados em eventos reais do seu negócio, como abandono de carrinho ou confirmação de pagamento.' }
     ]" :details="[
       {
-        title: 'Ecossistema Conectado',
-        description: 'Mantenha sua stack de ferramentas atualizada. A Flux atua como o hub central da sua comunicação com o cliente.',
+        title: 'Hub Central de Comunicação',
+        description: 'A Flux atua como a camada inteligente que une todas as suas ferramentas de negócio em uma interface de conversação única.',
         items: [
-          'Sincronização com outras ferramentas',
-          'Atualização automática',
-          'Gatilhos para disparos personalizados'
+          'Sincronização bidirecional de dados de clientes',
+          'Atualização de status de pedidos em tempo real',
+          'Enriquecimento de perfil com dados de ferramentas externas'
         ],
-        visualLabel: 'Partners Ecosystem'
+        visualLabel: 'Connected Ecosystem'
       },
       {
-        title: 'API Enterprise Documentada',
-        description: 'Para empresas com necessidades personalizadas, oferecemos uma API REST robusta e webhooks escaláveis.',
+        title: 'API Enterprise Escalável',
+        description: 'Construída para alta disponibilidade, nossa API permite que grandes organizações criem experiências personalizadas sobre a infraestrutura da Flux.',
         items: [
-          'Documentação Swagger completa',
-          'Segurança via Token/OAuth 2.0',
-          'Endpoints de alta disponibilidade'
+          'Documentação Swagger completa e atualizada',
+          'Autenticação segura via OAuth 2.0 e Bearer tokens',
+          'Endpoints otimizados para alto volume de requisições'
         ],
-        visualLabel: 'Dev Portal'
+        visualLabel: 'Dev Experience'
       },
       {
-        title: 'Automação Full-Stack',
-        description: 'Vá além do chat. Conecte dados de transações reais aos seus fluxos de atendimento automático.',
+        title: 'Automação de Ponta a Ponta',
+        description: 'Vá além do chat básico. Integre a lógica do seu negócio diretamente nos fluxos de atendimento humano e automático.',
         items: [
-          'Enriquecimento de dados via webhook',
-          'Validação de CPF/CNPJ em tempo real via API externa',
-          'Integração com gateways de pagamento'
+          'Validação de dados sensíveis via API segura',
+          'Integração nativa com gateways de pagamento (Stripe, Pagar.me)',
+          'Disparos automáticos baseados em comportamento no seu site/app'
         ],
-        visualLabel: 'Fullstack Integrations'
+        visualLabel: 'Business Logic'
       }
     ]" />
 </template>
