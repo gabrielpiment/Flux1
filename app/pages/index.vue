@@ -1,6 +1,6 @@
 <template>
   <div id="index-page">
-    <HeroSection />
+    <HeroSection @watch-demo="verticalVideo.open('/videos/apresentacao.mp4')" />
     <VerticalVideoModal :is-open="verticalVideo.isOpen.value" :video-src="verticalVideo.videoSrc.value"
       @close="verticalVideo.close" />
     <ConsiderDoneSection :has-watched="verticalVideo.hasBeenOpened.value"

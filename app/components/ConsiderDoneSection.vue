@@ -723,7 +723,7 @@ const vReveal = {
 
 .video-card-thumb {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 9/16;
   background: #000;
 }
 
