@@ -4,22 +4,15 @@
 
     <div class="container hero-wrap">
       <div class="hero-content">
-        <div
-          class="hero-badges"
-          v-motion
-          :initial="{ opacity: 0, y: -20 }"
-          :enter="{ opacity: 1, y: 0, transition: { delay: 100, duration: 600 } }"
-        >
+        <div class="hero-badges" v-motion :initial="{ opacity: 0, y: -20 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: 100, duration: 600 } }">
           <span class="hero-badge">Parceiro Meta Business</span>
           <span class="hero-badge">IA Enterprise Nativa</span>
           <span class="hero-badge">9.000+ Clientes</span>
         </div>
 
-        <h1
-          v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 700 } }"
-        >
+        <h1 v-motion :initial="{ opacity: 0, y: 30 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 700 } }">
           <span class="text-gradient">Sua Gestão,</span><br>
           <span class="brand-gradient">Gerenciada com</span><br>
           <span class="rotating-text-container">
@@ -30,22 +23,14 @@
           </span>
         </h1>
 
-        <p
-          class="subtitle"
-          v-motion
-          :initial="{ opacity: 0, y: 20 }"
-          :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
-        >
+        <p class="subtitle" v-motion :initial="{ opacity: 0, y: 20 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }">
           Reduza a carga da equipe e escalone sua operação com a plataforma oficial de engajamento omnichannel acelerada
           por IA.
         </p>
 
-        <div
-          class="hero-actions"
-          v-motion
-          :initial="{ opacity: 0, y: 20 }"
-          :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
-        >
+        <div class="hero-actions" v-motion :initial="{ opacity: 0, y: 20 }"
+          :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }">
           <NuxtLink class="btn-primary" to="/precos">
             Teste Grátis Agora
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -53,14 +38,16 @@
               <path d="M5 12h14m-7-7 7 7-7 7" />
             </svg>
           </NuxtLink>
+          <button class="btn-secondary" @click="$emit('watch-demo')">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Assista à Demonstração
+          </button>
         </div>
 
-        <div
-          class="hero-trusted"
-          v-motion
-          :initial="{ opacity: 0 }"
-          :enter="{ opacity: 1, transition: { delay: 800, duration: 600 } }"
-        >
+        <div class="hero-trusted" v-motion :initial="{ opacity: 0 }"
+          :enter="{ opacity: 1, transition: { delay: 800, duration: 600 } }">
           CONFIADO PELAS EMPRESAS QUE MAIS CRESCEM NO BRASIL
         </div>
       </div>
@@ -71,6 +58,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const emit = defineEmits(['watch-demo'])
 const words = ['IA Real.', 'Performance.', 'Precisão.', 'Estratégia.', 'Fluxo.']
 const currentIndex = ref(0)
 const exitIndex = ref<number | null>(null)

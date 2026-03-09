@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Reduza a carga da equipe e os custos de suporte com a plataforma de engajamento omnichannel do Flux powered by AI.' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/images/favicon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
