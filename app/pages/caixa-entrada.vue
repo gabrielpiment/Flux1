@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Caixa de Entrada | Flux - Gestão Omnichannel',
+  title: 'Caixa de Entrada | Legendaryhub - Gestão Omnichannel',
   meta: [
-    { name: 'description', content: 'Centralize sua comunicação e otimize a produtividade do seu time com a Caixa de Entrada Omnichannel da Flux.' }
+    { name: 'description', content: 'Centralize sua comunicação e otimize a produtividade do seu time com a Caixa de Entrada Omnichannel da Legendaryhub.' }
   ]
 })
 </script>

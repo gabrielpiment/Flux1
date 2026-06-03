@@ -42,9 +42,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Reengajamento do Cliente | Flux - Marketing de Retenção',
+  title: 'Reengajamento do Cliente | Legendaryhub - Marketing de Retenção',
   meta: [
-    { name: 'description', content: 'Aumente o LTV dos seus clientes com as ferramentas de reengajamento da Flux. Automação de follow-ups e campanhas de reativação.' }
+    { name: 'description', content: 'Aumente o LTV dos seus clientes com as ferramentas de reengajamento da Legendaryhub. Automação de follow-ups e campanhas de reativação.' }
   ]
 })
 </script>

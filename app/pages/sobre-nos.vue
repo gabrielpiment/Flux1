@@ -2,7 +2,7 @@
   <ProductTemplate
     eyebrow="Nossa História"
     :title-lines="['Liderando a Revolução', 'Da IA Conversacional']"
-    description="Nascemos com o propósito de humanizar a tecnologia. A Flux é o hub de IA que conecta grandes empresas aos seus clientes de forma inteligente."
+    description="Nascemos com o propósito de humanizar a tecnologia. A Legendaryhub é o hub de IA que conecta grandes empresas aos seus clientes de forma inteligente."
     :features="[
       { icon: '🚀', title: 'Nossa Missão', description: 'Transformar cada interação digital em uma experiência memorável e eficiente.' },
       { icon: '🌍', title: 'Alcance Global', description: 'Operamos em mais de 10 países, ajudando marcas a escalarem sua comunicação.' },
@@ -47,9 +47,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Sobre Nós | Flux - Inteligência Artificial para Empresas',
+  title: 'Sobre Nós | Legendaryhub - Inteligência Artificial para Empresas',
   meta: [
-    { name: 'description', content: 'Conheça a história e a missão da Flux. Liderando o futuro do atendimento ao cliente com IA.' }
+    { name: 'description', content: 'Conheça a história e a missão da Legendaryhub. Liderando o futuro do atendimento ao cliente com IA.' }
   ]
 })
 </script>

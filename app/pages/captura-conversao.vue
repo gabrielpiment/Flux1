@@ -42,9 +42,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Captura & Conversão | Flux - Escalando suas Vendas',
+  title: 'Captura & Conversão | Legendaryhub - Escalando suas Vendas',
   meta: [
-    { name: 'description', content: 'Descubra como a Flux automatiza a captura de leads e impulsiona suas taxas de conversão com IA.' }
+    { name: 'description', content: 'Descubra como a Legendaryhub automatiza a captura de leads e impulsiona suas taxas de conversão com IA.' }
   ]
 })
 </script>

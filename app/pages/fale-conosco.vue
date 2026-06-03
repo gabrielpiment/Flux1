@@ -126,9 +126,9 @@ const handleSubmit = async () => {
 }
 
 useHead({
-  title: 'Fale Conosco | Flux - Suporte e Vendas',
+  title: 'Fale Conosco | Legendaryhub - Suporte e Vendas',
   meta: [
-    { name: 'description', content: 'Entre em contato com a equipe Flux através de WhatsApp, email ou formulário. Estamos prontos para ajudar sua empresa.' }
+    { name: 'description', content: 'Entre em contato com a equipe Legendaryhub através de WhatsApp, email ou formulário. Estamos prontos para ajudar sua empresa.' }
   ]
 })
 </script>

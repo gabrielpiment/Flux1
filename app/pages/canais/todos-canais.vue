@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Todos os Canais | Flux - Onipresença Inteligente',
+  title: 'Todos os Canais | Legendaryhub - Onipresença Inteligente',
   meta: [
-    { name: 'description', content: 'Gerencie todos os canais de comunicação em um só lugar. WhatsApp, Redes Sociais, Email e Chat com a Flux.' }
+    { name: 'description', content: 'Gerencie todos os canais de comunicação em um só lugar. WhatsApp, Redes Sociais, Email e Chat com a Legendaryhub.' }
   ]
 })
 </script>

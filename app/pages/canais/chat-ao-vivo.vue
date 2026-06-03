@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Chat ao Vivo | Flux - Atendimento em Tempo Real',
+  title: 'Chat ao Vivo | Legendaryhub - Atendimento em Tempo Real',
   meta: [
-    { name: 'description', content: 'Converta visitantes em clientes com o chat ao vivo da Flux. Widget inteligente e integrado para seu site.' }
+    { name: 'description', content: 'Converta visitantes em clientes com o chat ao vivo da Legendaryhub. Widget inteligente e integrado para seu site.' }
   ]
 })
 </script>

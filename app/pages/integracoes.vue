@@ -1,6 +1,6 @@
 <template>
   <ProductTemplate eyebrow="Ecossistema" :title-lines="['Conectividade Total', 'Sem Silos de Dados']"
-    description="Integre a Flux nativamente aos CRMs, ERPs e meios de pagamento que seu negócio já utiliza. A informação flui livremente para uma visão 360° real."
+    description="Integre a Legendaryhub nativamente aos CRMs, ERPs e meios de pagamento que seu negócio já utiliza. A informação flui livremente para uma visão 360° real."
     :features="[
       { icon: '🔌', title: 'Webhooks & API REST', description: 'Conectividade ilimitada para enviar e receber dados do seu sistema via API.' },
       { icon: '🏢', title: 'Conectividade Custom', description: 'Integre com seus sistemas internos, CRMs ou ERPs via requisições HTTP.' },
@@ -8,7 +8,7 @@
     ]" :details="[
       {
         title: 'Hub de Automação',
-        description: 'A Flux atua como uma ponte entre seus canais de atendimento e o banco de dados da sua empresa.',
+        description: 'A Legendaryhub atua como uma ponte entre seus canais de atendimento e o banco de dados da sua empresa.',
         items: [
           'Disparo de webhooks em eventos específicos',
           'Consulta de informações externas via API no fluxo',
@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Integrações | Flux - Conectividade Sem Limites',
+  title: 'Integrações | Legendaryhub - Conectividade Sem Limites',
   meta: [
-    { name: 'description', content: 'Explore o ecossistema de integrações da Flux. Conecte sua comunicação com as ferramentas que você já utiliza.' }
+    { name: 'description', content: 'Explore o ecossistema de integrações da Legendaryhub. Conecte sua comunicação com as ferramentas que você já utiliza.' }
   ]
 })
 </script>

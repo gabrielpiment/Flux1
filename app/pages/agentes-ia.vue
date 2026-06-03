@@ -11,7 +11,7 @@
     :details="[
       {
         title: 'IA Treinada no Seu Negócio',
-        description: 'Diferente de chatbots genéricos, os Agentes Flux são alimentados diretamente pela sua base de conhecimento (PDF, URLs, manuais), garantindo respostas precisas e alinhadas à sua marca.',
+        description: 'Diferente de chatbots genéricos, os Agentes Legendaryhub são alimentados diretamente pela sua base de conhecimento (PDF, URLs, manuais), garantindo respostas precisas e alinhadas à sua marca.',
         items: [
           'Treinamento em múltiplos idiomas e dialetos',
           'Tom de voz e personalidade ajustáveis',
@@ -47,7 +47,7 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Agentes de IA | Flux - A Revolução do Atendimento',
+  title: 'Agentes de IA | Legendaryhub - A Revolução do Atendimento',
   meta: [
     { name: 'description', content: 'Automatize seu atendimento com Agentes de IA que realmente entendem seus clientes.' }
   ]

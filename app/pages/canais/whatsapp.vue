@@ -47,9 +47,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'WhatsApp Marketing & Suporte | Flux - Canal Oficial',
+  title: 'WhatsApp Marketing & Suporte | Legendaryhub - Canal Oficial',
   meta: [
-    { name: 'description', content: 'Escalone seu atendimento no WhatsApp com a API oficial e automações inteligentes da Flux.' }
+    { name: 'description', content: 'Escalone seu atendimento no WhatsApp com a API oficial e automações inteligentes da Legendaryhub.' }
   ]
 })
 </script>

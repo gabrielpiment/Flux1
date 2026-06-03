@@ -47,9 +47,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Instagram para Negócios | Flux - Automação de Direct',
+  title: 'Instagram para Negócios | Legendaryhub - Automação de Direct',
   meta: [
-    { name: 'description', content: 'Otimize seu Instagram. Converta comentários e DMs em vendas com a inteligência da Flux.' }
+    { name: 'description', content: 'Otimize seu Instagram. Converta comentários e DMs em vendas com a inteligência da Legendaryhub.' }
   ]
 })
 </script>

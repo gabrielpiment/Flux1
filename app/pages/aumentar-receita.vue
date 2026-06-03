@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Aumentar Receita | Flux - Vendas Impulsionadas por IA',
+  title: 'Aumentar Receita | Legendaryhub - Vendas Impulsionadas por IA',
   meta: [
-    { name: 'description', content: 'Potencialize seus lucros com a Flux. IA focada em vendas, recuperação de carrinhos e estratégias de upsell.' }
+    { name: 'description', content: 'Potencialize seus lucros com a Legendaryhub. IA focada em vendas, recuperação de carrinhos e estratégias de upsell.' }
   ]
 })
 </script>

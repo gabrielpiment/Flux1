@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Relatórios & Análises | Flux - Inteligência de Dados',
+  title: 'Relatórios & Análises | Legendaryhub - Inteligência de Dados',
   meta: [
-    { name: 'description', content: 'Tome decisões baseadas em dados com os relatórios avançados e dashboards em tempo real da plataforma Flux.' }
+    { name: 'description', content: 'Tome decisões baseadas em dados com os relatórios avançados e dashboards em tempo real da plataforma Legendaryhub.' }
   ]
 })
 </script>

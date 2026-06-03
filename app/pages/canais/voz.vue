@@ -23,9 +23,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Atendimento por Voz | Flux - PABX e IA de Voz',
+  title: 'Atendimento por Voz | Legendaryhub - PABX e IA de Voz',
   meta: [
-    { name: 'description', content: 'Modernize seu atendimento telefônico com a Flux. Automações de voz, URA inteligente e integração total.' }
+    { name: 'description', content: 'Modernize seu atendimento telefônico com a Legendaryhub. Automações de voz, URA inteligente e integração total.' }
   ]
 })
 </script>

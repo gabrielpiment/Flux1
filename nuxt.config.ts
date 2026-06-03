@@ -7,11 +7,11 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   app: {
     head: {
-      title: 'Flux - Plataforma de Engajamento do Cliente para Comunicação Omnichannel',
+      title: 'Legendaryhub - Plataforma de Engajamento do Cliente para Comunicação Omnichannel',
       meta: [
         { charset: 'UTF-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'Reduza a carga da equipe e os custos de suporte com a plataforma de engajamento omnichannel do Flux powered by AI.' }
+        { name: 'description', content: 'Reduza a carga da equipe e os custos de suporte com a plataforma de engajamento omnichannel do Legendaryhub powered by AI.' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },

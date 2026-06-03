@@ -3,7 +3,7 @@
     description="Receba e envie seus e-mails diretamente pela plataforma. Gerencie suas mensagens eletrônicas junto com seus outros canais de atendimento."
     :features="[
       { icon: '📩', title: 'Recebimento Básico', description: 'Receba seus e-mails em tempo real na sua caixa de entrada unificada.' },
-      { icon: '📤', title: 'Envio de Respostas', description: 'Responda aos seus clientes de forma rápida sem sair da interface da Flux.' },
+      { icon: '📤', title: 'Envio de Respostas', description: 'Responda aos seus clientes de forma rápida sem sair da interface da Legendaryhub.' },
       { icon: '📎', title: 'Gestão de Anexos', description: 'Visualize e envie arquivos anexados às suas conversas de e-mail.' }
     ]" :details="[
       {
@@ -43,9 +43,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'E-mail Marketing | Flux - Comunicação Omnichannel',
+  title: 'E-mail Marketing | Legendaryhub - Comunicação Omnichannel',
   meta: [
-    { name: 'description', content: 'Potencialize sua comunicação com e-mail marketing integrado. Campanhas automatizadas e alta entregabilidade com a Flux.' }
+    { name: 'description', content: 'Potencialize sua comunicação com e-mail marketing integrado. Campanhas automatizadas e alta entregabilidade com a Legendaryhub.' }
   ]
 })
 </script>

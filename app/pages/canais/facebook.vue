@@ -47,9 +47,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Facebook Messenger | Flux - Atendimento nas Redes Sociais',
+  title: 'Facebook Messenger | Legendaryhub - Atendimento nas Redes Sociais',
   meta: [
-    { name: 'description', content: 'Conecte sua marca ao Facebook Messenger. Automatize conversas e converta seguidores em clientes com a Flux.' }
+    { name: 'description', content: 'Conecte sua marca ao Facebook Messenger. Automatize conversas e converta seguidores em clientes com a Legendaryhub.' }
   ]
 })
 </script>

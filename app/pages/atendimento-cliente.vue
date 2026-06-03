@@ -42,9 +42,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Atendimento ao Cliente | Flux - Suporte Inteligente',
+  title: 'Atendimento ao Cliente | Legendaryhub - Suporte Inteligente',
   meta: [
-    { name: 'description', content: 'Revolucione seu SAC. Use a Flux para oferecer suporte omnichannel rápido, preciso e humanizado.' }
+    { name: 'description', content: 'Revolucione seu SAC. Use a Legendaryhub para oferecer suporte omnichannel rápido, preciso e humanizado.' }
   ]
 })
 </script>

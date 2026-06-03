@@ -47,9 +47,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Carreiras | Flux - Una-se ao Time',
+  title: 'Carreiras | Legendaryhub - Una-se ao Time',
   meta: [
-    { name: 'description', content: 'Venha construir o futuro da IA na Flux. Confira nossas vagas e cultura de trabalho.' }
+    { name: 'description', content: 'Venha construir o futuro da IA na Legendaryhub. Confira nossas vagas e cultura de trabalho.' }
   ]
 })
 </script>

@@ -1,14 +1,14 @@
 <template>
   <ProductTemplate eyebrow="Ecossistema" :title-lines="['Cresça Junto com', 'A Nossa Plataforma']"
-    description="Seja um parceiro Flux e ofereça a melhor tecnologia de IA para seus clientes enquanto aumenta sua receita recorrente."
+    description="Seja um parceiro Legendaryhub e ofereça a melhor tecnologia de IA para seus clientes enquanto aumenta sua receita recorrente."
     :features="[
-      { icon: '🤝', title: 'Programa de Indicação', description: 'Seja recompensado por cada novo cliente que você trouxer para a Flux.' },
+      { icon: '🤝', title: 'Programa de Indicação', description: 'Seja recompensado por cada novo cliente que você trouxer para a Legendaryhub.' },
       { icon: '🛠️', title: 'Suporte Comercial', description: 'Acesso direto ao nosso time para ajudar no fechamento das suas propostas.' },
       { icon: '🎓', title: 'Treinamento Master', description: 'Capacite sua equipe para dominar todas as funcionalidades da nossa plataforma.' }
     ]" :details="[
       {
         title: 'Vantagens do Parceiro',
-        description: 'Cresça junto com a Flux através de um modelo de parceria focado em resultados reais.',
+        description: 'Cresça junto com a Legendaryhub através de um modelo de parceria focado em resultados reais.',
         items: [
           'Painel de gestão de indicações',
           'Material de vendas white-label',
@@ -28,7 +28,7 @@
       },
       {
         title: 'Vantagens Exclusivas',
-        description: 'Parceiros Flux têm acesso antecipado a novas funcionalidades e suporte direto da nossa engenharia.',
+        description: 'Parceiros Legendaryhub têm acesso antecipado a novas funcionalidades e suporte direto da nossa engenharia.',
         items: [
           'Eventos exclusivos para parceiros'
         ],
@@ -41,9 +41,9 @@
 import ProductTemplate from '~/components/ProductTemplate.vue'
 
 useHead({
-  title: 'Parcerias | Flux - Ecossistema de IA',
+  title: 'Parcerias | Legendaryhub - Ecossistema de IA',
   meta: [
-    { name: 'description', content: 'Torne-se um parceiro Flux. Leve a inteligência artificial para seus clientes e escale seu negócio.' }
+    { name: 'description', content: 'Torne-se um parceiro Legendaryhub. Leve a inteligência artificial para seus clientes e escale seu negócio.' }
   ]
 })
 </script>
