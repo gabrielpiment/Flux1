@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@vueuse/motion/nuxt'],
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/production_homepage.css'],
   app: {
     head: {
       title: 'Legendaryhub - Plataforma de Engajamento do Cliente para Comunicação Omnichannel',

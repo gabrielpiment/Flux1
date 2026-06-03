@@ -2,11 +2,10 @@
   <section id="automation-flow" class="flow-section">
     <div class="container flow-container">
       <div class="flow-info">
-        <span class="eyebrow">Automação Visual</span>
-        <h2>Construa processos complexos com <span>Arrasta e Solta</span></h2>
+        <span class="eyebrow">Construtor de Chatbot</span>
+        <h2>Crie fluxos de chatbot com <span class="brand-gradient">Arrasta e Solta</span></h2>
         <p>
-          Nossa interface intuitiva permite que você desenhe toda a jornada do cliente em segundos.
-          Sem código, sem complicações. Apenas o poder da IA e automação lógica ao seu alcance.
+          Automatize 80% das suas conversas sem escrever uma linha de código. Qualifique leads, responda perguntas frequentes, processe pagamentos e integre com seus sistemas. Tudo visualmente, em minutos.
         </p>
         <ul class="flow-features">
           <li>
@@ -22,10 +21,11 @@
             <span>Integração Nativa com Kanban</span>
           </li>
         </ul>
-        <div class="flow-cta">
-          <NuxtLink class="btn-primary" to="/precos">
-            Criar minha automação
+        <div class="flow-cta" style="display: flex; gap: 1rem; align-items: center;">
+          <NuxtLink class="btn-primary" to="/precos" style="padding: 12px 24px; font-size: 1rem; border-radius: 99px;">
+            Ver Funções
           </NuxtLink>
+          <span style="color: #64748b; font-size: 0.85rem; font-weight: 600;">Tocar para explorar</span>
         </div>
       </div>
 

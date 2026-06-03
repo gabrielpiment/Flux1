@@ -15,7 +15,7 @@ export const navLinks: NavItem[] = [
             { label: 'Caixa de Entrada', href: '/caixa-entrada' },
             { label: 'Integrações', href: '/integracoes' },
             { label: 'Relatórios', href: '/relatorios' },
-            { label: 'Flux AI', href: '/flux-ai' }
+            { label: 'Legendary AI', href: '/flux-ai' }
         ]
     },
     {

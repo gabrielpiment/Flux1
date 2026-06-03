@@ -3,7 +3,7 @@
     <nav class="nav">
       <div class="nav-brand">
         <NuxtLink to="/">
-          <img src="/images/logo.png" alt="Flux" class="logo">
+          <img src="/images/logo.png" alt="Legendaryhub" class="logo">
         </NuxtLink>
       </div>
 

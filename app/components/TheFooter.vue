@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="/images/logo.png" alt="Flux" class="footer-logo">
+          <img src="/images/logo.png" alt="Legendaryhub" class="footer-logo">
           <div class="language-selector">
             <span>Idioma</span>
             <select>
@@ -60,7 +60,7 @@
           <NuxtLink to="/caixa-entrada">Caixa de entrada omnichannel</NuxtLink>
           <NuxtLink to="/integracoes">Integrações</NuxtLink>
           <NuxtLink to="/relatorios">Relatórios e análises</NuxtLink>
-          <NuxtLink to="/flux-ai">Flux AI</NuxtLink>
+          <NuxtLink to="/flux-ai">Legendary AI</NuxtLink>
           <NuxtLink to="/precos">Preços</NuxtLink>
         </div>
         <div class="footer-column">
@@ -91,7 +91,7 @@
           <NuxtLink to="/industrias/energia-servicos">Energia e serviços públicos</NuxtLink>
         </div>
         <div class="footer-column">
-          <h4>FLUX</h4>
+          <h4>LEGENDARY</h4>
           <NuxtLink to="/sobre-nos">Sobre nós</NuxtLink>
           <NuxtLink to="/carreiras">Carreiras</NuxtLink>
           <NuxtLink to="/parcerias">Parcerias</NuxtLink>
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Flux. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Legendary Hub. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

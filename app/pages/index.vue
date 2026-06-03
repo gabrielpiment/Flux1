@@ -3,19 +3,16 @@
     <HeroSection @watch-demo="verticalVideo.open('/videos/apresentacao.mp4')" />
     <VerticalVideoModal :is-open="verticalVideo.isOpen.value" :video-src="verticalVideo.videoSrc.value"
       @close="verticalVideo.close" />
-    <ConsiderDoneSection :has-watched="verticalVideo.hasBeenOpened.value"
-      @play-video="verticalVideo.open('/videos/apresentacao.mp4')" />
-    <VideoFloatingPrompt :has-been-opened="verticalVideo.hasBeenOpened.value"
-      @open="verticalVideo.open('/videos/apresentacao.mp4')" />
-    <FlowSection />
+    <VideoSection @play-video="verticalVideo.open('/videos/apresentacao.mp4')" />
+    <IndustriesSection />
+    <FollowUpSection />
     <InteractiveKanbanSection />
     <FeaturesSection />
     <ChannelsSection />
-    <StatisticsSection />
-    <TestimonialsSection />
-    <IndustriesSection />
+    <AgentsPanelSection />
+    <FlowSection />
+    <QuickResponsesSection />
     <FaqSection />
-    <CtaSection />
   </div>
 </template>
 
@@ -24,34 +21,32 @@ import { defineComponent } from 'vue'
 import { useVerticalVideoModal } from '../composables/useVerticalVideoModal'
 import HeroSection from '../components/HeroSection.vue'
 import VerticalVideoModal from '../components/VerticalVideoModal.vue'
-import ConsiderDoneSection from '../components/ConsiderDoneSection.vue'
-import FlowSection from '../components/FlowSection.vue'
+import VideoSection from '../components/VideoSection.vue'
+import IndustriesSection from '../components/IndustriesSection.vue'
+import FollowUpSection from '../components/FollowUpSection.vue'
 import InteractiveKanbanSection from '../components/InteractiveKanbanSection.vue'
 import FeaturesSection from '../components/FeaturesSection.vue'
 import ChannelsSection from '../components/ChannelsSection.vue'
-import StatisticsSection from '../components/StatisticsSection.vue'
-import TestimonialsSection from '../components/TestimonialsSection.vue'
-import IndustriesSection from '../components/IndustriesSection.vue'
+import AgentsPanelSection from '../components/AgentsPanelSection.vue'
+import FlowSection from '../components/FlowSection.vue'
+import QuickResponsesSection from '../components/QuickResponsesSection.vue'
 import FaqSection from '../components/FaqSection.vue'
-import CtaSection from '../components/CtaSection.vue'
-import VideoFloatingPrompt from '../components/VideoFloatingPrompt.vue'
 
 export default defineComponent({
   name: 'IndexPage',
   components: {
     HeroSection,
     VerticalVideoModal,
-    ConsiderDoneSection,
-    FlowSection,
+    VideoSection,
+    IndustriesSection,
+    FollowUpSection,
     InteractiveKanbanSection,
     FeaturesSection,
     ChannelsSection,
-    StatisticsSection,
-    TestimonialsSection,
-    IndustriesSection,
-    FaqSection,
-    CtaSection,
-    VideoFloatingPrompt
+    AgentsPanelSection,
+    FlowSection,
+    QuickResponsesSection,
+    FaqSection
   },
   setup() {
     const verticalVideo = useVerticalVideoModal()
