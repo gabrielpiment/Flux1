@@ -35,3 +35,58 @@
 <script setup lang="ts">
 defineEmits(['play-video'])
 </script>
+
+<style scoped>
+.video-section {
+  padding: 80px 0;
+  background: #0A0C14;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.video-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.eyebrow {
+  color: #0072f5;
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: rgba(0, 114, 245, 0.1);
+  border: 1px solid rgba(0, 114, 245, 0.25);
+  border-radius: 99px;
+  padding: 0.35rem 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #0072f5, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.video-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+</style>

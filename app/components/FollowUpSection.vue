@@ -1,14 +1,12 @@
 <template>
-  <section class="py-16 md:py-24 bg-[#0A0C14] relative overflow-hidden border-t border-white/5" id="follow-up">
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02]"></div>
-    
-    <div class="w-full max-w-7xl mx-auto px-4 relative z-10">
+  <section class="follow-up-section" id="follow-up">
+    <div class="follow-up-inner">
       
       <!-- Section Header -->
       <div class="section-header" v-motion-fade-visible>
         <span class="eyebrow">Esteira de Retenção</span>
         <h2 class="section-title">
-          Recuperação de leads no <br class="hidden md:block">
+          Recuperação de leads no <br class="break-desktop">
           <span class="gradient-blue">piloto automático</span>
         </h2>
         <p class="section-subtitle">
@@ -142,6 +140,40 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Section container */
+.follow-up-section {
+  background: #0A0C14;
+  overflow: hidden;
+  position: relative;
+  padding: 64px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .follow-up-section {
+    padding: 96px 0;
+  }
+}
+
+.follow-up-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.break-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .break-desktop {
+    display: block;
+  }
+}
+
 /* Typography */
 .section-header {
   text-align: center;

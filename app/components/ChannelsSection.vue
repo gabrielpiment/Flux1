@@ -239,7 +239,7 @@
 .svg-lines-container {
   position: relative;
   height: 80px;
-  max-width: 480px;
+  max-width: 400px;
   margin: 0 auto;
   overflow: visible;
 }
@@ -251,8 +251,8 @@
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px 16px;
-  max-width: 480px;
+  gap: 24px 0px;
+  max-width: 400px;
   margin: 0 auto;
   position: relative;
   z-index: 20;

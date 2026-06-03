@@ -1,12 +1,12 @@
 <template>
-  <section id="features-section" class="py-24 relative overflow-hidden bg-[#0d0f18]">
+  <section id="features-section" class="features-section">
     <div class="container relative z-10">
-      <div class="text-center mb-16" v-motion-fade-visible>
-        <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+      <div class="features-header" v-motion-fade-visible>
+        <h2 class="features-title">
           Tudo o que sua equipe precisa,<br>
-          <span class="text-primary-500 bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-blue-600" style="color: #0072f5;">em um só lugar</span>
+          <span class="features-highlight">em um só lugar</span>
         </h2>
-        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+        <p class="features-subtitle">
           O Legendary entrega o kit completo para transformar sua operação de atendimento em uma máquina de vendas.
         </p>
       </div>
@@ -137,10 +137,48 @@
 </template>
 
 <style scoped>
+.features-section {
+  background: #0d0f18;
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Section Header */
+.features-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.features-highlight {
+  background: linear-gradient(90deg, #3b8ef8, #0072f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.features-subtitle {
+  color: #94a3b8;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 640px;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .text-center {
