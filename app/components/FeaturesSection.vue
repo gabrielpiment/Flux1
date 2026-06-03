@@ -136,6 +136,90 @@
   </section>
 </template>
 
-<script setup lang="ts">
-// Scoped features matching the 6 production items
-</script>
+<style scoped>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+  }
+  .md\:col-span-2 {
+    grid-column: span 2;
+  }
+  .md\:row-span-2 {
+    grid-row: span 2;
+  }
+}
+
+.glass-panel-premium {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.feat-icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 114, 245, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 114, 245, 0.2);
+  margin-bottom: 24px;
+  transition: all 0.5s ease;
+}
+
+.glass-panel-premium:hover .feat-icon-container {
+  transform: scale(1.1);
+  background: rgba(0, 114, 245, 0.2);
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray-400 {
+  color: #94a3b8;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.mb-3 {
+  margin-bottom: 12px;
+}
+</style>
