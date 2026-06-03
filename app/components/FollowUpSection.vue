@@ -5,7 +5,7 @@
     <div class="w-full max-w-7xl mx-auto px-4 relative z-10">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24" v-motion-fade-visible>
+      <div class="section-header" v-motion-fade-visible>
         <span class="eyebrow">Esteira de Retenção</span>
         <h2 class="section-title">
           Recuperação de leads no <br class="hidden md:block">
@@ -143,6 +143,17 @@ onUnmounted(() => {
 
 <style scoped>
 /* Typography */
+.section-header {
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto 4rem;
+}
+@media (min-width: 768px) {
+  .section-header {
+    margin-bottom: 6rem;
+  }
+}
+
 .eyebrow {
   color: #0072f5;
   font-weight: 900;
