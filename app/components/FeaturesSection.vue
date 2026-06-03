@@ -161,7 +161,7 @@
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 220px;
+    grid-auto-rows: 250px;
   }
   .md\:col-span-2 {
     grid-column: span 2;
@@ -176,7 +176,7 @@
   backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,7 +194,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(0, 114, 245, 0.2);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   transition: all 0.5s ease;
 }
 
