@@ -9,7 +9,7 @@
       <div class="video-wrapper" v-motion-fade-visible>
         <div class="video-container" @click="$emit('play-video')">
           <iframe 
-            src="https://player.vimeo.com/video/1182023466?autoplay=1&amp;muted=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=0" 
+            src="https://player.vimeo.com/video/1182023466?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0&controls=0" 
             class="video-iframe" 
             frameborder="0" 
             allow="autoplay; fullscreen; picture-in-picture" 
