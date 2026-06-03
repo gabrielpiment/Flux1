@@ -24,11 +24,11 @@
 
 <script setup lang="ts">
 const testimonials = [
-  { text: 'A Flux transformou nossa comunicação. A IA resolve 80% dos chamados sem intervenção humana.', name: 'Ana Silva', role: 'CEO na TechLog' },
+  { text: 'A Legendaryhub transformou nossa comunicação. A IA resolve 80% dos chamados sem intervenção humana.', name: 'Ana Silva', role: 'CEO na TechLog' },
   { text: 'O suporte omnichannel é impecável. Nossos clientes nunca ficaram tão satisfeitos.', name: 'Marcos Oliveira', role: 'Diretor de CX' },
   { text: 'Resultado imediato. A latência de resposta caiu para menos de 1 segundo.', name: 'Julia Costa', role: 'Gerente Comercial' },
   { text: 'A integração com o WhatsApp oficial mudou o jogo para nosso time de vendas.', name: 'Ricardo Santos', role: 'Head de Vendas' },
-  { text: 'Nunca foi tão fácil gerenciar múltiplos canais. A Flux centraliza tudo com perfeição.', name: 'Carla Dias', role: 'Coordenadora de Atendimento' },
+  { text: 'Nunca foi tão fácil gerenciar múltiplos canais. A Legendaryhub centraliza tudo com perfeição.', name: 'Carla Dias', role: 'Coordenadora de Atendimento' },
   { text: 'Escalamos nossa operação para 12 estados sem contratar um único atendente extra.', name: 'Fernanda Lima', role: 'Gerente de Operações' }
 ]
 </script>

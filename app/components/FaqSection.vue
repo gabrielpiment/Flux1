@@ -5,7 +5,7 @@
       <div class="faq-header" v-motion :initial="{ opacity: 0, y: 30 }"
         :visible="{ opacity: 1, y: 0, transition: { duration: 600 } }">
         <span class="faq-eyebrow">DÚVIDAS FREQUENTES</span>
-        <h2>Tudo o que você precisa <span class="brand-gradient">saber sobre a Flux</span></h2>
+        <h2>Tudo o que você precisa <span class="brand-gradient">saber sobre a Legendaryhub</span></h2>
         <p>Respostas rápidas para as perguntas mais comuns da nossa comunidade.</p>
       </div>
 
@@ -62,20 +62,20 @@ const clearHeight = (el: Element) => {
 
 const faqs = [
   {
-    q: 'O que é a Flux e para quem ela foi criada?',
-    a: 'A Flux é uma plataforma omnichannel de atendimento acelerada por IA, criada para empresas que precisam escalar o suporte ao cliente sem aumentar a equipe. Atendemos desde PMEs até grandes operações com centenas de atendentes.'
+    q: 'O que é a Legendaryhub e para quem ela foi criada?',
+    a: 'A Legendaryhub é uma plataforma omnichannel de atendimento acelerada por IA, criada para empresas que precisam escalar o suporte ao cliente sem aumentar a equipe. Atendemos desde PMEs até grandes operações com centenas de atendentes.'
   },
   {
-    q: 'Como a IA da Flux funciona na prática?',
+    q: 'Como a IA da Legendaryhub funciona na prática?',
     a: 'Nossa IA é treinada no contexto do seu negócio — produtos, políticas e tom de voz. Ela resolve automaticamente até 80% dos chamados, classifica leads, responde dúvidas frequentes e escala para humanos apenas quando necessário.'
   },
   {
-    q: 'Quais canais a Flux suporta?',
+    q: 'Quais canais a Legendaryhub suporta?',
     a: 'WhatsApp (API Oficial Meta), Instagram Direct, Facebook Messenger, Telegram, OLX, chat web, e-mail e SMS. Tudo centralizado em uma única caixa de entrada inteligente.'
   },
   {
     q: 'Preciso de conhecimento técnico para configurar a plataforma?',
-    a: 'Não. A Flux foi projetada para times de atendimento e comerciais. A configuração é feita via painel visual sem código, e nossa equipe de onboarding acompanha você desde a ativação até o primeiro mês de uso.'
+    a: 'Não. A Legendaryhub foi projetada para times de atendimento e comerciais. A configuração é feita via painel visual sem código, e nossa equipe de onboarding acompanha você desde a ativação até o primeiro mês de uso.'
   },
   {
     q: 'Existe um período de teste gratuito?',

@@ -19,7 +19,7 @@
               </svg>
             </div>
             <div class="chat-demo-info">
-              <span class="chat-demo-name">Flux IA</span>
+              <span class="chat-demo-name">Legendaryhub IA</span>
               <span class="chat-demo-status">
                 <span class="status-pulse"></span> online agora
               </span>
@@ -34,7 +34,7 @@
           <transition name="msg-fade">
             <div v-if="showLabels" class="chat-labels-fixed">
               <div class="chat-label-event">
-                <span class="label-event-text">🤖 Flux IA adicionou etiquetas automaticamente</span>
+                <span class="label-event-text">🤖 Legendaryhub IA adicionou etiquetas automaticamente</span>
               </div>
               <div class="chat-labels">
                 <span class="chat-pill"
@@ -74,7 +74,7 @@
                     </svg>
                   </div>
                   <div class="cmsg__content">
-                    <div v-if="msg.from === 'ai'" class="cmsg__sender">Flux IA</div>
+                    <div v-if="msg.from === 'ai'" class="cmsg__sender">Legendaryhub IA</div>
 
                     <!-- Video Message Item -->
                     <div v-if="msg.text === 'VIDEO_MESSAGE'" class="video-msg-wrapper">
@@ -185,7 +185,7 @@ interface ChatMsg {
 
 const SCRIPT: ChatMsg[] = [
   { type: 'date', text: 'Hoje, 14:02' },
-  { from: 'client', text: 'Oi! Quero saber mais sobre o Flux 😊', time: '14:02' },
+  { from: 'client', text: 'Oi! Quero saber mais sobre o Legendaryhub 😊', time: '14:02' },
   { from: 'ai', text: 'Olá! Temos planos a partir de R$150/mês. Assista abaixo como acabamos com o amadorismo no WhatsApp:', time: '14:02' },
   { from: 'ai', text: 'VIDEO_MESSAGE', time: '14:03' },
   { from: 'ai', text: 'Qualquer dúvida é só chamar 😉', time: '14:04' },
