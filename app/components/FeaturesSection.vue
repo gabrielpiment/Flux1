@@ -203,23 +203,35 @@
   background: rgba(0, 114, 245, 0.2);
 }
 
-.text-white {
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #fff;
+  margin: 0 0 12px 0;
+  transition: color 0.3s ease;
 }
 
-.text-gray-400 {
+.glass-panel-premium:hover h3 {
+  color: #0072f5;
+}
+
+p {
   color: #94a3b8;
-}
-
-.text-sm {
   font-size: 0.875rem;
-}
-
-.leading-relaxed {
   line-height: 1.625;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.3s ease;
 }
 
-.mb-3 {
-  margin-bottom: 12px;
+.glass-panel-premium:hover p {
+  color: #cbd5e1;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 </style>
