@@ -8,14 +8,14 @@
                 <div class="glass-panel terms-card">
                     <section class="terms-section">
                         <h2 class="brand-gradient">1. Aceitação dos Termos</h2>
-                        <p>Ao acessar e utilizar a plataforma Flux Conversa, você concorda em cumprir e estar vinculado
+                        <p>Ao acessar e utilizar a plataforma Legendary Hub, você concorda em cumprir e estar vinculado
                             a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deve
                             utilizar nossos serviços.</p>
                     </section>
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">2. Descrição do Serviço</h2>
-                        <p>O Flux Conversa é uma plataforma de CRM (Customer Relationship Management) que oferece:</p>
+                        <p>O Legendary Hub é uma plataforma de CRM (Customer Relationship Management) que oferece:</p>
                         <ul>
                             <li>Gestão de relacionamento com clientes</li>
                             <li>Automações de fluxo de trabalho</li>
@@ -74,7 +74,7 @@
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">7. Propriedade Intelectual</h2>
-                        <p>Todos os direitos de propriedade intelectual da plataforma Flux Conversa pertencem à nossa
+                        <p>Todos os direitos de propriedade intelectual da plataforma Legendary Hub pertencem à nossa
                             empresa. Você recebe apenas uma licença limitada para uso dos serviços conforme estes
                             termos.</p>
                     </section>
@@ -111,7 +111,7 @@
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">13. Serviços de Terceiros e Falhas de API</h2>
-                        <p>O Flux Conversa integra funcionalidades que dependem de APIs e serviços de terceiros, como
+                        <p>O Legendary Hub integra funcionalidades que dependem de APIs e serviços de terceiros, como
                             WhatsApp, Meta, provedores de mensagens, gateways e outras plataformas externas.</p>
                         <p>Você reconhece e concorda que:</p>
                         <ul>
@@ -132,7 +132,7 @@
                         <p>Em caso de falha grave que impossibilite o uso essencial da plataforma — entendida como
                             indisponibilidade total ou parcial que impeça a utilização das principais funcionalidades
                             contratadas — e não houver correção em prazo razoável após comunicação formal do cliente, o
-                            Flux Conversa poderá, a seu critério, oferecer:</p>
+                            Legendary Hub poderá, a seu critério, oferecer:</p>
                         <ul>
                             <li>Crédito proporcional ao período afetado; ou</li>
                             <li>Estorno do valor proporcional da mensalidade correspondente ao período de
@@ -152,7 +152,7 @@
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">15. Indisponibilidade Programada (Manutenção)</h2>
-                        <p>O Flux Conversa poderá realizar manutenções programadas para garantir a estabilidade,
+                        <p>O Legendary Hub poderá realizar manutenções programadas para garantir a estabilidade,
                             segurança e melhorias da plataforma. Sempre que possível, tais manutenções serão comunicadas
                             previamente aos usuários pelos canais oficiais.</p>
                         <p>Indisponibilidades decorrentes de manutenções programadas não geram direito a reembolso,
@@ -162,7 +162,7 @@
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">16. Alterações Técnicas Necessárias</h2>
-                        <p>O Flux Conversa poderá modificar, ajustar, limitar ou descontinuar funcionalidades
+                        <p>O Legendary Hub poderá modificar, ajustar, limitar ou descontinuar funcionalidades
                             específicas da plataforma sempre que necessário para atender a requisitos técnicos, legais,
                             de segurança ou políticas de terceiros (como WhatsApp, Meta e demais APIs integradas).
                             Alterações técnicas necessárias não caracterizam quebra contratual, sendo consideradas parte
@@ -174,7 +174,7 @@
                         <p>O usuário é inteiramente responsável pelas configurações realizadas dentro da plataforma,
                             incluindo fluxos de automação, integrações externas, regras de envio, mensagens criadas e
                             demais parametrizações. </p>
-                        <p>O Flux Conversa não se responsabiliza por falhas, duplicações, disparos indevidos, quedas de
+                        <p>O Legendary Hub não se responsabiliza por falhas, duplicações, disparos indevidos, quedas de
                             performance ou qualquer prejuízo decorrente de configurações incorretas feitas pelo próprio
                             usuário ou por terceiros que ele autorize a acessar sua conta. Erros de operação ou
                             parametrização inadequada não geram direito a estorno ou compensação.</p>
@@ -185,18 +185,18 @@
                         <p>O usuário é exclusivamente responsável pela veracidade, legalidade e adequação dos dados e
                             conteúdos inseridos na plataforma, incluindo informações de clientes, contatos, mensagens,
                             documentos, listas de envio e demais registros.</p>
-                        <p>O Flux Conversa não audita, valida ou se responsabiliza pelo conteúdo fornecido pelo usuário,
+                        <p>O Legendary Hub não audita, valida ou se responsabiliza pelo conteúdo fornecido pelo usuário,
                             tampouco por danos, prejuízos ou violações legais decorrentes do uso indevido, ilegal ou
                             inadequado dessas informações.</p>
                     </section>
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">19. Política de Suporte e Níveis de Atendimento (SLA Básico)</h2>
-                        <p>O suporte do Flux Conversa é prestado através dos canais oficiais indicados na plataforma,
+                        <p>O suporte do Legendary Hub é prestado através dos canais oficiais indicados na plataforma,
                             dentro dos horários estabelecidos e conforme a ordem de recebimento das solicitações. Os
                             prazos de resposta podem variar de acordo com a complexidade da demanda, volume de
                             atendimentos e natureza do problema.</p>
-                        <p>O suporte prestado pelo Flux Conversa não caracteriza SLA de atendimento imediato, exceto
+                        <p>O suporte prestado pelo Legendary Hub não caracteriza SLA de atendimento imediato, exceto
                             quando
                             previamente contratado em plano específico. Chamados relacionados a plataformas externas,
                             integrações de terceiros ou políticas do WhatsApp/Meta podem requerer prazos adicionais, não
@@ -205,7 +205,7 @@
 
                     <section class="terms-section">
                         <h2 class="brand-gradient">20. Rescisão por Conduta Abusiva</h2>
-                        <p>O Flux Conversa poderá suspender ou encerrar o acesso à plataforma caso o usuário:</p>
+                        <p>O Legendary Hub poderá suspender ou encerrar o acesso à plataforma caso o usuário:</p>
                         <ul>
                             <li>Adote comportamento ofensivo, agressivo ou desrespeitoso com a equipe de suporte ou
                                 demais

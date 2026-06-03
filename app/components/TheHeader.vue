@@ -21,7 +21,7 @@
           </div>
           <NuxtLink v-else :to="link.href">{{ link.label }}</NuxtLink>
         </div>
-        <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link">Entrar</a>
+        <a href="https://crm.legendaryhub.com.br/login" target="_blank" rel="noopener" class="login-link">Entrar</a>
         <NuxtLink to="/precos" class="btn-cta neon">Teste grátis</NuxtLink>
       </div>
 
@@ -48,7 +48,7 @@
           </div>
           <NuxtLink v-else :to="link.href" @click="closeMobileMenu">{{ link.label }}</NuxtLink>
         </div>
-        <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener" class="login-link"
+        <a href="https://crm.legendaryhub.com.br/login" target="_blank" rel="noopener" class="login-link"
           @click="closeMobileMenu">Entrar</a>
         <NuxtLink to="/precos" class="btn-cta neon" @click="closeMobileMenu">Teste grátis</NuxtLink>
       </div>

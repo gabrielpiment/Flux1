@@ -8,14 +8,14 @@
                 <div class="glass-panel policy-card">
                     <section class="policy-section">
                         <h2 class="brand-gradient">1. Introdução</h2>
-                        <p>Esta Política de Privacidade descreve como o Flux Conversa coleta, usa, armazena e protege
+                        <p>Esta Política de Privacidade descreve como o Legendary Hub coleta, usa, armazena e protege
                             suas informações pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei
                             13.709/2018) e demais regulamentações aplicáveis.</p>
                     </section>
 
                     <section class="policy-section">
                         <h2 class="brand-gradient">2. Controlador de Dados</h2>
-                        <p>O Flux Conversa atua como controlador dos dados pessoais coletados através de nossa
+                        <p>O Legendary Hub atua como controlador dos dados pessoais coletados através de nossa
                             plataforma. Somos responsáveis pelas decisões referentes ao tratamento de seus dados
                             pessoais.</p>
                     </section>
@@ -163,7 +163,7 @@
                     <section class="policy-section">
                         <h2 class="brand-gradient">14. Encarregado de Dados (DPO)</h2>
                         <p>Designamos um Encarregado de Proteção de Dados para atuar como canal de comunicação entre
-                            você, o Flux Conversa e a Autoridade Nacional de Proteção de Dados (ANPD).</p>
+                            você, o Legendary Hub e a Autoridade Nacional de Proteção de Dados (ANPD).</p>
                     </section>
 
                     <section class="policy-section">

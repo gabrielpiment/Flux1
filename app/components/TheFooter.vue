@@ -36,7 +36,7 @@
 
         <div class="newsletter-section">
           <h3>Junte-se ao nosso <span class="whatsapp-text">WhatsApp</span> ou newsletter por email</h3>
-          <p>A FluxConversa é uma comunidade de 7.000 membros que está moldando o engajamento do cliente oferecendo
+          <p>A Legendaryhub é uma comunidade de 7.000 membros que está moldando o engajamento do cliente oferecendo
             acesso a conselhos especializados e recursos.</p>
           <div class="newsletter-signup">
             <div class="newsletter-options">
@@ -96,7 +96,7 @@
           <NuxtLink to="/carreiras">Carreiras</NuxtLink>
           <NuxtLink to="/parcerias">Parcerias</NuxtLink>
           <NuxtLink to="/fale-conosco">Fale conosco</NuxtLink>
-          <a href="https://crm.fluxconversa.com.br/login" target="_blank" rel="noopener">Entrar</a>
+          <a href="https://crm.legendaryhub.com.br/login" target="_blank" rel="noopener">Entrar</a>
           <NuxtLink to="/termos">Termos de Uso</NuxtLink>
           <NuxtLink to="/privacidade">Política de Privacidade</NuxtLink>
         </div>

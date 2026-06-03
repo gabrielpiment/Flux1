@@ -5,7 +5,7 @@
       <div class="features-header" v-motion-fade-visible>
         <span class="features-eyebrow">FUNCIONALIDADES</span>
         <h2>Tudo o que sua equipe precisa, <span class="brand-gradient">em um só lugar</span></h2>
-        <p>Da automação à análise, a Fluxconversa entrega o kit completo para transformar sua operação de atendimento.</p>
+        <p>Da automação à análise, a Legendaryhub entrega o kit completo para transformar sua operação de atendimento.</p>
       </div>
 
       <!-- Bento Grid -->

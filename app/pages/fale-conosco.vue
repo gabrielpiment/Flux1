@@ -75,7 +75,7 @@
               <div>
                 <h4>E-mail</h4>
                 <p>Para propostas e parcerias</p>
-                <a href="mailto:contato@fluxconversa.com.br" class="info-link">contato@fluxconversa.com.br</a>
+                <a href="mailto:contato@legendaryhub.com.br" class="info-link">contato@legendaryhub.com.br</a>
               </div>
             </div>
 

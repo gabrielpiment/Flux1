@@ -1,7 +1,7 @@
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     const TARGET_URLS = [
-        'https://back.fluxconversa.com.br/api/webhooks/f8086251-c7a8-4d53-80dd-da0f507c567c',
+        'https://back.legendaryhub.com.br/api/webhooks/f8086251-c7a8-4d53-80dd-da0f507c567c',
         'https://webhook.elevenapp.com.br/webhook/cadastro'
     ]
 
