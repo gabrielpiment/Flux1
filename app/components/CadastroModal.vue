@@ -283,7 +283,7 @@
                                 <div class="success-icon">✅</div>
                                 <h3>Cadastro enviado com sucesso!</h3>
                                 <p>Em breve nossa equipe entrará em contato.</p>
-                                <a id="success-entrar-btn" href="https://crm.legendaryhub.com.br/login" target="_blank"
+                                <a id="success-entrar-btn" href="https://chat.legendaryhub.com.br/login" target="_blank"
                                     rel="noopener" class="btn-step flex-center">
                                     Entrar
                                 </a>

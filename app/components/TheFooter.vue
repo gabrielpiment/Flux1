@@ -96,7 +96,7 @@
           <NuxtLink to="/carreiras">Carreiras</NuxtLink>
           <NuxtLink to="/parcerias">Parcerias</NuxtLink>
           <NuxtLink to="/fale-conosco">Fale conosco</NuxtLink>
-          <a href="https://crm.legendaryhub.com.br/login" target="_blank" rel="noopener">Entrar</a>
+          <a href="https://chat.legendaryhub.com.br/login" target="_blank" rel="noopener">Entrar</a>
           <NuxtLink to="/termos">Termos de Uso</NuxtLink>
           <NuxtLink to="/privacidade">Política de Privacidade</NuxtLink>
         </div>
