@@ -1,5 +1,5 @@
 <template>
-  <section class="agents-section" id="agents-panel">
+  <section class="agents-section" id="agents-panel" ref="sectionRef">
     <div class="container">
       <!-- Section Header -->
       <div class="section-header" v-motion-fade-visible>
@@ -14,62 +14,44 @@
         <!-- Dashboard Simulation -->
         <div class="dashboard-sim">
           <div class="agents-bar">
-            <!-- Ana (Livre) -->
-            <div class="agent-col">
-              <div class="tickets-stack stack-green">
-                <div class="ticket-pill ticket-green"></div>
-                <div class="ticket-pill ticket-green"></div>
+            <div v-for="agent in agents" :key="agent.id" 
+                 class="agent-col" :class="{ 'agent-col--featured': agent.color === 'red' }">
+              <div class="tickets-stack" :class="'stack-' + agent.color">
+                <transition-group name="ticket-list">
+                  <div v-for="i in agent.tickets" :key="agent.id + '-' + i" 
+                       class="ticket-pill" :class="['ticket-' + agent.color, { 'ticket-pulse': agent.pulse && i === agent.tickets }]"></div>
+                </transition-group>
               </div>
-              <div class="agent-card card-green">
-                <div class="agent-badge badge-green">Livre</div>
-                <div class="agent-avatar avatar-green">AC</div>
-                <div class="agent-name">Ana</div>
-              </div>
-            </div>
-
-            <!-- Carlos (Sobrecarga) -->
-            <div class="agent-col agent-col--featured">
-              <div class="tickets-stack stack-red">
-                <div v-for="i in 8" :key="i" class="ticket-pill ticket-red" :class="{ 'ticket-pulse': i === 8 }"></div>
-              </div>
-              <div class="agent-card card-red">
-                <div class="agent-badge badge-red badge-pulse">Sobrecarga</div>
-                <div class="agent-avatar avatar-red">CS</div>
-                <div class="agent-name">Carlos</div>
-              </div>
-            </div>
-
-            <!-- Pedro (Estável) -->
-            <div class="agent-col">
-              <div class="tickets-stack stack-blue">
-                <div class="ticket-pill ticket-blue"></div>
-                <div class="ticket-pill ticket-blue"></div>
-                <div class="ticket-pill ticket-blue"></div>
-              </div>
-              <div class="agent-card card-blue">
-                <div class="agent-badge badge-blue">Estável</div>
-                <div class="agent-avatar avatar-blue">PS</div>
-                <div class="agent-name">Pedro</div>
+              <div class="agent-card" :class="'card-' + agent.color">
+                <div class="agent-badge" :class="['badge-' + agent.color, { 'badge-pulse': agent.pulse }]">{{ agent.status }}</div>
+                <div class="agent-avatar" :class="'avatar-' + agent.color">{{ agent.initials }}</div>
+                <div class="agent-name">{{ agent.name }}</div>
               </div>
             </div>
           </div>
+          
+          <transition name="fade">
+            <div v-if="isStabilized" class="sim-actions" style="display: flex; justify-content: center; margin-top: 1.5rem;">
+              <button @click="resetSimulation" class="sim-btn sim-btn-outline" style="padding: 6px 12px; font-size: 0.75rem;">🔄 Repetir Animação</button>
+            </div>
+          </transition>
         </div>
 
         <!-- Logs Panel -->
         <div class="logs-panel">
           <div class="logs-header">
             <div class="logs-title">
-              <div class="live-dot"></div>
+              <div class="live-dot" :class="{ 'live-dot-green': isStabilized }"></div>
               <span class="logs-label">Logs do Sistema</span>
             </div>
             <span class="live-badge">AO VIVO</span>
           </div>
           <div class="logs-body">
-            <div class="log-alert">
-              ⚠️ Gargalo: Carlos com 8 atendimentos
+            <div class="log-alert" :style="isStabilized ? 'background: rgba(34, 197, 94, 0.1); color: #22c55e; border-color: rgba(34, 197, 94, 0.2);' : ''">
+              {{ logStatus.icon }} {{ logStatus.title }}
             </div>
             <div class="log-info">
-              <span>Analisando melhor rota...</span>
+              <span>{{ logStatus.desc }}</span>
             </div>
           </div>
         </div>
@@ -117,7 +99,113 @@
 </template>
 
 <script setup lang="ts">
-// Simple visual team simulator component
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+
+const sectionRef = ref<HTMLElement | null>(null)
+let observer: IntersectionObserver | null = null
+
+const agents = ref([
+  { id: 'ana', name: 'Ana', initials: 'AC', tickets: 2, status: 'Livre', color: 'green', pulse: false },
+  { id: 'carlos', name: 'Carlos', initials: 'CS', tickets: 8, status: 'Sobrecarga', color: 'red', pulse: true },
+  { id: 'pedro', name: 'Pedro', initials: 'PS', tickets: 3, status: 'Estável', color: 'blue', pulse: false }
+])
+
+const isStabilized = ref(false)
+const isAnimating = ref(false)
+
+const logStatus = computed(() => {
+  if (isStabilized.value) {
+    return {
+      icon: '✅',
+      title: 'Tudo sob controle: Fila estabilizada',
+      desc: 'Atendimentos distribuídos com sucesso...'
+    }
+  }
+  if (isAnimating.value) {
+    return {
+      icon: '⚡',
+      title: 'Redistribuindo carga de trabalho...',
+      desc: 'Transferindo atendimentos de Carlos...'
+    }
+  }
+  return {
+    icon: '⚠️',
+    title: 'Gargalo: Carlos com 8 atendimentos',
+    desc: 'Analisando melhor rota...'
+  }
+})
+
+const balanceWorkload = () => {
+  if (isAnimating.value || isStabilized.value) return;
+  isAnimating.value = true;
+  
+  setTimeout(() => {
+    agents.value[1].tickets = 7
+    agents.value[0].tickets = 3
+  }, 600)
+  
+  setTimeout(() => {
+    agents.value[1].tickets = 6
+    agents.value[2].tickets = 4
+  }, 1200)
+
+  setTimeout(() => {
+    agents.value[1].tickets = 5
+    agents.value[2].tickets = 5
+  }, 1800)
+
+  setTimeout(() => {
+    agents.value[1].tickets = 4
+    agents.value[0].tickets = 4
+    
+    // Change states
+    agents.value[0].status = 'Estável'
+    agents.value[0].color = 'blue'
+    
+    agents.value[1].status = 'Estável'
+    agents.value[1].color = 'blue'
+    agents.value[1].pulse = false
+
+    isStabilized.value = true
+    isAnimating.value = false
+  }, 2400)
+}
+
+const resetSimulation = () => {
+  agents.value = [
+    { id: 'ana', name: 'Ana', initials: 'AC', tickets: 2, status: 'Livre', color: 'green', pulse: false },
+    { id: 'carlos', name: 'Carlos', initials: 'CS', tickets: 8, status: 'Sobrecarga', color: 'red', pulse: true },
+    { id: 'pedro', name: 'Pedro', initials: 'PS', tickets: 3, status: 'Estável', color: 'blue', pulse: false }
+  ]
+  isStabilized.value = false
+  isAnimating.value = false
+  
+  // Auto restart after reset
+  setTimeout(() => {
+    balanceWorkload()
+  }, 1000)
+}
+
+onMounted(() => {
+  observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !isStabilized.value && !isAnimating.value) {
+      // Trigger animation automatically when user scrolls to it
+      setTimeout(() => {
+        balanceWorkload()
+      }, 1000)
+    }
+  }, { threshold: 0.5 })
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
 </script>
 
 <style scoped>
@@ -544,5 +632,66 @@
     height: 38px;
     font-size: 0.8rem;
   }
+}
+
+/* Animation specific styles */
+.ticket-list-enter-active,
+.ticket-list-leave-active,
+.ticket-list-move {
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.ticket-list-enter-from {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.8);
+}
+.ticket-list-leave-to {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+}
+
+.sim-btn {
+  background: rgba(0, 114, 245, 0.1);
+  border: 1px solid rgba(0, 114, 245, 0.4);
+  color: #3b8ef8;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.sim-btn:hover:not(:disabled) {
+  background: rgba(0, 114, 245, 0.2);
+  transform: translateY(-2px);
+}
+.sim-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.sim-btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+}
+.sim-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.live-dot-green {
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
 }
 </style>
